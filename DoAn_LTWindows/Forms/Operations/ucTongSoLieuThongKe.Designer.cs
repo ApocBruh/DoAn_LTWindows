@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.lbl_Title = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.pnl_Data = new System.Windows.Forms.Panel();
+            this.lbl_TongDoanhThu = new System.Windows.Forms.Label();
+            this.lbl_SoTienChiPhiBaoTri = new System.Windows.Forms.Label();
+            this.lbl_SoTienTheoNam = new System.Windows.Forms.Label();
+            this.lbl_SoTienTheoQuy = new System.Windows.Forms.Label();
+            this.lbl_SoTienTheoThang = new System.Windows.Forms.Label();
+            this.lbl_SoChuyenDaThucHien = new System.Windows.Forms.Label();
+            this.lbl_SoChuyenDaHuy = new System.Windows.Forms.Label();
+            this.lbl_SoTienDaHoanTra = new System.Windows.Forms.Label();
+            this.lbl_SoVeDaHuy = new System.Windows.Forms.Label();
+            this.lbl_SoVeDaBan = new System.Windows.Forms.Label();
+            this.btn_ExportData = new System.Windows.Forms.Button();
+            this.btn_Return = new System.Windows.Forms.Button();
+            this.pnl_Data.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_Title
@@ -57,173 +57,173 @@
             this.lbl_Title.TabIndex = 2;
             this.lbl_Title.Text = "TỔNG DOANH THU (TRONG KỲ BÁO CÁO)";
             // 
-            // panel1
+            // pnl_Data
             // 
-            this.panel1.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackground;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(60, 91);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(872, 451);
-            this.panel1.TabIndex = 3;
+            this.pnl_Data.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackground;
+            this.pnl_Data.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnl_Data.Controls.Add(this.lbl_TongDoanhThu);
+            this.pnl_Data.Controls.Add(this.lbl_SoTienChiPhiBaoTri);
+            this.pnl_Data.Controls.Add(this.lbl_SoTienTheoNam);
+            this.pnl_Data.Controls.Add(this.lbl_SoTienTheoQuy);
+            this.pnl_Data.Controls.Add(this.lbl_SoTienTheoThang);
+            this.pnl_Data.Controls.Add(this.lbl_SoChuyenDaThucHien);
+            this.pnl_Data.Controls.Add(this.lbl_SoChuyenDaHuy);
+            this.pnl_Data.Controls.Add(this.lbl_SoTienDaHoanTra);
+            this.pnl_Data.Controls.Add(this.lbl_SoVeDaHuy);
+            this.pnl_Data.Controls.Add(this.lbl_SoVeDaBan);
+            this.pnl_Data.Location = new System.Drawing.Point(60, 91);
+            this.pnl_Data.Name = "pnl_Data";
+            this.pnl_Data.Size = new System.Drawing.Size(872, 451);
+            this.pnl_Data.TabIndex = 3;
             // 
-            // button1
+            // lbl_TongDoanhThu
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._75pxbtn1;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Oswald", 14F);
-            this.button1.Location = new System.Drawing.Point(341, 553);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 41);
-            this.button1.TabIndex = 57;
-            this.button1.Text = "Xuất Số Liệu";
-            this.button1.UseVisualStyleBackColor = false;
+            this.lbl_TongDoanhThu.AutoSize = true;
+            this.lbl_TongDoanhThu.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_TongDoanhThu.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_TongDoanhThu.Location = new System.Drawing.Point(253, 395);
+            this.lbl_TongDoanhThu.Name = "lbl_TongDoanhThu";
+            this.lbl_TongDoanhThu.Size = new System.Drawing.Size(168, 37);
+            this.lbl_TongDoanhThu.TabIndex = 61;
+            this.lbl_TongDoanhThu.Text = "TỔNG DOANH THU:";
             // 
-            // button2
+            // lbl_SoTienChiPhiBaoTri
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._75pxbtn1;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Oswald", 14F);
-            this.button2.Location = new System.Drawing.Point(512, 553);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 41);
-            this.button2.TabIndex = 58;
-            this.button2.Text = "Quay Lại";
-            this.button2.UseVisualStyleBackColor = false;
+            this.lbl_SoTienChiPhiBaoTri.AutoSize = true;
+            this.lbl_SoTienChiPhiBaoTri.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_SoTienChiPhiBaoTri.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_SoTienChiPhiBaoTri.Location = new System.Drawing.Point(16, 346);
+            this.lbl_SoTienChiPhiBaoTri.Name = "lbl_SoTienChiPhiBaoTri";
+            this.lbl_SoTienChiPhiBaoTri.Size = new System.Drawing.Size(242, 37);
+            this.lbl_SoTienChiPhiBaoTri.TabIndex = 60;
+            this.lbl_SoTienChiPhiBaoTri.Text = "Tổng Số Tiền Chi Phí Bảo Trì:";
             // 
-            // label1
+            // lbl_SoTienTheoNam
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Oswald", 16F);
-            this.label1.Location = new System.Drawing.Point(16, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 37);
-            this.label1.TabIndex = 52;
-            this.label1.Text = "Tổng Số Vé Đã Bán:";
+            this.lbl_SoTienTheoNam.AutoSize = true;
+            this.lbl_SoTienTheoNam.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_SoTienTheoNam.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_SoTienTheoNam.Location = new System.Drawing.Point(16, 307);
+            this.lbl_SoTienTheoNam.Name = "lbl_SoTienTheoNam";
+            this.lbl_SoTienTheoNam.Size = new System.Drawing.Size(203, 37);
+            this.lbl_SoTienTheoNam.TabIndex = 59;
+            this.lbl_SoTienTheoNam.Text = "Tổng Số Tiền Theo Năm:";
             // 
-            // label2
+            // lbl_SoTienTheoQuy
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Oswald", 16F);
-            this.label2.Location = new System.Drawing.Point(16, 57);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 37);
-            this.label2.TabIndex = 53;
-            this.label2.Text = "Tổng Số Vé Đã Hủy:";
+            this.lbl_SoTienTheoQuy.AutoSize = true;
+            this.lbl_SoTienTheoQuy.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_SoTienTheoQuy.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_SoTienTheoQuy.Location = new System.Drawing.Point(16, 266);
+            this.lbl_SoTienTheoQuy.Name = "lbl_SoTienTheoQuy";
+            this.lbl_SoTienTheoQuy.Size = new System.Drawing.Size(198, 37);
+            this.lbl_SoTienTheoQuy.TabIndex = 58;
+            this.lbl_SoTienTheoQuy.Text = "Tổng Số Tiền Theo Quý:";
             // 
-            // label3
+            // lbl_SoTienTheoThang
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Oswald", 16F);
-            this.label3.Location = new System.Drawing.Point(16, 183);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(220, 37);
-            this.label3.TabIndex = 54;
-            this.label3.Text = "Tổng Số Tiền Đã Hoàn Trả:";
+            this.lbl_SoTienTheoThang.AutoSize = true;
+            this.lbl_SoTienTheoThang.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_SoTienTheoThang.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_SoTienTheoThang.Location = new System.Drawing.Point(16, 223);
+            this.lbl_SoTienTheoThang.Name = "lbl_SoTienTheoThang";
+            this.lbl_SoTienTheoThang.Size = new System.Drawing.Size(215, 37);
+            this.lbl_SoTienTheoThang.TabIndex = 57;
+            this.lbl_SoTienTheoThang.Text = "Tổng Số Tiền Theo Tháng:";
             // 
-            // label4
+            // lbl_SoChuyenDaThucHien
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Oswald", 16F);
-            this.label4.Location = new System.Drawing.Point(16, 141);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(208, 37);
-            this.label4.TabIndex = 55;
-            this.label4.Text = "Tổng Số Chuyến Đã Hủy:";
+            this.lbl_SoChuyenDaThucHien.AutoSize = true;
+            this.lbl_SoChuyenDaThucHien.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_SoChuyenDaThucHien.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_SoChuyenDaThucHien.Location = new System.Drawing.Point(16, 99);
+            this.lbl_SoChuyenDaThucHien.Name = "lbl_SoChuyenDaThucHien";
+            this.lbl_SoChuyenDaThucHien.Size = new System.Drawing.Size(256, 37);
+            this.lbl_SoChuyenDaThucHien.TabIndex = 56;
+            this.lbl_SoChuyenDaThucHien.Text = "Tổng Số Chuyến Đã Thực Hiện:";
             // 
-            // label5
+            // lbl_SoChuyenDaHuy
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Oswald", 16F);
-            this.label5.Location = new System.Drawing.Point(16, 99);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(256, 37);
-            this.label5.TabIndex = 56;
-            this.label5.Text = "Tổng Số Chuyến Đã Thực Hiện:";
+            this.lbl_SoChuyenDaHuy.AutoSize = true;
+            this.lbl_SoChuyenDaHuy.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_SoChuyenDaHuy.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_SoChuyenDaHuy.Location = new System.Drawing.Point(16, 141);
+            this.lbl_SoChuyenDaHuy.Name = "lbl_SoChuyenDaHuy";
+            this.lbl_SoChuyenDaHuy.Size = new System.Drawing.Size(208, 37);
+            this.lbl_SoChuyenDaHuy.TabIndex = 55;
+            this.lbl_SoChuyenDaHuy.Text = "Tổng Số Chuyến Đã Hủy:";
             // 
-            // label6
+            // lbl_SoTienDaHoanTra
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Oswald", 16F);
-            this.label6.Location = new System.Drawing.Point(16, 223);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(215, 37);
-            this.label6.TabIndex = 57;
-            this.label6.Text = "Tổng Số Tiền Theo Tháng:";
+            this.lbl_SoTienDaHoanTra.AutoSize = true;
+            this.lbl_SoTienDaHoanTra.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_SoTienDaHoanTra.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_SoTienDaHoanTra.Location = new System.Drawing.Point(16, 183);
+            this.lbl_SoTienDaHoanTra.Name = "lbl_SoTienDaHoanTra";
+            this.lbl_SoTienDaHoanTra.Size = new System.Drawing.Size(220, 37);
+            this.lbl_SoTienDaHoanTra.TabIndex = 54;
+            this.lbl_SoTienDaHoanTra.Text = "Tổng Số Tiền Đã Hoàn Trả:";
             // 
-            // label7
+            // lbl_SoVeDaHuy
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Oswald", 16F);
-            this.label7.Location = new System.Drawing.Point(16, 266);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(198, 37);
-            this.label7.TabIndex = 58;
-            this.label7.Text = "Tổng Số Tiền Theo Quý:";
+            this.lbl_SoVeDaHuy.AutoSize = true;
+            this.lbl_SoVeDaHuy.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_SoVeDaHuy.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_SoVeDaHuy.Location = new System.Drawing.Point(16, 57);
+            this.lbl_SoVeDaHuy.Name = "lbl_SoVeDaHuy";
+            this.lbl_SoVeDaHuy.Size = new System.Drawing.Size(168, 37);
+            this.lbl_SoVeDaHuy.TabIndex = 53;
+            this.lbl_SoVeDaHuy.Text = "Tổng Số Vé Đã Hủy:";
             // 
-            // label8
+            // lbl_SoVeDaBan
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Oswald", 16F);
-            this.label8.Location = new System.Drawing.Point(16, 307);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(203, 37);
-            this.label8.TabIndex = 59;
-            this.label8.Text = "Tổng Số Tiền Theo Năm:";
+            this.lbl_SoVeDaBan.AutoSize = true;
+            this.lbl_SoVeDaBan.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_SoVeDaBan.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_SoVeDaBan.Location = new System.Drawing.Point(16, 15);
+            this.lbl_SoVeDaBan.Name = "lbl_SoVeDaBan";
+            this.lbl_SoVeDaBan.Size = new System.Drawing.Size(168, 37);
+            this.lbl_SoVeDaBan.TabIndex = 52;
+            this.lbl_SoVeDaBan.Text = "Tổng Số Vé Đã Bán:";
             // 
-            // label9
+            // btn_ExportData
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Oswald", 16F);
-            this.label9.Location = new System.Drawing.Point(16, 346);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(242, 37);
-            this.label9.TabIndex = 60;
-            this.label9.Text = "Tổng Số Tiền Chi Phí Bảo Trì:";
+            this.btn_ExportData.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ExportData.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._75pxbtn1;
+            this.btn_ExportData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_ExportData.FlatAppearance.BorderSize = 0;
+            this.btn_ExportData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ExportData.Font = new System.Drawing.Font("Oswald", 14F);
+            this.btn_ExportData.Location = new System.Drawing.Point(341, 553);
+            this.btn_ExportData.Name = "btn_ExportData";
+            this.btn_ExportData.Size = new System.Drawing.Size(140, 41);
+            this.btn_ExportData.TabIndex = 57;
+            this.btn_ExportData.Text = "Xuất Số Liệu";
+            this.btn_ExportData.UseVisualStyleBackColor = false;
             // 
-            // label10
+            // btn_Return
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Oswald", 16F);
-            this.label10.Location = new System.Drawing.Point(253, 395);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(168, 37);
-            this.label10.TabIndex = 61;
-            this.label10.Text = "TỔNG DOANH THU:";
+            this.btn_Return.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Return.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._75pxbtn1;
+            this.btn_Return.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Return.FlatAppearance.BorderSize = 0;
+            this.btn_Return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Return.Font = new System.Drawing.Font("Oswald", 14F);
+            this.btn_Return.Location = new System.Drawing.Point(512, 553);
+            this.btn_Return.Name = "btn_Return";
+            this.btn_Return.Size = new System.Drawing.Size(140, 41);
+            this.btn_Return.TabIndex = 58;
+            this.btn_Return.Text = "Quay Lại";
+            this.btn_Return.UseVisualStyleBackColor = false;
             // 
             // ucTongSoLieuThongKe
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btn_Return);
+            this.Controls.Add(this.btn_ExportData);
+            this.Controls.Add(this.pnl_Data);
             this.Controls.Add(this.lbl_Title);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Oswald", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -232,8 +232,8 @@
             this.MinimumSize = new System.Drawing.Size(992, 623);
             this.Name = "ucTongSoLieuThongKe";
             this.Size = new System.Drawing.Size(992, 623);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnl_Data.ResumeLayout(false);
+            this.pnl_Data.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,18 +242,18 @@
         #endregion
 
         private System.Windows.Forms.Label lbl_Title;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel pnl_Data;
+        private System.Windows.Forms.Button btn_ExportData;
+        private System.Windows.Forms.Button btn_Return;
+        private System.Windows.Forms.Label lbl_SoChuyenDaThucHien;
+        private System.Windows.Forms.Label lbl_SoChuyenDaHuy;
+        private System.Windows.Forms.Label lbl_SoTienDaHoanTra;
+        private System.Windows.Forms.Label lbl_SoVeDaHuy;
+        private System.Windows.Forms.Label lbl_SoVeDaBan;
+        private System.Windows.Forms.Label lbl_TongDoanhThu;
+        private System.Windows.Forms.Label lbl_SoTienChiPhiBaoTri;
+        private System.Windows.Forms.Label lbl_SoTienTheoNam;
+        private System.Windows.Forms.Label lbl_SoTienTheoQuy;
+        private System.Windows.Forms.Label lbl_SoTienTheoThang;
     }
 }

@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgv_ChuyenXe = new System.Windows.Forms.DataGridView();
+            this.dgv_KhachHang = new System.Windows.Forms.DataGridView();
             this.btn_FindData = new System.Windows.Forms.Button();
-            this.lbl_ChonXe = new System.Windows.Forms.Label();
-            this.lbl_ChonTuyen = new System.Windows.Forms.Label();
+            this.lbl_SoDienThoai = new System.Windows.Forms.Label();
+            this.lbl_TenKhachHang = new System.Windows.Forms.Label();
             this.txt_Find = new System.Windows.Forms.TextBox();
             this.lbl_TimKiem = new System.Windows.Forms.Label();
             this.btn_Reset = new System.Windows.Forms.Button();
@@ -39,25 +39,25 @@
             this.btn_Edit = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
             this.btn_Find = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pnl_Import = new System.Windows.Forms.Panel();
+            this.txt_TongSoVeDaMua = new System.Windows.Forms.TextBox();
+            this.lbl_TongSoVeDaMua = new System.Windows.Forms.Label();
+            this.txt_DiaChi = new System.Windows.Forms.TextBox();
+            this.lbl_DiaChi = new System.Windows.Forms.Label();
+            this.txt_SoDienThoai = new System.Windows.Forms.TextBox();
+            this.txt_TenKhachHang = new System.Windows.Forms.TextBox();
             this.lbl_Title = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_ChuyenXe)).BeginInit();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_KhachHang)).BeginInit();
+            this.pnl_Import.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgv_ChuyenXe
+            // dgv_KhachHang
             // 
-            this.dgv_ChuyenXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_ChuyenXe.Location = new System.Drawing.Point(44, 329);
-            this.dgv_ChuyenXe.Name = "dgv_ChuyenXe";
-            this.dgv_ChuyenXe.Size = new System.Drawing.Size(905, 271);
-            this.dgv_ChuyenXe.TabIndex = 37;
+            this.dgv_KhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_KhachHang.Location = new System.Drawing.Point(44, 329);
+            this.dgv_KhachHang.Name = "dgv_KhachHang";
+            this.dgv_KhachHang.Size = new System.Drawing.Size(905, 271);
+            this.dgv_KhachHang.TabIndex = 37;
             // 
             // btn_FindData
             // 
@@ -74,27 +74,27 @@
             this.btn_FindData.Text = "Tìm Kiếm";
             this.btn_FindData.UseVisualStyleBackColor = false;
             // 
-            // lbl_ChonXe
+            // lbl_SoDienThoai
             // 
-            this.lbl_ChonXe.AutoSize = true;
-            this.lbl_ChonXe.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_ChonXe.Font = new System.Drawing.Font("Oswald", 16F);
-            this.lbl_ChonXe.Location = new System.Drawing.Point(34, 55);
-            this.lbl_ChonXe.Name = "lbl_ChonXe";
-            this.lbl_ChonXe.Size = new System.Drawing.Size(128, 37);
-            this.lbl_ChonXe.TabIndex = 18;
-            this.lbl_ChonXe.Text = "Số Điện Thoại:";
+            this.lbl_SoDienThoai.AutoSize = true;
+            this.lbl_SoDienThoai.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_SoDienThoai.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_SoDienThoai.Location = new System.Drawing.Point(34, 55);
+            this.lbl_SoDienThoai.Name = "lbl_SoDienThoai";
+            this.lbl_SoDienThoai.Size = new System.Drawing.Size(128, 37);
+            this.lbl_SoDienThoai.TabIndex = 18;
+            this.lbl_SoDienThoai.Text = "Số Điện Thoại:";
             // 
-            // lbl_ChonTuyen
+            // lbl_TenKhachHang
             // 
-            this.lbl_ChonTuyen.AutoSize = true;
-            this.lbl_ChonTuyen.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_ChonTuyen.Font = new System.Drawing.Font("Oswald", 16F);
-            this.lbl_ChonTuyen.Location = new System.Drawing.Point(34, 11);
-            this.lbl_ChonTuyen.Name = "lbl_ChonTuyen";
-            this.lbl_ChonTuyen.Size = new System.Drawing.Size(148, 37);
-            this.lbl_ChonTuyen.TabIndex = 16;
-            this.lbl_ChonTuyen.Text = "Tên Khách Hàng:";
+            this.lbl_TenKhachHang.AutoSize = true;
+            this.lbl_TenKhachHang.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_TenKhachHang.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_TenKhachHang.Location = new System.Drawing.Point(34, 11);
+            this.lbl_TenKhachHang.Name = "lbl_TenKhachHang";
+            this.lbl_TenKhachHang.Size = new System.Drawing.Size(148, 37);
+            this.lbl_TenKhachHang.TabIndex = 16;
+            this.lbl_TenKhachHang.Text = "Tên Khách Hàng:";
             // 
             // txt_Find
             // 
@@ -190,81 +190,81 @@
             this.btn_Find.Text = "Tìm Kiếm";
             this.btn_Find.UseVisualStyleBackColor = false;
             // 
-            // panel1
+            // pnl_Import
             // 
-            this.panel1.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackground;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.btn_Reset);
-            this.panel1.Controls.Add(this.btn_Delete);
-            this.panel1.Controls.Add(this.btn_Edit);
-            this.panel1.Controls.Add(this.btn_Save);
-            this.panel1.Controls.Add(this.btn_Find);
-            this.panel1.Controls.Add(this.lbl_ChonXe);
-            this.panel1.Controls.Add(this.lbl_ChonTuyen);
-            this.panel1.Location = new System.Drawing.Point(88, 133);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(816, 190);
-            this.panel1.TabIndex = 35;
+            this.pnl_Import.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackground;
+            this.pnl_Import.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnl_Import.Controls.Add(this.txt_TongSoVeDaMua);
+            this.pnl_Import.Controls.Add(this.lbl_TongSoVeDaMua);
+            this.pnl_Import.Controls.Add(this.txt_DiaChi);
+            this.pnl_Import.Controls.Add(this.lbl_DiaChi);
+            this.pnl_Import.Controls.Add(this.txt_SoDienThoai);
+            this.pnl_Import.Controls.Add(this.txt_TenKhachHang);
+            this.pnl_Import.Controls.Add(this.btn_Reset);
+            this.pnl_Import.Controls.Add(this.btn_Delete);
+            this.pnl_Import.Controls.Add(this.btn_Edit);
+            this.pnl_Import.Controls.Add(this.btn_Save);
+            this.pnl_Import.Controls.Add(this.btn_Find);
+            this.pnl_Import.Controls.Add(this.lbl_SoDienThoai);
+            this.pnl_Import.Controls.Add(this.lbl_TenKhachHang);
+            this.pnl_Import.Location = new System.Drawing.Point(88, 133);
+            this.pnl_Import.Name = "pnl_Import";
+            this.pnl_Import.Size = new System.Drawing.Size(816, 190);
+            this.pnl_Import.TabIndex = 35;
             // 
-            // textBox4
+            // txt_TongSoVeDaMua
             // 
-            this.textBox4.Font = new System.Drawing.Font("Oswald", 16F);
-            this.textBox4.Location = new System.Drawing.Point(616, 52);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(164, 39);
-            this.textBox4.TabIndex = 43;
+            this.txt_TongSoVeDaMua.Font = new System.Drawing.Font("Oswald", 16F);
+            this.txt_TongSoVeDaMua.Location = new System.Drawing.Point(616, 52);
+            this.txt_TongSoVeDaMua.Name = "txt_TongSoVeDaMua";
+            this.txt_TongSoVeDaMua.Size = new System.Drawing.Size(164, 39);
+            this.txt_TongSoVeDaMua.TabIndex = 43;
             // 
-            // label2
+            // lbl_TongSoVeDaMua
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Oswald", 16F);
-            this.label2.Location = new System.Drawing.Point(612, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 37);
-            this.label2.TabIndex = 42;
-            this.label2.Text = "Tổng Số Vé Đã Mua:";
+            this.lbl_TongSoVeDaMua.AutoSize = true;
+            this.lbl_TongSoVeDaMua.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_TongSoVeDaMua.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_TongSoVeDaMua.Location = new System.Drawing.Point(612, 10);
+            this.lbl_TongSoVeDaMua.Name = "lbl_TongSoVeDaMua";
+            this.lbl_TongSoVeDaMua.Size = new System.Drawing.Size(171, 37);
+            this.lbl_TongSoVeDaMua.TabIndex = 42;
+            this.lbl_TongSoVeDaMua.Text = "Tổng Số Vé Đã Mua:";
             // 
-            // textBox3
+            // txt_DiaChi
             // 
-            this.textBox3.Font = new System.Drawing.Font("Oswald", 16F);
-            this.textBox3.Location = new System.Drawing.Point(188, 96);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(592, 39);
-            this.textBox3.TabIndex = 41;
+            this.txt_DiaChi.Font = new System.Drawing.Font("Oswald", 16F);
+            this.txt_DiaChi.Location = new System.Drawing.Point(188, 96);
+            this.txt_DiaChi.Name = "txt_DiaChi";
+            this.txt_DiaChi.Size = new System.Drawing.Size(592, 39);
+            this.txt_DiaChi.TabIndex = 41;
             // 
-            // label1
+            // lbl_DiaChi
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Oswald", 16F);
-            this.label1.Location = new System.Drawing.Point(34, 98);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 37);
-            this.label1.TabIndex = 40;
-            this.label1.Text = "Địa Chỉ:";
+            this.lbl_DiaChi.AutoSize = true;
+            this.lbl_DiaChi.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_DiaChi.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_DiaChi.Location = new System.Drawing.Point(34, 98);
+            this.lbl_DiaChi.Name = "lbl_DiaChi";
+            this.lbl_DiaChi.Size = new System.Drawing.Size(78, 37);
+            this.lbl_DiaChi.TabIndex = 40;
+            this.lbl_DiaChi.Text = "Địa Chỉ:";
             // 
-            // textBox2
+            // txt_SoDienThoai
             // 
-            this.textBox2.Font = new System.Drawing.Font("Oswald", 16F);
-            this.textBox2.Location = new System.Drawing.Point(188, 53);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(258, 39);
-            this.textBox2.TabIndex = 39;
+            this.txt_SoDienThoai.Font = new System.Drawing.Font("Oswald", 16F);
+            this.txt_SoDienThoai.Location = new System.Drawing.Point(188, 53);
+            this.txt_SoDienThoai.Name = "txt_SoDienThoai";
+            this.txt_SoDienThoai.Size = new System.Drawing.Size(258, 39);
+            this.txt_SoDienThoai.TabIndex = 39;
             // 
-            // textBox1
+            // txt_TenKhachHang
             // 
-            this.textBox1.Font = new System.Drawing.Font("Oswald", 16F);
-            this.textBox1.Location = new System.Drawing.Point(188, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(258, 39);
-            this.textBox1.TabIndex = 38;
+            this.txt_TenKhachHang.Font = new System.Drawing.Font("Oswald", 16F);
+            this.txt_TenKhachHang.Location = new System.Drawing.Point(188, 8);
+            this.txt_TenKhachHang.Name = "txt_TenKhachHang";
+            this.txt_TenKhachHang.Size = new System.Drawing.Size(258, 39);
+            this.txt_TenKhachHang.TabIndex = 38;
             // 
             // lbl_Title
             // 
@@ -283,11 +283,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.dgv_ChuyenXe);
+            this.Controls.Add(this.dgv_KhachHang);
             this.Controls.Add(this.btn_FindData);
             this.Controls.Add(this.txt_Find);
             this.Controls.Add(this.lbl_TimKiem);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnl_Import);
             this.Controls.Add(this.lbl_Title);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Oswald", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -297,9 +297,9 @@
             this.MinimumSize = new System.Drawing.Size(992, 623);
             this.Name = "ucQuanLyKhachHang";
             this.Size = new System.Drawing.Size(992, 623);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_ChuyenXe)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_KhachHang)).EndInit();
+            this.pnl_Import.ResumeLayout(false);
+            this.pnl_Import.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,10 +307,10 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgv_ChuyenXe;
+        private System.Windows.Forms.DataGridView dgv_KhachHang;
         private System.Windows.Forms.Button btn_FindData;
-        private System.Windows.Forms.Label lbl_ChonXe;
-        private System.Windows.Forms.Label lbl_ChonTuyen;
+        private System.Windows.Forms.Label lbl_SoDienThoai;
+        private System.Windows.Forms.Label lbl_TenKhachHang;
         private System.Windows.Forms.TextBox txt_Find;
         private System.Windows.Forms.Label lbl_TimKiem;
         private System.Windows.Forms.Button btn_Reset;
@@ -318,13 +318,13 @@
         private System.Windows.Forms.Button btn_Edit;
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.Button btn_Find;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnl_Import;
         private System.Windows.Forms.Label lbl_Title;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_TongSoVeDaMua;
+        private System.Windows.Forms.Label lbl_TongSoVeDaMua;
+        private System.Windows.Forms.TextBox txt_DiaChi;
+        private System.Windows.Forms.Label lbl_DiaChi;
+        private System.Windows.Forms.TextBox txt_SoDienThoai;
+        private System.Windows.Forms.TextBox txt_TenKhachHang;
     }
 }

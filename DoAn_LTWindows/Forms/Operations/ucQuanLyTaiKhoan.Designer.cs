@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             this.lbl_Title = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_Password = new System.Windows.Forms.TextBox();
+            this.lbl_Password = new System.Windows.Forms.Label();
+            this.lbl_Role = new System.Windows.Forms.Label();
+            this.txt_TenNhanVien = new System.Windows.Forms.TextBox();
+            this.txt_Username = new System.Windows.Forms.TextBox();
             this.btn_Reset = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Edit = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnl_Import = new System.Windows.Forms.Panel();
+            this.chk_Active = new System.Windows.Forms.CheckBox();
+            this.chk_Lock = new System.Windows.Forms.CheckBox();
+            this.lbl_Status = new System.Windows.Forms.Label();
+            this.cmb_Role = new System.Windows.Forms.ComboBox();
             this.btn_Save = new System.Windows.Forms.Button();
             this.btn_Find = new System.Windows.Forms.Button();
-            this.lbl_ChonXe = new System.Windows.Forms.Label();
-            this.lbl_ChonTuyen = new System.Windows.Forms.Label();
+            this.lbl_TenNhanVien = new System.Windows.Forms.Label();
+            this.lbl_Usename = new System.Windows.Forms.Label();
             this.txt_Find = new System.Windows.Forms.TextBox();
             this.lbl_TimKiem = new System.Windows.Forms.Label();
             this.btn_FindData = new System.Windows.Forms.Button();
-            this.dgv_ChuyenXe = new System.Windows.Forms.DataGridView();
-            this.cmb_Tuyen = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_ChuyenXe)).BeginInit();
+            this.dgv_Account = new System.Windows.Forms.DataGridView();
+            this.pnl_Import.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Account)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Title
@@ -66,52 +66,52 @@
             this.lbl_Title.TabIndex = 38;
             this.lbl_Title.Text = "QUẢN LÝ TÀI KHOẢN";
             // 
-            // textBox4
+            // txt_Password
             // 
-            this.textBox4.Font = new System.Drawing.Font("Oswald", 16F);
-            this.textBox4.Location = new System.Drawing.Point(551, 9);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.PasswordChar = '*';
-            this.textBox4.Size = new System.Drawing.Size(235, 39);
-            this.textBox4.TabIndex = 43;
+            this.txt_Password.Font = new System.Drawing.Font("Oswald", 16F);
+            this.txt_Password.Location = new System.Drawing.Point(551, 9);
+            this.txt_Password.Name = "txt_Password";
+            this.txt_Password.PasswordChar = '*';
+            this.txt_Password.Size = new System.Drawing.Size(235, 39);
+            this.txt_Password.TabIndex = 43;
             // 
-            // label2
+            // lbl_Password
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Oswald", 16F);
-            this.label2.Location = new System.Drawing.Point(448, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 37);
-            this.label2.TabIndex = 42;
-            this.label2.Text = "Mật Khẩu:";
+            this.lbl_Password.AutoSize = true;
+            this.lbl_Password.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Password.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_Password.Location = new System.Drawing.Point(448, 11);
+            this.lbl_Password.Name = "lbl_Password";
+            this.lbl_Password.Size = new System.Drawing.Size(97, 37);
+            this.lbl_Password.TabIndex = 42;
+            this.lbl_Password.Text = "Mật Khẩu:";
             // 
-            // label1
+            // lbl_Role
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Oswald", 16F);
-            this.label1.Location = new System.Drawing.Point(448, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 37);
-            this.label1.TabIndex = 40;
-            this.label1.Text = "Vai Trò:";
+            this.lbl_Role.AutoSize = true;
+            this.lbl_Role.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Role.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_Role.Location = new System.Drawing.Point(448, 55);
+            this.lbl_Role.Name = "lbl_Role";
+            this.lbl_Role.Size = new System.Drawing.Size(74, 37);
+            this.lbl_Role.TabIndex = 40;
+            this.lbl_Role.Text = "Vai Trò:";
             // 
-            // textBox2
+            // txt_TenNhanVien
             // 
-            this.textBox2.Font = new System.Drawing.Font("Oswald", 16F);
-            this.textBox2.Location = new System.Drawing.Point(184, 53);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(258, 39);
-            this.textBox2.TabIndex = 39;
+            this.txt_TenNhanVien.Font = new System.Drawing.Font("Oswald", 16F);
+            this.txt_TenNhanVien.Location = new System.Drawing.Point(184, 53);
+            this.txt_TenNhanVien.Name = "txt_TenNhanVien";
+            this.txt_TenNhanVien.Size = new System.Drawing.Size(258, 39);
+            this.txt_TenNhanVien.TabIndex = 39;
             // 
-            // textBox1
+            // txt_Username
             // 
-            this.textBox1.Font = new System.Drawing.Font("Oswald", 16F);
-            this.textBox1.Location = new System.Drawing.Point(184, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(258, 39);
-            this.textBox1.TabIndex = 38;
+            this.txt_Username.Font = new System.Drawing.Font("Oswald", 16F);
+            this.txt_Username.Location = new System.Drawing.Point(184, 8);
+            this.txt_Username.Name = "txt_Username";
+            this.txt_Username.Size = new System.Drawing.Size(258, 39);
+            this.txt_Username.TabIndex = 38;
             // 
             // btn_Reset
             // 
@@ -158,30 +158,74 @@
             this.btn_Edit.Text = "Sửa";
             this.btn_Edit.UseVisualStyleBackColor = false;
             // 
-            // panel1
+            // pnl_Import
             // 
-            this.panel1.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackground;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.checkBox2);
-            this.panel1.Controls.Add(this.checkBox1);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.cmb_Tuyen);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.btn_Reset);
-            this.panel1.Controls.Add(this.btn_Delete);
-            this.panel1.Controls.Add(this.btn_Edit);
-            this.panel1.Controls.Add(this.btn_Save);
-            this.panel1.Controls.Add(this.btn_Find);
-            this.panel1.Controls.Add(this.lbl_ChonXe);
-            this.panel1.Controls.Add(this.lbl_ChonTuyen);
-            this.panel1.Location = new System.Drawing.Point(88, 133);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(816, 190);
-            this.panel1.TabIndex = 41;
+            this.pnl_Import.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackground;
+            this.pnl_Import.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnl_Import.Controls.Add(this.chk_Active);
+            this.pnl_Import.Controls.Add(this.chk_Lock);
+            this.pnl_Import.Controls.Add(this.lbl_Status);
+            this.pnl_Import.Controls.Add(this.cmb_Role);
+            this.pnl_Import.Controls.Add(this.txt_Password);
+            this.pnl_Import.Controls.Add(this.lbl_Password);
+            this.pnl_Import.Controls.Add(this.lbl_Role);
+            this.pnl_Import.Controls.Add(this.txt_TenNhanVien);
+            this.pnl_Import.Controls.Add(this.txt_Username);
+            this.pnl_Import.Controls.Add(this.btn_Reset);
+            this.pnl_Import.Controls.Add(this.btn_Delete);
+            this.pnl_Import.Controls.Add(this.btn_Edit);
+            this.pnl_Import.Controls.Add(this.btn_Save);
+            this.pnl_Import.Controls.Add(this.btn_Find);
+            this.pnl_Import.Controls.Add(this.lbl_TenNhanVien);
+            this.pnl_Import.Controls.Add(this.lbl_Usename);
+            this.pnl_Import.Location = new System.Drawing.Point(88, 133);
+            this.pnl_Import.Name = "pnl_Import";
+            this.pnl_Import.Size = new System.Drawing.Size(816, 190);
+            this.pnl_Import.TabIndex = 41;
+            // 
+            // chk_Active
+            // 
+            this.chk_Active.AutoSize = true;
+            this.chk_Active.BackColor = System.Drawing.Color.Transparent;
+            this.chk_Active.Font = new System.Drawing.Font("Oswald", 18F);
+            this.chk_Active.Location = new System.Drawing.Point(295, 94);
+            this.chk_Active.Name = "chk_Active";
+            this.chk_Active.Size = new System.Drawing.Size(208, 45);
+            this.chk_Active.TabIndex = 47;
+            this.chk_Active.Text = "Kích Hoạt Tài Khoản";
+            this.chk_Active.UseVisualStyleBackColor = false;
+            // 
+            // chk_Lock
+            // 
+            this.chk_Lock.AutoSize = true;
+            this.chk_Lock.BackColor = System.Drawing.Color.Transparent;
+            this.chk_Lock.Font = new System.Drawing.Font("Oswald", 18F);
+            this.chk_Lock.Location = new System.Drawing.Point(184, 94);
+            this.chk_Lock.Name = "chk_Lock";
+            this.chk_Lock.Size = new System.Drawing.Size(80, 45);
+            this.chk_Lock.TabIndex = 46;
+            this.chk_Lock.Text = "Khóa";
+            this.chk_Lock.UseVisualStyleBackColor = false;
+            // 
+            // lbl_Status
+            // 
+            this.lbl_Status.AutoSize = true;
+            this.lbl_Status.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Status.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_Status.Location = new System.Drawing.Point(30, 99);
+            this.lbl_Status.Name = "lbl_Status";
+            this.lbl_Status.Size = new System.Drawing.Size(103, 37);
+            this.lbl_Status.TabIndex = 45;
+            this.lbl_Status.Text = "Trạng Thái:";
+            // 
+            // cmb_Role
+            // 
+            this.cmb_Role.Font = new System.Drawing.Font("Oswald", 14F);
+            this.cmb_Role.FormattingEnabled = true;
+            this.cmb_Role.Location = new System.Drawing.Point(551, 52);
+            this.cmb_Role.Name = "cmb_Role";
+            this.cmb_Role.Size = new System.Drawing.Size(235, 40);
+            this.cmb_Role.TabIndex = 44;
             // 
             // btn_Save
             // 
@@ -213,27 +257,27 @@
             this.btn_Find.Text = "Tìm Kiếm";
             this.btn_Find.UseVisualStyleBackColor = false;
             // 
-            // lbl_ChonXe
+            // lbl_TenNhanVien
             // 
-            this.lbl_ChonXe.AutoSize = true;
-            this.lbl_ChonXe.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_ChonXe.Font = new System.Drawing.Font("Oswald", 16F);
-            this.lbl_ChonXe.Location = new System.Drawing.Point(30, 55);
-            this.lbl_ChonXe.Name = "lbl_ChonXe";
-            this.lbl_ChonXe.Size = new System.Drawing.Size(134, 37);
-            this.lbl_ChonXe.TabIndex = 18;
-            this.lbl_ChonXe.Text = "Tên Nhân Viên:";
+            this.lbl_TenNhanVien.AutoSize = true;
+            this.lbl_TenNhanVien.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_TenNhanVien.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_TenNhanVien.Location = new System.Drawing.Point(30, 55);
+            this.lbl_TenNhanVien.Name = "lbl_TenNhanVien";
+            this.lbl_TenNhanVien.Size = new System.Drawing.Size(134, 37);
+            this.lbl_TenNhanVien.TabIndex = 18;
+            this.lbl_TenNhanVien.Text = "Tên Nhân Viên:";
             // 
-            // lbl_ChonTuyen
+            // lbl_Usename
             // 
-            this.lbl_ChonTuyen.AutoSize = true;
-            this.lbl_ChonTuyen.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_ChonTuyen.Font = new System.Drawing.Font("Oswald", 16F);
-            this.lbl_ChonTuyen.Location = new System.Drawing.Point(30, 11);
-            this.lbl_ChonTuyen.Name = "lbl_ChonTuyen";
-            this.lbl_ChonTuyen.Size = new System.Drawing.Size(140, 37);
-            this.lbl_ChonTuyen.TabIndex = 16;
-            this.lbl_ChonTuyen.Text = "Tên Đăng Nhập:";
+            this.lbl_Usename.AutoSize = true;
+            this.lbl_Usename.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Usename.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_Usename.Location = new System.Drawing.Point(30, 11);
+            this.lbl_Usename.Name = "lbl_Usename";
+            this.lbl_Usename.Size = new System.Drawing.Size(140, 37);
+            this.lbl_Usename.TabIndex = 16;
+            this.lbl_Usename.Text = "Tên Đăng Nhập:";
             // 
             // txt_Find
             // 
@@ -269,57 +313,13 @@
             this.btn_FindData.Text = "Tìm Kiếm";
             this.btn_FindData.UseVisualStyleBackColor = false;
             // 
-            // dgv_ChuyenXe
+            // dgv_Account
             // 
-            this.dgv_ChuyenXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_ChuyenXe.Location = new System.Drawing.Point(44, 329);
-            this.dgv_ChuyenXe.Name = "dgv_ChuyenXe";
-            this.dgv_ChuyenXe.Size = new System.Drawing.Size(905, 271);
-            this.dgv_ChuyenXe.TabIndex = 43;
-            // 
-            // cmb_Tuyen
-            // 
-            this.cmb_Tuyen.Font = new System.Drawing.Font("Oswald", 14F);
-            this.cmb_Tuyen.FormattingEnabled = true;
-            this.cmb_Tuyen.Location = new System.Drawing.Point(551, 52);
-            this.cmb_Tuyen.Name = "cmb_Tuyen";
-            this.cmb_Tuyen.Size = new System.Drawing.Size(235, 40);
-            this.cmb_Tuyen.TabIndex = 44;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Oswald", 16F);
-            this.label3.Location = new System.Drawing.Point(30, 99);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 37);
-            this.label3.TabIndex = 45;
-            this.label3.Text = "Trạng Thái:";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.Font = new System.Drawing.Font("Oswald", 18F);
-            this.checkBox1.Location = new System.Drawing.Point(184, 94);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 45);
-            this.checkBox1.TabIndex = 46;
-            this.checkBox1.Text = "Khóa";
-            this.checkBox1.UseVisualStyleBackColor = false;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox2.Font = new System.Drawing.Font("Oswald", 18F);
-            this.checkBox2.Location = new System.Drawing.Point(295, 94);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(208, 45);
-            this.checkBox2.TabIndex = 47;
-            this.checkBox2.Text = "Kích Hoạt Tài Khoản";
-            this.checkBox2.UseVisualStyleBackColor = false;
+            this.dgv_Account.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Account.Location = new System.Drawing.Point(44, 329);
+            this.dgv_Account.Name = "dgv_Account";
+            this.dgv_Account.Size = new System.Drawing.Size(905, 271);
+            this.dgv_Account.TabIndex = 43;
             // 
             // ucQuanLyTaiKhoan
             // 
@@ -327,11 +327,11 @@
             this.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.lbl_Title);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnl_Import);
             this.Controls.Add(this.txt_Find);
             this.Controls.Add(this.lbl_TimKiem);
             this.Controls.Add(this.btn_FindData);
-            this.Controls.Add(this.dgv_ChuyenXe);
+            this.Controls.Add(this.dgv_Account);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Oswald", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -339,9 +339,9 @@
             this.MinimumSize = new System.Drawing.Size(992, 623);
             this.Name = "ucQuanLyTaiKhoan";
             this.Size = new System.Drawing.Size(992, 623);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_ChuyenXe)).EndInit();
+            this.pnl_Import.ResumeLayout(false);
+            this.pnl_Import.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Account)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,26 +350,26 @@
         #endregion
 
         private System.Windows.Forms.Label lbl_Title;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_Password;
+        private System.Windows.Forms.Label lbl_Password;
+        private System.Windows.Forms.Label lbl_Role;
+        private System.Windows.Forms.TextBox txt_TenNhanVien;
+        private System.Windows.Forms.TextBox txt_Username;
         private System.Windows.Forms.Button btn_Reset;
         private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.Button btn_Edit;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnl_Import;
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.Button btn_Find;
-        private System.Windows.Forms.Label lbl_ChonXe;
-        private System.Windows.Forms.Label lbl_ChonTuyen;
+        private System.Windows.Forms.Label lbl_TenNhanVien;
+        private System.Windows.Forms.Label lbl_Usename;
         private System.Windows.Forms.TextBox txt_Find;
         private System.Windows.Forms.Label lbl_TimKiem;
         private System.Windows.Forms.Button btn_FindData;
-        private System.Windows.Forms.DataGridView dgv_ChuyenXe;
-        private System.Windows.Forms.ComboBox cmb_Tuyen;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dgv_Account;
+        private System.Windows.Forms.ComboBox cmb_Role;
+        private System.Windows.Forms.CheckBox chk_Active;
+        private System.Windows.Forms.CheckBox chk_Lock;
+        private System.Windows.Forms.Label lbl_Status;
     }
 }

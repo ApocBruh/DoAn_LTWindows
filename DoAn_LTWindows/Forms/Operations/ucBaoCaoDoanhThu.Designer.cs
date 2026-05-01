@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.lbl_Title = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.btn_Find = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dtp_FromDate = new System.Windows.Forms.DateTimePicker();
+            this.lbl_FromDate = new System.Windows.Forms.Label();
+            this.lbl_ToDate = new System.Windows.Forms.Label();
+            this.dtp_ToDate = new System.Windows.Forms.DateTimePicker();
+            this.btn_ThongKe = new System.Windows.Forms.Button();
+            this.dgv_DoanhThu = new System.Windows.Forms.DataGridView();
+            this.btn_TongSoLieuThongKe = new System.Windows.Forms.Button();
+            this.btn_ExportExcel = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DoanhThu)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Title
@@ -52,110 +52,110 @@
             this.lbl_Title.TabIndex = 1;
             this.lbl_Title.Text = "BÁO CÁO DOANH THU";
             // 
-            // dateTimePicker1
+            // dtp_FromDate
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Oswald", 14F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(219, 97);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(204, 35);
-            this.dateTimePicker1.TabIndex = 2;
+            this.dtp_FromDate.Font = new System.Drawing.Font("Oswald", 14F);
+            this.dtp_FromDate.Location = new System.Drawing.Point(219, 97);
+            this.dtp_FromDate.Name = "dtp_FromDate";
+            this.dtp_FromDate.Size = new System.Drawing.Size(204, 35);
+            this.dtp_FromDate.TabIndex = 2;
             // 
-            // label1
+            // lbl_FromDate
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Oswald", 16F);
-            this.label1.Location = new System.Drawing.Point(130, 97);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 37);
-            this.label1.TabIndex = 51;
-            this.label1.Text = "Từ Ngày:";
+            this.lbl_FromDate.AutoSize = true;
+            this.lbl_FromDate.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_FromDate.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_FromDate.Location = new System.Drawing.Point(130, 97);
+            this.lbl_FromDate.Name = "lbl_FromDate";
+            this.lbl_FromDate.Size = new System.Drawing.Size(83, 37);
+            this.lbl_FromDate.TabIndex = 51;
+            this.lbl_FromDate.Text = "Từ Ngày:";
             // 
-            // label2
+            // lbl_ToDate
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Oswald", 16F);
-            this.label2.Location = new System.Drawing.Point(557, 97);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 37);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "Đến Ngày:";
+            this.lbl_ToDate.AutoSize = true;
+            this.lbl_ToDate.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_ToDate.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_ToDate.Location = new System.Drawing.Point(557, 97);
+            this.lbl_ToDate.Name = "lbl_ToDate";
+            this.lbl_ToDate.Size = new System.Drawing.Size(96, 37);
+            this.lbl_ToDate.TabIndex = 52;
+            this.lbl_ToDate.Text = "Đến Ngày:";
             // 
-            // dateTimePicker2
+            // dtp_ToDate
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Oswald", 14F);
-            this.dateTimePicker2.Location = new System.Drawing.Point(659, 97);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(204, 35);
-            this.dateTimePicker2.TabIndex = 53;
+            this.dtp_ToDate.Font = new System.Drawing.Font("Oswald", 14F);
+            this.dtp_ToDate.Location = new System.Drawing.Point(659, 97);
+            this.dtp_ToDate.Name = "dtp_ToDate";
+            this.dtp_ToDate.Size = new System.Drawing.Size(204, 35);
+            this.dtp_ToDate.TabIndex = 53;
             // 
-            // btn_Find
+            // btn_ThongKe
             // 
-            this.btn_Find.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Find.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._75pxbtn1;
-            this.btn_Find.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Find.FlatAppearance.BorderSize = 0;
-            this.btn_Find.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Find.Font = new System.Drawing.Font("Oswald", 14F);
-            this.btn_Find.Location = new System.Drawing.Point(432, 149);
-            this.btn_Find.Name = "btn_Find";
-            this.btn_Find.Size = new System.Drawing.Size(129, 41);
-            this.btn_Find.TabIndex = 54;
-            this.btn_Find.Text = "Thống Kê";
-            this.btn_Find.UseVisualStyleBackColor = false;
+            this.btn_ThongKe.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ThongKe.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._75pxbtn1;
+            this.btn_ThongKe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_ThongKe.FlatAppearance.BorderSize = 0;
+            this.btn_ThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ThongKe.Font = new System.Drawing.Font("Oswald", 14F);
+            this.btn_ThongKe.Location = new System.Drawing.Point(432, 149);
+            this.btn_ThongKe.Name = "btn_ThongKe";
+            this.btn_ThongKe.Size = new System.Drawing.Size(129, 41);
+            this.btn_ThongKe.TabIndex = 54;
+            this.btn_ThongKe.Text = "Thống Kê";
+            this.btn_ThongKe.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dgv_DoanhThu
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(65, 196);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(862, 354);
-            this.dataGridView1.TabIndex = 55;
+            this.dgv_DoanhThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_DoanhThu.Location = new System.Drawing.Point(65, 196);
+            this.dgv_DoanhThu.Name = "dgv_DoanhThu";
+            this.dgv_DoanhThu.Size = new System.Drawing.Size(862, 354);
+            this.dgv_DoanhThu.TabIndex = 55;
             // 
-            // button1
+            // btn_TongSoLieuThongKe
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._75pxbtn1;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Oswald", 14F);
-            this.button1.Location = new System.Drawing.Point(569, 556);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 41);
-            this.button1.TabIndex = 56;
-            this.button1.Text = "Tổng Số Liệu Thống Kê";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_TongSoLieuThongKe.BackColor = System.Drawing.Color.Transparent;
+            this.btn_TongSoLieuThongKe.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._75pxbtn1;
+            this.btn_TongSoLieuThongKe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_TongSoLieuThongKe.FlatAppearance.BorderSize = 0;
+            this.btn_TongSoLieuThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TongSoLieuThongKe.Font = new System.Drawing.Font("Oswald", 14F);
+            this.btn_TongSoLieuThongKe.Location = new System.Drawing.Point(569, 556);
+            this.btn_TongSoLieuThongKe.Name = "btn_TongSoLieuThongKe";
+            this.btn_TongSoLieuThongKe.Size = new System.Drawing.Size(190, 41);
+            this.btn_TongSoLieuThongKe.TabIndex = 56;
+            this.btn_TongSoLieuThongKe.Text = "Tổng Số Liệu Thống Kê";
+            this.btn_TongSoLieuThongKe.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btn_ExportExcel
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._75pxbtn1;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Oswald", 14F);
-            this.button2.Location = new System.Drawing.Point(777, 556);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 41);
-            this.button2.TabIndex = 57;
-            this.button2.Text = "Xuất File Excel";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_ExportExcel.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ExportExcel.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._75pxbtn1;
+            this.btn_ExportExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_ExportExcel.FlatAppearance.BorderSize = 0;
+            this.btn_ExportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ExportExcel.Font = new System.Drawing.Font("Oswald", 14F);
+            this.btn_ExportExcel.Location = new System.Drawing.Point(777, 556);
+            this.btn_ExportExcel.Name = "btn_ExportExcel";
+            this.btn_ExportExcel.Size = new System.Drawing.Size(150, 41);
+            this.btn_ExportExcel.TabIndex = 57;
+            this.btn_ExportExcel.Text = "Xuất File Excel";
+            this.btn_ExportExcel.UseVisualStyleBackColor = false;
             // 
             // ucBaoCaoDoanhThu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btn_Find);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.btn_ExportExcel);
+            this.Controls.Add(this.btn_TongSoLieuThongKe);
+            this.Controls.Add(this.dgv_DoanhThu);
+            this.Controls.Add(this.btn_ThongKe);
+            this.Controls.Add(this.dtp_ToDate);
+            this.Controls.Add(this.lbl_ToDate);
+            this.Controls.Add(this.lbl_FromDate);
+            this.Controls.Add(this.dtp_FromDate);
             this.Controls.Add(this.lbl_Title);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Oswald", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -164,7 +164,7 @@
             this.MinimumSize = new System.Drawing.Size(992, 623);
             this.Name = "ucBaoCaoDoanhThu";
             this.Size = new System.Drawing.Size(992, 623);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DoanhThu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,13 +173,13 @@
         #endregion
 
         private System.Windows.Forms.Label lbl_Title;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Button btn_Find;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DateTimePicker dtp_FromDate;
+        private System.Windows.Forms.Label lbl_FromDate;
+        private System.Windows.Forms.Label lbl_ToDate;
+        private System.Windows.Forms.DateTimePicker dtp_ToDate;
+        private System.Windows.Forms.Button btn_ThongKe;
+        private System.Windows.Forms.DataGridView dgv_DoanhThu;
+        private System.Windows.Forms.Button btn_TongSoLieuThongKe;
+        private System.Windows.Forms.Button btn_ExportExcel;
     }
 }

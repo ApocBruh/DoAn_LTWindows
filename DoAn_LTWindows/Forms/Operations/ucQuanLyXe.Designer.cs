@@ -28,37 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgv_ChuyenXe = new System.Windows.Forms.DataGridView();
+            this.dgv_Xe = new System.Windows.Forms.DataGridView();
             this.btn_FindData = new System.Windows.Forms.Button();
             this.btn_Reset = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Edit = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
             this.btn_Find = new System.Windows.Forms.Button();
-            this.cmb_DateTime = new System.Windows.Forms.ComboBox();
+            this.cmb_TinhTrang = new System.Windows.Forms.ComboBox();
             this.txt_Find = new System.Windows.Forms.TextBox();
             this.lbl_TimKiem = new System.Windows.Forms.Label();
-            this.lbl_ChonNgayGioXuatBen = new System.Windows.Forms.Label();
+            this.lbl_TinhTrang = new System.Windows.Forms.Label();
             this.lbl_SoGhe = new System.Windows.Forms.Label();
-            this.lbl_ChonXe = new System.Windows.Forms.Label();
-            this.cmb_Xe = new System.Windows.Forms.ComboBox();
+            this.lbl_LoaiXe = new System.Windows.Forms.Label();
+            this.cmb_LoaiXe = new System.Windows.Forms.ComboBox();
             this.lbl_BienSoXe = new System.Windows.Forms.Label();
-            this.cmb_Tuyen = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.pnl_Import = new System.Windows.Forms.Panel();
+            this.txt_BienSoXe = new System.Windows.Forms.TextBox();
+            this.nud_SoGhe = new System.Windows.Forms.NumericUpDown();
             this.lbl_Title = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_ChuyenXe)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Xe)).BeginInit();
+            this.pnl_Import.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_SoGhe)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgv_ChuyenXe
+            // dgv_Xe
             // 
-            this.dgv_ChuyenXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_ChuyenXe.Location = new System.Drawing.Point(44, 329);
-            this.dgv_ChuyenXe.Name = "dgv_ChuyenXe";
-            this.dgv_ChuyenXe.Size = new System.Drawing.Size(905, 271);
-            this.dgv_ChuyenXe.TabIndex = 31;
+            this.dgv_Xe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Xe.Location = new System.Drawing.Point(44, 329);
+            this.dgv_Xe.Name = "dgv_Xe";
+            this.dgv_Xe.Size = new System.Drawing.Size(905, 271);
+            this.dgv_Xe.TabIndex = 31;
             // 
             // btn_FindData
             // 
@@ -150,14 +150,14 @@
             this.btn_Find.Text = "Tìm Kiếm";
             this.btn_Find.UseVisualStyleBackColor = false;
             // 
-            // cmb_DateTime
+            // cmb_TinhTrang
             // 
-            this.cmb_DateTime.Font = new System.Drawing.Font("Oswald", 14F);
-            this.cmb_DateTime.FormattingEnabled = true;
-            this.cmb_DateTime.Location = new System.Drawing.Point(459, 54);
-            this.cmb_DateTime.Name = "cmb_DateTime";
-            this.cmb_DateTime.Size = new System.Drawing.Size(329, 40);
-            this.cmb_DateTime.TabIndex = 23;
+            this.cmb_TinhTrang.Font = new System.Drawing.Font("Oswald", 14F);
+            this.cmb_TinhTrang.FormattingEnabled = true;
+            this.cmb_TinhTrang.Location = new System.Drawing.Point(459, 54);
+            this.cmb_TinhTrang.Name = "cmb_TinhTrang";
+            this.cmb_TinhTrang.Size = new System.Drawing.Size(329, 40);
+            this.cmb_TinhTrang.TabIndex = 23;
             // 
             // txt_Find
             // 
@@ -178,17 +178,17 @@
             this.lbl_TimKiem.TabIndex = 27;
             this.lbl_TimKiem.Text = "Tìm Kiếm:";
             // 
-            // lbl_ChonNgayGioXuatBen
+            // lbl_TinhTrang
             // 
-            this.lbl_ChonNgayGioXuatBen.AutoSize = true;
-            this.lbl_ChonNgayGioXuatBen.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_ChonNgayGioXuatBen.Font = new System.Drawing.Font("Oswald", 16F);
-            this.lbl_ChonNgayGioXuatBen.Location = new System.Drawing.Point(349, 57);
-            this.lbl_ChonNgayGioXuatBen.Name = "lbl_ChonNgayGioXuatBen";
-            this.lbl_ChonNgayGioXuatBen.Size = new System.Drawing.Size(104, 37);
-            this.lbl_ChonNgayGioXuatBen.TabIndex = 22;
-            this.lbl_ChonNgayGioXuatBen.Text = "Tình Trạng:";
-            this.lbl_ChonNgayGioXuatBen.UseMnemonic = false;
+            this.lbl_TinhTrang.AutoSize = true;
+            this.lbl_TinhTrang.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_TinhTrang.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_TinhTrang.Location = new System.Drawing.Point(349, 57);
+            this.lbl_TinhTrang.Name = "lbl_TinhTrang";
+            this.lbl_TinhTrang.Size = new System.Drawing.Size(104, 37);
+            this.lbl_TinhTrang.TabIndex = 22;
+            this.lbl_TinhTrang.Text = "Tình Trạng:";
+            this.lbl_TinhTrang.UseMnemonic = false;
             // 
             // lbl_SoGhe
             // 
@@ -201,25 +201,25 @@
             this.lbl_SoGhe.TabIndex = 21;
             this.lbl_SoGhe.Text = "Số Ghế:";
             // 
-            // lbl_ChonXe
+            // lbl_LoaiXe
             // 
-            this.lbl_ChonXe.AutoSize = true;
-            this.lbl_ChonXe.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_ChonXe.Font = new System.Drawing.Font("Oswald", 16F);
-            this.lbl_ChonXe.Location = new System.Drawing.Point(463, 11);
-            this.lbl_ChonXe.Name = "lbl_ChonXe";
-            this.lbl_ChonXe.Size = new System.Drawing.Size(78, 37);
-            this.lbl_ChonXe.TabIndex = 18;
-            this.lbl_ChonXe.Text = "Loại Xe:";
+            this.lbl_LoaiXe.AutoSize = true;
+            this.lbl_LoaiXe.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_LoaiXe.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_LoaiXe.Location = new System.Drawing.Point(463, 11);
+            this.lbl_LoaiXe.Name = "lbl_LoaiXe";
+            this.lbl_LoaiXe.Size = new System.Drawing.Size(78, 37);
+            this.lbl_LoaiXe.TabIndex = 18;
+            this.lbl_LoaiXe.Text = "Loại Xe:";
             // 
-            // cmb_Xe
+            // cmb_LoaiXe
             // 
-            this.cmb_Xe.Font = new System.Drawing.Font("Oswald", 14F);
-            this.cmb_Xe.FormattingEnabled = true;
-            this.cmb_Xe.Location = new System.Drawing.Point(547, 8);
-            this.cmb_Xe.Name = "cmb_Xe";
-            this.cmb_Xe.Size = new System.Drawing.Size(241, 40);
-            this.cmb_Xe.TabIndex = 19;
+            this.cmb_LoaiXe.Font = new System.Drawing.Font("Oswald", 14F);
+            this.cmb_LoaiXe.FormattingEnabled = true;
+            this.cmb_LoaiXe.Location = new System.Drawing.Point(547, 8);
+            this.cmb_LoaiXe.Name = "cmb_LoaiXe";
+            this.cmb_LoaiXe.Size = new System.Drawing.Size(241, 40);
+            this.cmb_LoaiXe.TabIndex = 19;
             // 
             // lbl_BienSoXe
             // 
@@ -232,44 +232,43 @@
             this.lbl_BienSoXe.TabIndex = 16;
             this.lbl_BienSoXe.Text = "Biển Số Xe:";
             // 
-            // cmb_Tuyen
+            // pnl_Import
             // 
-            this.cmb_Tuyen.Font = new System.Drawing.Font("Oswald", 14F);
-            this.cmb_Tuyen.FormattingEnabled = true;
-            this.cmb_Tuyen.Location = new System.Drawing.Point(141, 8);
-            this.cmb_Tuyen.Name = "cmb_Tuyen";
-            this.cmb_Tuyen.Size = new System.Drawing.Size(295, 40);
-            this.cmb_Tuyen.TabIndex = 17;
+            this.pnl_Import.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackground;
+            this.pnl_Import.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnl_Import.Controls.Add(this.txt_BienSoXe);
+            this.pnl_Import.Controls.Add(this.nud_SoGhe);
+            this.pnl_Import.Controls.Add(this.btn_Reset);
+            this.pnl_Import.Controls.Add(this.btn_Delete);
+            this.pnl_Import.Controls.Add(this.btn_Edit);
+            this.pnl_Import.Controls.Add(this.btn_Save);
+            this.pnl_Import.Controls.Add(this.btn_Find);
+            this.pnl_Import.Controls.Add(this.cmb_TinhTrang);
+            this.pnl_Import.Controls.Add(this.lbl_TinhTrang);
+            this.pnl_Import.Controls.Add(this.lbl_SoGhe);
+            this.pnl_Import.Controls.Add(this.lbl_LoaiXe);
+            this.pnl_Import.Controls.Add(this.cmb_LoaiXe);
+            this.pnl_Import.Controls.Add(this.lbl_BienSoXe);
+            this.pnl_Import.Location = new System.Drawing.Point(88, 133);
+            this.pnl_Import.Name = "pnl_Import";
+            this.pnl_Import.Size = new System.Drawing.Size(816, 190);
+            this.pnl_Import.TabIndex = 29;
             // 
-            // panel1
+            // txt_BienSoXe
             // 
-            this.panel1.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackground;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.numericUpDown1);
-            this.panel1.Controls.Add(this.btn_Reset);
-            this.panel1.Controls.Add(this.btn_Delete);
-            this.panel1.Controls.Add(this.btn_Edit);
-            this.panel1.Controls.Add(this.btn_Save);
-            this.panel1.Controls.Add(this.btn_Find);
-            this.panel1.Controls.Add(this.cmb_DateTime);
-            this.panel1.Controls.Add(this.lbl_ChonNgayGioXuatBen);
-            this.panel1.Controls.Add(this.lbl_SoGhe);
-            this.panel1.Controls.Add(this.lbl_ChonXe);
-            this.panel1.Controls.Add(this.cmb_Xe);
-            this.panel1.Controls.Add(this.lbl_BienSoXe);
-            this.panel1.Controls.Add(this.cmb_Tuyen);
-            this.panel1.Location = new System.Drawing.Point(88, 133);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(816, 190);
-            this.panel1.TabIndex = 29;
+            this.txt_BienSoXe.Font = new System.Drawing.Font("Oswald", 16F);
+            this.txt_BienSoXe.Location = new System.Drawing.Point(141, 9);
+            this.txt_BienSoXe.Name = "txt_BienSoXe";
+            this.txt_BienSoXe.Size = new System.Drawing.Size(303, 39);
+            this.txt_BienSoXe.TabIndex = 31;
             // 
-            // numericUpDown1
+            // nud_SoGhe
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Oswald", 14F);
-            this.numericUpDown1.Location = new System.Drawing.Point(141, 58);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 35);
-            this.numericUpDown1.TabIndex = 30;
+            this.nud_SoGhe.Font = new System.Drawing.Font("Oswald", 14F);
+            this.nud_SoGhe.Location = new System.Drawing.Point(141, 58);
+            this.nud_SoGhe.Name = "nud_SoGhe";
+            this.nud_SoGhe.Size = new System.Drawing.Size(120, 35);
+            this.nud_SoGhe.TabIndex = 30;
             // 
             // lbl_Title
             // 
@@ -288,11 +287,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.dgv_ChuyenXe);
+            this.Controls.Add(this.dgv_Xe);
             this.Controls.Add(this.btn_FindData);
             this.Controls.Add(this.txt_Find);
             this.Controls.Add(this.lbl_TimKiem);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnl_Import);
             this.Controls.Add(this.lbl_Title);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Oswald", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -301,10 +300,10 @@
             this.MinimumSize = new System.Drawing.Size(992, 623);
             this.Name = "ucQuanLyXe";
             this.Size = new System.Drawing.Size(992, 623);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_ChuyenXe)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Xe)).EndInit();
+            this.pnl_Import.ResumeLayout(false);
+            this.pnl_Import.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_SoGhe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,24 +311,24 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgv_ChuyenXe;
+        private System.Windows.Forms.DataGridView dgv_Xe;
         private System.Windows.Forms.Button btn_FindData;
         private System.Windows.Forms.Button btn_Reset;
         private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.Button btn_Edit;
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.Button btn_Find;
-        private System.Windows.Forms.ComboBox cmb_DateTime;
+        private System.Windows.Forms.ComboBox cmb_TinhTrang;
         private System.Windows.Forms.TextBox txt_Find;
         private System.Windows.Forms.Label lbl_TimKiem;
-        private System.Windows.Forms.Label lbl_ChonNgayGioXuatBen;
+        private System.Windows.Forms.Label lbl_TinhTrang;
         private System.Windows.Forms.Label lbl_SoGhe;
-        private System.Windows.Forms.Label lbl_ChonXe;
-        private System.Windows.Forms.ComboBox cmb_Xe;
+        private System.Windows.Forms.Label lbl_LoaiXe;
+        private System.Windows.Forms.ComboBox cmb_LoaiXe;
         private System.Windows.Forms.Label lbl_BienSoXe;
-        private System.Windows.Forms.ComboBox cmb_Tuyen;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnl_Import;
         private System.Windows.Forms.Label lbl_Title;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nud_SoGhe;
+        private System.Windows.Forms.TextBox txt_BienSoXe;
     }
 }
