@@ -102,9 +102,6 @@
     <None Include="Resources\busbackground.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\loginbackground.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\160pxtab.png" />
   </ItemGroup>
   <ItemGroup>
@@ -124,6 +121,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\c_button1.png" />
+    <None Include="Resources\rabt.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

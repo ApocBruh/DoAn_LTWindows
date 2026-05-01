@@ -15,6 +15,14 @@ namespace DoAn_LTWindows.Forms.Systems
         public frmLogin()
         {
             InitializeComponent();
+
+            btn_Login.MouseDown += (s, e) => {
+                btn_Login.BackgroundImage = Properties.Resources.c_button1;
+            };
+    
+            btn_Login.MouseUp += (s, e) => {
+                btn_Login.BackgroundImage = Properties.Resources.button1;
+            };
         }
     }
 }

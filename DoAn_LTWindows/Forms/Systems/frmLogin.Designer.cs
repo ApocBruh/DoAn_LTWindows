@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.lbl_Title = new System.Windows.Forms.Label();
             this.pnl_Login = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Login = new System.Windows.Forms.Button();
             this.lbl_ForgotPassword = new System.Windows.Forms.LinkLabel();
             this.pnl_Password = new System.Windows.Forms.Panel();
             this.txt_Password = new System.Windows.Forms.TextBox();
@@ -60,7 +60,7 @@
             this.pnl_Login.BackColor = System.Drawing.Color.Transparent;
             this.pnl_Login.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl_Login.BackgroundImage")));
             this.pnl_Login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnl_Login.Controls.Add(this.button1);
+            this.pnl_Login.Controls.Add(this.btn_Login);
             this.pnl_Login.Controls.Add(this.lbl_ForgotPassword);
             this.pnl_Login.Controls.Add(this.pnl_Password);
             this.pnl_Login.Controls.Add(this.lbl_Password);
@@ -71,24 +71,27 @@
             this.pnl_Login.Size = new System.Drawing.Size(904, 577);
             this.pnl_Login.TabIndex = 1;
             // 
-            // button1
+            // btn_Login
             // 
-            this.button1.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._75pxbtn_c;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Oswald", 20.25F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(298, 394);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(308, 60);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Đăng Nhập";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_Login.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.button1;
+            this.btn_Login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Login.FlatAppearance.BorderSize = 0;
+            this.btn_Login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Login.Font = new System.Drawing.Font("Oswald", 20.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Login.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Login.Location = new System.Drawing.Point(344, 393);
+            this.btn_Login.Name = "btn_Login";
+            this.btn_Login.Size = new System.Drawing.Size(217, 67);
+            this.btn_Login.TabIndex = 5;
+            this.btn_Login.Text = "Đăng Nhập";
+            this.btn_Login.UseVisualStyleBackColor = true;
             // 
             // lbl_ForgotPassword
             // 
             this.lbl_ForgotPassword.AutoSize = true;
-            this.lbl_ForgotPassword.Location = new System.Drawing.Point(362, 334);
+            this.lbl_ForgotPassword.Location = new System.Drawing.Point(365, 334);
             this.lbl_ForgotPassword.Name = "lbl_ForgotPassword";
             this.lbl_ForgotPassword.Size = new System.Drawing.Size(180, 46);
             this.lbl_ForgotPassword.TabIndex = 4;
@@ -193,6 +196,6 @@
         private System.Windows.Forms.TextBox txt_Password;
         private System.Windows.Forms.Label lbl_Password;
         private System.Windows.Forms.LinkLabel lbl_ForgotPassword;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Login;
     }
 }
