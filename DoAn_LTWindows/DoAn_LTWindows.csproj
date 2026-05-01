@@ -52,6 +52,24 @@
     <Compile Include="Forms\Operations\ucChonTuyen.Designer.cs">
       <DependentUpon>ucChonTuyen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Operations\ucQuanLyChuyenXe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Operations\ucQuanLyChuyenXe.Designer.cs">
+      <DependentUpon>ucQuanLyChuyenXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operations\ucTuyenNgoaiThanh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Operations\ucTuyenNgoaiThanh.Designer.cs">
+      <DependentUpon>ucTuyenNgoaiThanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operations\ucTuyenNoiThanh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Operations\ucTuyenNoiThanh.Designer.cs">
+      <DependentUpon>ucTuyenNoiThanh.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Systems\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +86,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Operations\ucChonTuyen.resx">
       <DependentUpon>ucChonTuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operations\ucQuanLyChuyenXe.resx">
+      <DependentUpon>ucQuanLyChuyenXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operations\ucTuyenNgoaiThanh.resx">
+      <DependentUpon>ucTuyenNgoaiThanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operations\ucTuyenNoiThanh.resx">
+      <DependentUpon>ucTuyenNoiThanh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Systems\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -135,6 +162,8 @@
     <None Include="Resources\75pxbtn1.png" />
     <None Include="Resources\choosebutton1.png" />
     <None Include="Resources\choosebutton2.png" />
+    <None Include="Resources\choosebutton11.png" />
+    <None Include="Resources\choosebutton21.png" />
     <Content Include="Resources\c_button1.png" />
     <Content Include="Resources\loginbackground.png" />
     <None Include="Resources\rabt.png" />

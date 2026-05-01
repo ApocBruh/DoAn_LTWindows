@@ -29,83 +29,119 @@
         private void InitializeComponent()
         {
             this.lbl_Title = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.cmb_SoLuongVe = new System.Windows.Forms.ComboBox();
+            this.cmb_TuyenXe = new System.Windows.Forms.ComboBox();
+            this.lbl_SoLuongVe = new System.Windows.Forms.Label();
+            this.lbl_ChonTuyenXe = new System.Windows.Forms.Label();
+            this.cmb_NgayDi = new System.Windows.Forms.ComboBox();
+            this.lbl_ChonNgayDi = new System.Windows.Forms.Label();
+            this.btn_Load = new System.Windows.Forms.Button();
+            this.btn_Reset = new System.Windows.Forms.Button();
             this.btn_Return = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnt_Data = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // lbl_Title
             // 
             this.lbl_Title.AutoSize = true;
             this.lbl_Title.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Title.Font = new System.Drawing.Font("Oswald", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Title.Font = new System.Drawing.Font("Oswald", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Title.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lbl_Title.Location = new System.Drawing.Point(250, 16);
+            this.lbl_Title.Location = new System.Drawing.Point(305, 16);
             this.lbl_Title.Name = "lbl_Title";
-            this.lbl_Title.Size = new System.Drawing.Size(492, 82);
+            this.lbl_Title.Size = new System.Drawing.Size(383, 63);
             this.lbl_Title.TabIndex = 2;
             this.lbl_Title.Text = "TUYẾN XE NGOẠI THÀNH";
             // 
-            // comboBox2
+            // cmb_SoLuongVe
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(693, 100);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(262, 54);
-            this.comboBox2.TabIndex = 10;
+            this.cmb_SoLuongVe.Font = new System.Drawing.Font("Oswald", 16F);
+            this.cmb_SoLuongVe.FormattingEnabled = true;
+            this.cmb_SoLuongVe.Location = new System.Drawing.Point(691, 86);
+            this.cmb_SoLuongVe.Name = "cmb_SoLuongVe";
+            this.cmb_SoLuongVe.Size = new System.Drawing.Size(262, 44);
+            this.cmb_SoLuongVe.TabIndex = 10;
             // 
-            // comboBox1
+            // cmb_TuyenXe
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(209, 100);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(329, 54);
-            this.comboBox1.TabIndex = 9;
+            this.cmb_TuyenXe.Font = new System.Drawing.Font("Oswald", 16F);
+            this.cmb_TuyenXe.FormattingEnabled = true;
+            this.cmb_TuyenXe.Location = new System.Drawing.Point(195, 86);
+            this.cmb_TuyenXe.Name = "cmb_TuyenXe";
+            this.cmb_TuyenXe.Size = new System.Drawing.Size(329, 44);
+            this.cmb_TuyenXe.TabIndex = 9;
             // 
-            // label2
+            // lbl_SoLuongVe
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(544, 103);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 46);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Số Lượng Vé:";
+            this.lbl_SoLuongVe.AutoSize = true;
+            this.lbl_SoLuongVe.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_SoLuongVe.Font = new System.Drawing.Font("Oswald", 18F);
+            this.lbl_SoLuongVe.Location = new System.Drawing.Point(557, 88);
+            this.lbl_SoLuongVe.Name = "lbl_SoLuongVe";
+            this.lbl_SoLuongVe.Size = new System.Drawing.Size(128, 41);
+            this.lbl_SoLuongVe.TabIndex = 8;
+            this.lbl_SoLuongVe.Text = "Số Lượng Vé:";
             // 
-            // label1
+            // lbl_ChonTuyenXe
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(37, 103);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 46);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Chọn Tuyến Xe:";
+            this.lbl_ChonTuyenXe.AutoSize = true;
+            this.lbl_ChonTuyenXe.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_ChonTuyenXe.Font = new System.Drawing.Font("Oswald", 18F);
+            this.lbl_ChonTuyenXe.Location = new System.Drawing.Point(40, 88);
+            this.lbl_ChonTuyenXe.Name = "lbl_ChonTuyenXe";
+            this.lbl_ChonTuyenXe.Size = new System.Drawing.Size(149, 41);
+            this.lbl_ChonTuyenXe.TabIndex = 7;
+            this.lbl_ChonTuyenXe.Text = "Chọn Tuyến Xe:";
             // 
-            // comboBox3
+            // cmb_NgayDi
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(209, 164);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(329, 54);
-            this.comboBox3.TabIndex = 12;
+            this.cmb_NgayDi.Font = new System.Drawing.Font("Oswald", 16F);
+            this.cmb_NgayDi.FormattingEnabled = true;
+            this.cmb_NgayDi.Location = new System.Drawing.Point(195, 146);
+            this.cmb_NgayDi.Name = "cmb_NgayDi";
+            this.cmb_NgayDi.Size = new System.Drawing.Size(329, 44);
+            this.cmb_NgayDi.TabIndex = 12;
             // 
-            // label3
+            // lbl_ChonNgayDi
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(37, 167);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 46);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Chọn Ngày Đi:";
+            this.lbl_ChonNgayDi.AutoSize = true;
+            this.lbl_ChonNgayDi.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_ChonNgayDi.Font = new System.Drawing.Font("Oswald", 18F);
+            this.lbl_ChonNgayDi.Location = new System.Drawing.Point(40, 147);
+            this.lbl_ChonNgayDi.Name = "lbl_ChonNgayDi";
+            this.lbl_ChonNgayDi.Size = new System.Drawing.Size(137, 41);
+            this.lbl_ChonNgayDi.TabIndex = 11;
+            this.lbl_ChonNgayDi.Text = "Chọn Ngày Đi:";
+            // 
+            // btn_Load
+            // 
+            this.btn_Load.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Load.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._75pxbtn1;
+            this.btn_Load.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Load.FlatAppearance.BorderSize = 0;
+            this.btn_Load.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Load.Font = new System.Drawing.Font("Oswald", 18F);
+            this.btn_Load.Location = new System.Drawing.Point(194, 200);
+            this.btn_Load.Name = "btn_Load";
+            this.btn_Load.Size = new System.Drawing.Size(185, 49);
+            this.btn_Load.TabIndex = 13;
+            this.btn_Load.Text = "Tải Sơ Đồ";
+            this.btn_Load.UseVisualStyleBackColor = false;
+            // 
+            // btn_Reset
+            // 
+            this.btn_Reset.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Reset.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._75pxbtn1;
+            this.btn_Reset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Reset.FlatAppearance.BorderSize = 0;
+            this.btn_Reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Reset.Font = new System.Drawing.Font("Oswald", 18F);
+            this.btn_Reset.Location = new System.Drawing.Point(404, 200);
+            this.btn_Reset.Name = "btn_Reset";
+            this.btn_Reset.Size = new System.Drawing.Size(185, 49);
+            this.btn_Reset.TabIndex = 14;
+            this.btn_Reset.Text = "Đặt Lại";
+            this.btn_Reset.UseVisualStyleBackColor = false;
             // 
             // btn_Return
             // 
@@ -114,63 +150,36 @@
             this.btn_Return.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Return.FlatAppearance.BorderSize = 0;
             this.btn_Return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Return.Location = new System.Drawing.Point(45, 233);
+            this.btn_Return.Font = new System.Drawing.Font("Oswald", 18F);
+            this.btn_Return.Location = new System.Drawing.Point(614, 200);
             this.btn_Return.Name = "btn_Return";
-            this.btn_Return.Size = new System.Drawing.Size(297, 70);
-            this.btn_Return.TabIndex = 13;
-            this.btn_Return.Text = "Tải Sơ Đồ";
+            this.btn_Return.Size = new System.Drawing.Size(185, 49);
+            this.btn_Return.TabIndex = 15;
+            this.btn_Return.Text = "Quay Lại";
             this.btn_Return.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // pnt_Data
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._75pxbtn1;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(348, 233);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(297, 70);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Đặt Lại";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._75pxbtn1;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(651, 233);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(297, 70);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Quay Lại";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(39, 310);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(914, 284);
-            this.panel1.TabIndex = 16;
+            this.pnt_Data.Location = new System.Drawing.Point(39, 255);
+            this.pnt_Data.Name = "pnt_Data";
+            this.pnt_Data.Size = new System.Drawing.Size(914, 339);
+            this.pnt_Data.TabIndex = 16;
             // 
             // ucTuyenNgoaiThanh
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pnt_Data);
             this.Controls.Add(this.btn_Return);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btn_Reset);
+            this.Controls.Add(this.btn_Load);
+            this.Controls.Add(this.cmb_NgayDi);
+            this.Controls.Add(this.lbl_ChonNgayDi);
+            this.Controls.Add(this.cmb_SoLuongVe);
+            this.Controls.Add(this.cmb_TuyenXe);
+            this.Controls.Add(this.lbl_SoLuongVe);
+            this.Controls.Add(this.lbl_ChonTuyenXe);
             this.Controls.Add(this.lbl_Title);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Oswald", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -187,15 +196,15 @@
         #endregion
 
         private System.Windows.Forms.Label lbl_Title;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cmb_SoLuongVe;
+        private System.Windows.Forms.ComboBox cmb_TuyenXe;
+        private System.Windows.Forms.Label lbl_SoLuongVe;
+        private System.Windows.Forms.Label lbl_ChonTuyenXe;
+        private System.Windows.Forms.ComboBox cmb_NgayDi;
+        private System.Windows.Forms.Label lbl_ChonNgayDi;
+        private System.Windows.Forms.Button btn_Load;
+        private System.Windows.Forms.Button btn_Reset;
         private System.Windows.Forms.Button btn_Return;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnt_Data;
     }
 }
