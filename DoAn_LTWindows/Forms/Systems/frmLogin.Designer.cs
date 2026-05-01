@@ -76,6 +76,8 @@
             this.button1.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._75pxbtn_c;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Oswald", 20.25F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Location = new System.Drawing.Point(298, 394);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(308, 60);
