@@ -39,10 +39,10 @@
             this.txt_Find = new System.Windows.Forms.TextBox();
             this.lbl_TimKiem = new System.Windows.Forms.Label();
             this.lbl_ChonNgayGioXuatBen = new System.Windows.Forms.Label();
-            this.lbl_NhapGiaVe = new System.Windows.Forms.Label();
+            this.lbl_SoGhe = new System.Windows.Forms.Label();
             this.lbl_ChonXe = new System.Windows.Forms.Label();
             this.cmb_Xe = new System.Windows.Forms.ComboBox();
-            this.lbl_ChonTuyen = new System.Windows.Forms.Label();
+            this.lbl_BienSoXe = new System.Windows.Forms.Label();
             this.cmb_Tuyen = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -190,16 +190,16 @@
             this.lbl_ChonNgayGioXuatBen.Text = "Tình Trạng:";
             this.lbl_ChonNgayGioXuatBen.UseMnemonic = false;
             // 
-            // lbl_NhapGiaVe
+            // lbl_SoGhe
             // 
-            this.lbl_NhapGiaVe.AutoSize = true;
-            this.lbl_NhapGiaVe.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_NhapGiaVe.Font = new System.Drawing.Font("Oswald", 16F);
-            this.lbl_NhapGiaVe.Location = new System.Drawing.Point(29, 57);
-            this.lbl_NhapGiaVe.Name = "lbl_NhapGiaVe";
-            this.lbl_NhapGiaVe.Size = new System.Drawing.Size(76, 37);
-            this.lbl_NhapGiaVe.TabIndex = 21;
-            this.lbl_NhapGiaVe.Text = "Số Ghế:";
+            this.lbl_SoGhe.AutoSize = true;
+            this.lbl_SoGhe.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_SoGhe.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_SoGhe.Location = new System.Drawing.Point(29, 57);
+            this.lbl_SoGhe.Name = "lbl_SoGhe";
+            this.lbl_SoGhe.Size = new System.Drawing.Size(76, 37);
+            this.lbl_SoGhe.TabIndex = 21;
+            this.lbl_SoGhe.Text = "Số Ghế:";
             // 
             // lbl_ChonXe
             // 
@@ -221,16 +221,16 @@
             this.cmb_Xe.Size = new System.Drawing.Size(241, 40);
             this.cmb_Xe.TabIndex = 19;
             // 
-            // lbl_ChonTuyen
+            // lbl_BienSoXe
             // 
-            this.lbl_ChonTuyen.AutoSize = true;
-            this.lbl_ChonTuyen.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_ChonTuyen.Font = new System.Drawing.Font("Oswald", 16F);
-            this.lbl_ChonTuyen.Location = new System.Drawing.Point(29, 11);
-            this.lbl_ChonTuyen.Name = "lbl_ChonTuyen";
-            this.lbl_ChonTuyen.Size = new System.Drawing.Size(106, 37);
-            this.lbl_ChonTuyen.TabIndex = 16;
-            this.lbl_ChonTuyen.Text = "Biển Số Xe:";
+            this.lbl_BienSoXe.AutoSize = true;
+            this.lbl_BienSoXe.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_BienSoXe.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_BienSoXe.Location = new System.Drawing.Point(29, 11);
+            this.lbl_BienSoXe.Name = "lbl_BienSoXe";
+            this.lbl_BienSoXe.Size = new System.Drawing.Size(106, 37);
+            this.lbl_BienSoXe.TabIndex = 16;
+            this.lbl_BienSoXe.Text = "Biển Số Xe:";
             // 
             // cmb_Tuyen
             // 
@@ -253,10 +253,10 @@
             this.panel1.Controls.Add(this.btn_Find);
             this.panel1.Controls.Add(this.cmb_DateTime);
             this.panel1.Controls.Add(this.lbl_ChonNgayGioXuatBen);
-            this.panel1.Controls.Add(this.lbl_NhapGiaVe);
+            this.panel1.Controls.Add(this.lbl_SoGhe);
             this.panel1.Controls.Add(this.lbl_ChonXe);
             this.panel1.Controls.Add(this.cmb_Xe);
-            this.panel1.Controls.Add(this.lbl_ChonTuyen);
+            this.panel1.Controls.Add(this.lbl_BienSoXe);
             this.panel1.Controls.Add(this.cmb_Tuyen);
             this.panel1.Location = new System.Drawing.Point(88, 133);
             this.panel1.Name = "panel1";
@@ -323,10 +323,10 @@
         private System.Windows.Forms.TextBox txt_Find;
         private System.Windows.Forms.Label lbl_TimKiem;
         private System.Windows.Forms.Label lbl_ChonNgayGioXuatBen;
-        private System.Windows.Forms.Label lbl_NhapGiaVe;
+        private System.Windows.Forms.Label lbl_SoGhe;
         private System.Windows.Forms.Label lbl_ChonXe;
         private System.Windows.Forms.ComboBox cmb_Xe;
-        private System.Windows.Forms.Label lbl_ChonTuyen;
+        private System.Windows.Forms.Label lbl_BienSoXe;
         private System.Windows.Forms.ComboBox cmb_Tuyen;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbl_Title;

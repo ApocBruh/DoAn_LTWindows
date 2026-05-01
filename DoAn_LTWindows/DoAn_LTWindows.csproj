@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Operations\ucBaoCaoDoanhThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Operations\ucBaoCaoDoanhThu.Designer.cs">
+      <DependentUpon>ucBaoCaoDoanhThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Operations\ucChonTuyen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -57,6 +63,36 @@
     </Compile>
     <Compile Include="Forms\Operations\ucQuanLyChuyenXe.Designer.cs">
       <DependentUpon>ucQuanLyChuyenXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operations\ucQuanLyKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Operations\ucQuanLyKhachHang.Designer.cs">
+      <DependentUpon>ucQuanLyKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operations\ucQuanLyTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Operations\ucQuanLyTaiKhoan.Designer.cs">
+      <DependentUpon>ucQuanLyTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operations\ucQuanLyXe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Operations\ucQuanLyXe.Designer.cs">
+      <DependentUpon>ucQuanLyXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operations\ucTongSoLieuThongKe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Operations\ucTongSoLieuThongKe.Designer.cs">
+      <DependentUpon>ucTongSoLieuThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Operations\ucTraCuuVe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Operations\ucTraCuuVe.Designer.cs">
+      <DependentUpon>ucTraCuuVe.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Operations\ucTuyenNgoaiThanh.cs">
       <SubType>UserControl</SubType>
@@ -84,11 +120,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Operations\ucBaoCaoDoanhThu.resx">
+      <DependentUpon>ucBaoCaoDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Operations\ucChonTuyen.resx">
       <DependentUpon>ucChonTuyen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Operations\ucQuanLyChuyenXe.resx">
       <DependentUpon>ucQuanLyChuyenXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operations\ucQuanLyKhachHang.resx">
+      <DependentUpon>ucQuanLyKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operations\ucQuanLyTaiKhoan.resx">
+      <DependentUpon>ucQuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operations\ucQuanLyXe.resx">
+      <DependentUpon>ucQuanLyXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operations\ucTongSoLieuThongKe.resx">
+      <DependentUpon>ucTongSoLieuThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Operations\ucTraCuuVe.resx">
+      <DependentUpon>ucTraCuuVe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Operations\ucTuyenNgoaiThanh.resx">
       <DependentUpon>ucTuyenNgoaiThanh.cs</DependentUpon>
@@ -164,6 +218,7 @@
     <None Include="Resources\choosebutton2.png" />
     <None Include="Resources\choosebutton11.png" />
     <None Include="Resources\choosebutton21.png" />
+    <None Include="Resources\75pxbtnd.png" />
     <Content Include="Resources\c_button1.png" />
     <Content Include="Resources\loginbackground.png" />
     <None Include="Resources\rabt.png" />
