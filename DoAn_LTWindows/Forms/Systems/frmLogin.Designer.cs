@@ -103,9 +103,9 @@
             this.pnl_Password.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._160pxtab;
             this.pnl_Password.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnl_Password.Controls.Add(this.txt_Password);
-            this.pnl_Password.Location = new System.Drawing.Point(101, 245);
+            this.pnl_Password.Location = new System.Drawing.Point(154, 245);
             this.pnl_Password.Name = "pnl_Password";
-            this.pnl_Password.Size = new System.Drawing.Size(570, 51);
+            this.pnl_Password.Size = new System.Drawing.Size(517, 51);
             this.pnl_Password.TabIndex = 3;
             // 
             // txt_Password
@@ -117,14 +117,14 @@
             this.txt_Password.Location = new System.Drawing.Point(21, 6);
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.PasswordChar = '*';
-            this.txt_Password.Size = new System.Drawing.Size(533, 36);
+            this.txt_Password.Size = new System.Drawing.Size(475, 36);
             this.txt_Password.TabIndex = 0;
             // 
             // lbl_Password
             // 
             this.lbl_Password.AutoSize = true;
             this.lbl_Password.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_Password.Location = new System.Drawing.Point(102, 196);
+            this.lbl_Password.Location = new System.Drawing.Point(178, 196);
             this.lbl_Password.Name = "lbl_Password";
             this.lbl_Password.Size = new System.Drawing.Size(111, 46);
             this.lbl_Password.TabIndex = 2;
@@ -135,9 +135,9 @@
             this.pnl_Usename.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._160pxtab;
             this.pnl_Usename.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnl_Usename.Controls.Add(this.txt_Username);
-            this.pnl_Usename.Location = new System.Drawing.Point(101, 122);
+            this.pnl_Usename.Location = new System.Drawing.Point(154, 122);
             this.pnl_Usename.Name = "pnl_Usename";
-            this.pnl_Usename.Size = new System.Drawing.Size(570, 51);
+            this.pnl_Usename.Size = new System.Drawing.Size(517, 51);
             this.pnl_Usename.TabIndex = 1;
             // 
             // txt_Username
@@ -148,14 +148,14 @@
             this.txt_Username.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txt_Username.Location = new System.Drawing.Point(21, 6);
             this.txt_Username.Name = "txt_Username";
-            this.txt_Username.Size = new System.Drawing.Size(533, 36);
+            this.txt_Username.Size = new System.Drawing.Size(475, 36);
             this.txt_Username.TabIndex = 0;
             // 
             // lbl_Usename
             // 
             this.lbl_Usename.AutoSize = true;
             this.lbl_Usename.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_Usename.Location = new System.Drawing.Point(102, 73);
+            this.lbl_Usename.Location = new System.Drawing.Point(178, 73);
             this.lbl_Usename.Name = "lbl_Usename";
             this.lbl_Usename.Size = new System.Drawing.Size(162, 46);
             this.lbl_Usename.TabIndex = 0;

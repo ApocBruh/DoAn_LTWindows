@@ -29,6 +29,16 @@
         private void InitializeComponent()
         {
             this.pnt_ComponentList = new System.Windows.Forms.Panel();
+            this.btn_QuanLyTaiKhoan = new System.Windows.Forms.Button();
+            this.lbl_HeThong = new System.Windows.Forms.Label();
+            this.btn_BaoCaoDoanhThu = new System.Windows.Forms.Button();
+            this.lbl_ThongKe = new System.Windows.Forms.Label();
+            this.btn_KhachHang = new System.Windows.Forms.Button();
+            this.btn_LichTrinh = new System.Windows.Forms.Button();
+            this.lbl_QuanTriDanhMuc = new System.Windows.Forms.Label();
+            this.btn_TraCuuHuyVe = new System.Windows.Forms.Button();
+            this.btn_BanVe = new System.Windows.Forms.Button();
+            this.lbl_NghiepVu = new System.Windows.Forms.Label();
             this.pnl_TopBar = new System.Windows.Forms.Panel();
             this.lbl_Time = new System.Windows.Forms.Label();
             this.lbl_Date = new System.Windows.Forms.Label();
@@ -39,16 +49,6 @@
             this.lbl_Username = new System.Windows.Forms.Label();
             this.lbl_Hello = new System.Windows.Forms.Label();
             this.pnt_DashBoard = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.pnt_ComponentList.SuspendLayout();
             this.pnl_TopBar.SuspendLayout();
             this.SuspendLayout();
@@ -58,20 +58,169 @@
             this.pnt_ComponentList.BackColor = System.Drawing.Color.Transparent;
             this.pnt_ComponentList.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackgroundlist;
             this.pnt_ComponentList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnt_ComponentList.Controls.Add(this.button6);
-            this.pnt_ComponentList.Controls.Add(this.label4);
-            this.pnt_ComponentList.Controls.Add(this.button5);
-            this.pnt_ComponentList.Controls.Add(this.label3);
-            this.pnt_ComponentList.Controls.Add(this.button3);
-            this.pnt_ComponentList.Controls.Add(this.button4);
-            this.pnt_ComponentList.Controls.Add(this.label2);
-            this.pnt_ComponentList.Controls.Add(this.button2);
-            this.pnt_ComponentList.Controls.Add(this.button1);
-            this.pnt_ComponentList.Controls.Add(this.label1);
+            this.pnt_ComponentList.Controls.Add(this.btn_QuanLyTaiKhoan);
+            this.pnt_ComponentList.Controls.Add(this.lbl_HeThong);
+            this.pnt_ComponentList.Controls.Add(this.btn_BaoCaoDoanhThu);
+            this.pnt_ComponentList.Controls.Add(this.lbl_ThongKe);
+            this.pnt_ComponentList.Controls.Add(this.btn_KhachHang);
+            this.pnt_ComponentList.Controls.Add(this.btn_LichTrinh);
+            this.pnt_ComponentList.Controls.Add(this.lbl_QuanTriDanhMuc);
+            this.pnt_ComponentList.Controls.Add(this.btn_TraCuuHuyVe);
+            this.pnt_ComponentList.Controls.Add(this.btn_BanVe);
+            this.pnt_ComponentList.Controls.Add(this.lbl_NghiepVu);
             this.pnt_ComponentList.Location = new System.Drawing.Point(0, 1);
             this.pnt_ComponentList.Name = "pnt_ComponentList";
             this.pnt_ComponentList.Size = new System.Drawing.Size(356, 730);
             this.pnt_ComponentList.TabIndex = 0;
+            // 
+            // btn_QuanLyTaiKhoan
+            // 
+            this.btn_QuanLyTaiKhoan.FlatAppearance.BorderSize = 0;
+            this.btn_QuanLyTaiKhoan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_QuanLyTaiKhoan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_QuanLyTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_QuanLyTaiKhoan.Font = new System.Drawing.Font("Oswald", 28.25F);
+            this.btn_QuanLyTaiKhoan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_QuanLyTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn_QuanLyTaiKhoan.Location = new System.Drawing.Point(12, 640);
+            this.btn_QuanLyTaiKhoan.Name = "btn_QuanLyTaiKhoan";
+            this.btn_QuanLyTaiKhoan.Size = new System.Drawing.Size(328, 76);
+            this.btn_QuanLyTaiKhoan.TabIndex = 17;
+            this.btn_QuanLyTaiKhoan.Text = "Quản Lý Tài Khoản";
+            this.btn_QuanLyTaiKhoan.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn_QuanLyTaiKhoan.UseVisualStyleBackColor = true;
+            // 
+            // lbl_HeThong
+            // 
+            this.lbl_HeThong.AutoSize = true;
+            this.lbl_HeThong.Font = new System.Drawing.Font("Oswald", 20F);
+            this.lbl_HeThong.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_HeThong.Location = new System.Drawing.Point(20, 591);
+            this.lbl_HeThong.Name = "lbl_HeThong";
+            this.lbl_HeThong.Size = new System.Drawing.Size(110, 46);
+            this.lbl_HeThong.TabIndex = 16;
+            this.lbl_HeThong.Text = "Hệ Thống";
+            this.lbl_HeThong.UseMnemonic = false;
+            // 
+            // btn_BaoCaoDoanhThu
+            // 
+            this.btn_BaoCaoDoanhThu.FlatAppearance.BorderSize = 0;
+            this.btn_BaoCaoDoanhThu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_BaoCaoDoanhThu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_BaoCaoDoanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_BaoCaoDoanhThu.Font = new System.Drawing.Font("Oswald", 28.25F);
+            this.btn_BaoCaoDoanhThu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_BaoCaoDoanhThu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn_BaoCaoDoanhThu.Location = new System.Drawing.Point(12, 512);
+            this.btn_BaoCaoDoanhThu.Name = "btn_BaoCaoDoanhThu";
+            this.btn_BaoCaoDoanhThu.Size = new System.Drawing.Size(329, 76);
+            this.btn_BaoCaoDoanhThu.TabIndex = 15;
+            this.btn_BaoCaoDoanhThu.Text = "Báo Cáo Doanh Thu";
+            this.btn_BaoCaoDoanhThu.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn_BaoCaoDoanhThu.UseVisualStyleBackColor = true;
+            // 
+            // lbl_ThongKe
+            // 
+            this.lbl_ThongKe.AutoSize = true;
+            this.lbl_ThongKe.Font = new System.Drawing.Font("Oswald", 20F);
+            this.lbl_ThongKe.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_ThongKe.Location = new System.Drawing.Point(10, 463);
+            this.lbl_ThongKe.Name = "lbl_ThongKe";
+            this.lbl_ThongKe.Size = new System.Drawing.Size(108, 46);
+            this.lbl_ThongKe.TabIndex = 14;
+            this.lbl_ThongKe.Text = "Thống Kê";
+            this.lbl_ThongKe.UseMnemonic = false;
+            // 
+            // btn_KhachHang
+            // 
+            this.btn_KhachHang.FlatAppearance.BorderSize = 0;
+            this.btn_KhachHang.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_KhachHang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_KhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_KhachHang.Font = new System.Drawing.Font("Oswald", 28.25F);
+            this.btn_KhachHang.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_KhachHang.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn_KhachHang.Location = new System.Drawing.Point(12, 384);
+            this.btn_KhachHang.Name = "btn_KhachHang";
+            this.btn_KhachHang.Size = new System.Drawing.Size(329, 76);
+            this.btn_KhachHang.TabIndex = 13;
+            this.btn_KhachHang.Text = "Khách Hàng";
+            this.btn_KhachHang.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn_KhachHang.UseVisualStyleBackColor = true;
+            // 
+            // btn_LichTrinh
+            // 
+            this.btn_LichTrinh.FlatAppearance.BorderSize = 0;
+            this.btn_LichTrinh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_LichTrinh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_LichTrinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LichTrinh.Font = new System.Drawing.Font("Oswald", 28.25F);
+            this.btn_LichTrinh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_LichTrinh.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn_LichTrinh.Location = new System.Drawing.Point(12, 302);
+            this.btn_LichTrinh.Name = "btn_LichTrinh";
+            this.btn_LichTrinh.Size = new System.Drawing.Size(329, 76);
+            this.btn_LichTrinh.TabIndex = 12;
+            this.btn_LichTrinh.Text = "Lịch Trình";
+            this.btn_LichTrinh.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn_LichTrinh.UseVisualStyleBackColor = true;
+            // 
+            // lbl_QuanTriDanhMuc
+            // 
+            this.lbl_QuanTriDanhMuc.AutoSize = true;
+            this.lbl_QuanTriDanhMuc.Font = new System.Drawing.Font("Oswald", 20F);
+            this.lbl_QuanTriDanhMuc.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_QuanTriDanhMuc.Location = new System.Drawing.Point(10, 253);
+            this.lbl_QuanTriDanhMuc.Name = "lbl_QuanTriDanhMuc";
+            this.lbl_QuanTriDanhMuc.Size = new System.Drawing.Size(224, 46);
+            this.lbl_QuanTriDanhMuc.TabIndex = 11;
+            this.lbl_QuanTriDanhMuc.Text = "Quản Trị & Danh Mục";
+            this.lbl_QuanTriDanhMuc.UseMnemonic = false;
+            // 
+            // btn_TraCuuHuyVe
+            // 
+            this.btn_TraCuuHuyVe.FlatAppearance.BorderSize = 0;
+            this.btn_TraCuuHuyVe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_TraCuuHuyVe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_TraCuuHuyVe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TraCuuHuyVe.Font = new System.Drawing.Font("Oswald", 28.25F);
+            this.btn_TraCuuHuyVe.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_TraCuuHuyVe.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn_TraCuuHuyVe.Location = new System.Drawing.Point(12, 174);
+            this.btn_TraCuuHuyVe.Name = "btn_TraCuuHuyVe";
+            this.btn_TraCuuHuyVe.Size = new System.Drawing.Size(329, 76);
+            this.btn_TraCuuHuyVe.TabIndex = 10;
+            this.btn_TraCuuHuyVe.Text = "Tra Cứu / Hủy Vé";
+            this.btn_TraCuuHuyVe.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn_TraCuuHuyVe.UseVisualStyleBackColor = true;
+            // 
+            // btn_BanVe
+            // 
+            this.btn_BanVe.FlatAppearance.BorderSize = 0;
+            this.btn_BanVe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_BanVe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_BanVe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_BanVe.Font = new System.Drawing.Font("Oswald", 28.25F);
+            this.btn_BanVe.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_BanVe.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn_BanVe.Location = new System.Drawing.Point(12, 92);
+            this.btn_BanVe.Name = "btn_BanVe";
+            this.btn_BanVe.Size = new System.Drawing.Size(329, 76);
+            this.btn_BanVe.TabIndex = 9;
+            this.btn_BanVe.Text = "Bán Vé";
+            this.btn_BanVe.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn_BanVe.UseVisualStyleBackColor = true;
+            // 
+            // lbl_NghiepVu
+            // 
+            this.lbl_NghiepVu.AutoSize = true;
+            this.lbl_NghiepVu.Font = new System.Drawing.Font("Oswald", 20F);
+            this.lbl_NghiepVu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_NghiepVu.Location = new System.Drawing.Point(10, 43);
+            this.lbl_NghiepVu.Name = "lbl_NghiepVu";
+            this.lbl_NghiepVu.Size = new System.Drawing.Size(118, 46);
+            this.lbl_NghiepVu.TabIndex = 8;
+            this.lbl_NghiepVu.Text = "Nghiệp Vụ";
             // 
             // pnl_TopBar
             // 
@@ -199,155 +348,6 @@
             this.pnt_DashBoard.Size = new System.Drawing.Size(992, 623);
             this.pnt_DashBoard.TabIndex = 2;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Oswald", 20F);
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(10, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 46);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Nghiệp Vụ";
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Oswald", 28.25F);
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button1.Location = new System.Drawing.Point(29, 101);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(312, 76);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Bán Vé";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Oswald", 28.25F);
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button2.Location = new System.Drawing.Point(29, 183);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(312, 76);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Tra Cứu / Hủy Vé";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Oswald", 28.25F);
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button3.Location = new System.Drawing.Point(29, 393);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(312, 76);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Khách Hàng";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Oswald", 28.25F);
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button4.Location = new System.Drawing.Point(29, 311);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(312, 76);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "Lịch Trình";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Oswald", 20F);
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(10, 262);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(224, 46);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Quản Trị & Danh Mục";
-            this.label2.UseMnemonic = false;
-            // 
-            // button5
-            // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Oswald", 28.25F);
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button5.Location = new System.Drawing.Point(29, 521);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(312, 76);
-            this.button5.TabIndex = 15;
-            this.button5.Text = "Báo Cáo Doanh Thu";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Oswald", 20F);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(10, 472);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 46);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Thống Kê";
-            this.label3.UseMnemonic = false;
-            // 
-            // button6
-            // 
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Oswald", 28.25F);
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button6.Location = new System.Drawing.Point(28, 649);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(312, 76);
-            this.button6.TabIndex = 17;
-            this.button6.Text = "Quản Lý Tài Khoản";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Oswald", 20F);
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(20, 600);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 46);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Thống Kê";
-            this.label4.UseMnemonic = false;
-            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -383,15 +383,15 @@
         private System.Windows.Forms.Label lbl_Time;
         private System.Windows.Forms.Label lbl_Date;
         private System.Windows.Forms.Button btn_Exit;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_NghiepVu;
+        private System.Windows.Forms.Button btn_BanVe;
+        private System.Windows.Forms.Button btn_TraCuuHuyVe;
+        private System.Windows.Forms.Button btn_QuanLyTaiKhoan;
+        private System.Windows.Forms.Label lbl_HeThong;
+        private System.Windows.Forms.Button btn_BaoCaoDoanhThu;
+        private System.Windows.Forms.Label lbl_ThongKe;
+        private System.Windows.Forms.Button btn_KhachHang;
+        private System.Windows.Forms.Button btn_LichTrinh;
+        private System.Windows.Forms.Label lbl_QuanTriDanhMuc;
     }
 }

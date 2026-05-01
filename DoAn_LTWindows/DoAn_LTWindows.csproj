@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Operations\ucChonTuyen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Operations\ucChonTuyen.Designer.cs">
+      <DependentUpon>ucChonTuyen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Systems\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Operations\ucChonTuyen.resx">
+      <DependentUpon>ucChonTuyen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Systems\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,7 +103,6 @@
     <Folder Include="Assets\Images\" />
     <Folder Include="Core\" />
     <Folder Include="Forms\MasterData\" />
-    <Folder Include="Forms\Operations\" />
     <Folder Include="Forms\Reports\" />
     <Folder Include="UserControls\" />
   </ItemGroup>
@@ -123,7 +131,12 @@
     <None Include="Resources\button1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\choosebutton.png" />
+    <None Include="Resources\75pxbtn1.png" />
+    <None Include="Resources\choosebutton1.png" />
+    <None Include="Resources\choosebutton2.png" />
     <Content Include="Resources\c_button1.png" />
+    <Content Include="Resources\loginbackground.png" />
     <None Include="Resources\rabt.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
