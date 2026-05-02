@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnt_ComponentList = new System.Windows.Forms.Panel();
+            this.pnl_ComponentList = new System.Windows.Forms.Panel();
             this.btn_QuanLyTaiKhoan = new System.Windows.Forms.Button();
             this.lbl_HeThong = new System.Windows.Forms.Label();
             this.btn_BaoCaoDoanhThu = new System.Windows.Forms.Button();
@@ -48,30 +48,30 @@
             this.lbl_Role = new System.Windows.Forms.Label();
             this.lbl_Username = new System.Windows.Forms.Label();
             this.lbl_Hello = new System.Windows.Forms.Label();
-            this.pnt_DashBoard = new System.Windows.Forms.Panel();
-            this.pnt_ComponentList.SuspendLayout();
+            this.pnl_DashBoard = new System.Windows.Forms.Panel();
+            this.pnl_ComponentList.SuspendLayout();
             this.pnl_TopBar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnt_ComponentList
+            // pnl_ComponentList
             // 
-            this.pnt_ComponentList.BackColor = System.Drawing.Color.Transparent;
-            this.pnt_ComponentList.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackgroundlist;
-            this.pnt_ComponentList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnt_ComponentList.Controls.Add(this.btn_QuanLyTaiKhoan);
-            this.pnt_ComponentList.Controls.Add(this.lbl_HeThong);
-            this.pnt_ComponentList.Controls.Add(this.btn_BaoCaoDoanhThu);
-            this.pnt_ComponentList.Controls.Add(this.lbl_ThongKe);
-            this.pnt_ComponentList.Controls.Add(this.btn_KhachHang);
-            this.pnt_ComponentList.Controls.Add(this.btn_LichTrinh);
-            this.pnt_ComponentList.Controls.Add(this.lbl_QuanTriDanhMuc);
-            this.pnt_ComponentList.Controls.Add(this.btn_TraCuuHuyVe);
-            this.pnt_ComponentList.Controls.Add(this.btn_BanVe);
-            this.pnt_ComponentList.Controls.Add(this.lbl_NghiepVu);
-            this.pnt_ComponentList.Location = new System.Drawing.Point(0, 1);
-            this.pnt_ComponentList.Name = "pnt_ComponentList";
-            this.pnt_ComponentList.Size = new System.Drawing.Size(356, 730);
-            this.pnt_ComponentList.TabIndex = 0;
+            this.pnl_ComponentList.BackColor = System.Drawing.Color.Transparent;
+            this.pnl_ComponentList.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackgroundlist;
+            this.pnl_ComponentList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnl_ComponentList.Controls.Add(this.btn_QuanLyTaiKhoan);
+            this.pnl_ComponentList.Controls.Add(this.lbl_HeThong);
+            this.pnl_ComponentList.Controls.Add(this.btn_BaoCaoDoanhThu);
+            this.pnl_ComponentList.Controls.Add(this.lbl_ThongKe);
+            this.pnl_ComponentList.Controls.Add(this.btn_KhachHang);
+            this.pnl_ComponentList.Controls.Add(this.btn_LichTrinh);
+            this.pnl_ComponentList.Controls.Add(this.lbl_QuanTriDanhMuc);
+            this.pnl_ComponentList.Controls.Add(this.btn_TraCuuHuyVe);
+            this.pnl_ComponentList.Controls.Add(this.btn_BanVe);
+            this.pnl_ComponentList.Controls.Add(this.lbl_NghiepVu);
+            this.pnl_ComponentList.Location = new System.Drawing.Point(0, 1);
+            this.pnl_ComponentList.Name = "pnl_ComponentList";
+            this.pnl_ComponentList.Size = new System.Drawing.Size(356, 730);
+            this.pnl_ComponentList.TabIndex = 0;
             // 
             // btn_QuanLyTaiKhoan
             // 
@@ -89,6 +89,7 @@
             this.btn_QuanLyTaiKhoan.Text = "Quản Lý Tài Khoản";
             this.btn_QuanLyTaiKhoan.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btn_QuanLyTaiKhoan.UseVisualStyleBackColor = true;
+            this.btn_QuanLyTaiKhoan.Click += new System.EventHandler(this.btn_QuanLyTaiKhoan_Click);
             // 
             // lbl_HeThong
             // 
@@ -118,6 +119,7 @@
             this.btn_BaoCaoDoanhThu.Text = "Báo Cáo Doanh Thu";
             this.btn_BaoCaoDoanhThu.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btn_BaoCaoDoanhThu.UseVisualStyleBackColor = true;
+            this.btn_BaoCaoDoanhThu.Click += new System.EventHandler(this.btn_BaoCaoDoanhThu_Click);
             // 
             // lbl_ThongKe
             // 
@@ -147,6 +149,7 @@
             this.btn_KhachHang.Text = "Khách Hàng";
             this.btn_KhachHang.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btn_KhachHang.UseVisualStyleBackColor = true;
+            this.btn_KhachHang.Click += new System.EventHandler(this.btn_KhachHang_Click);
             // 
             // btn_LichTrinh
             // 
@@ -164,6 +167,7 @@
             this.btn_LichTrinh.Text = "Lịch Trình";
             this.btn_LichTrinh.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btn_LichTrinh.UseVisualStyleBackColor = true;
+            this.btn_LichTrinh.Click += new System.EventHandler(this.btn_LichTrinh_Click);
             // 
             // lbl_QuanTriDanhMuc
             // 
@@ -193,6 +197,7 @@
             this.btn_TraCuuHuyVe.Text = "Tra Cứu / Hủy Vé";
             this.btn_TraCuuHuyVe.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btn_TraCuuHuyVe.UseVisualStyleBackColor = true;
+            this.btn_TraCuuHuyVe.Click += new System.EventHandler(this.btn_TraCuuVe_Click);
             // 
             // btn_BanVe
             // 
@@ -210,6 +215,7 @@
             this.btn_BanVe.Text = "Bán Vé";
             this.btn_BanVe.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btn_BanVe.UseVisualStyleBackColor = true;
+            this.btn_BanVe.Click += new System.EventHandler(this.btn_BanVe_Click);
             // 
             // lbl_NghiepVu
             // 
@@ -237,7 +243,7 @@
             this.pnl_TopBar.Controls.Add(this.lbl_Hello);
             this.pnl_TopBar.Location = new System.Drawing.Point(360, 0);
             this.pnl_TopBar.Name = "pnl_TopBar";
-            this.pnl_TopBar.Size = new System.Drawing.Size(992, 102);
+            this.pnl_TopBar.Size = new System.Drawing.Size(994, 102);
             this.pnl_TopBar.TabIndex = 1;
             // 
             // lbl_Time
@@ -277,6 +283,7 @@
             this.btn_Exit.TabIndex = 5;
             this.btn_Exit.Text = "Thoát";
             this.btn_Exit.UseVisualStyleBackColor = true;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // btn_LogOut
             // 
@@ -293,6 +300,7 @@
             this.btn_LogOut.TabIndex = 4;
             this.btn_LogOut.Text = "Đăng Xuất";
             this.btn_LogOut.UseVisualStyleBackColor = true;
+            this.btn_LogOut.Click += new System.EventHandler(this.btn_LogOut_Click);
             // 
             // lbl_RoleName
             // 
@@ -338,15 +346,15 @@
             this.lbl_Hello.TabIndex = 0;
             this.lbl_Hello.Text = "Xin Chào:";
             // 
-            // pnt_DashBoard
+            // pnl_DashBoard
             // 
-            this.pnt_DashBoard.BackColor = System.Drawing.Color.Transparent;
-            this.pnt_DashBoard.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackground;
-            this.pnt_DashBoard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnt_DashBoard.Location = new System.Drawing.Point(360, 108);
-            this.pnt_DashBoard.Name = "pnt_DashBoard";
-            this.pnt_DashBoard.Size = new System.Drawing.Size(992, 623);
-            this.pnt_DashBoard.TabIndex = 2;
+            this.pnl_DashBoard.BackColor = System.Drawing.Color.Transparent;
+            this.pnl_DashBoard.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackground;
+            this.pnl_DashBoard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnl_DashBoard.Location = new System.Drawing.Point(360, 108);
+            this.pnl_DashBoard.Name = "pnl_DashBoard";
+            this.pnl_DashBoard.Size = new System.Drawing.Size(992, 623);
+            this.pnl_DashBoard.TabIndex = 2;
             // 
             // frmMain
             // 
@@ -354,16 +362,16 @@
             this.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.busbackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1350, 729);
-            this.Controls.Add(this.pnt_DashBoard);
+            this.Controls.Add(this.pnl_DashBoard);
             this.Controls.Add(this.pnl_TopBar);
-            this.Controls.Add(this.pnt_ComponentList);
+            this.Controls.Add(this.pnl_ComponentList);
             this.Font = new System.Drawing.Font("Oswald", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximumSize = new System.Drawing.Size(1366, 768);
             this.MinimumSize = new System.Drawing.Size(1366, 768);
             this.Name = "frmMain";
             this.Text = "Quản Lý Bán Vé Xe Buýt Client - Menu Chính";
-            this.pnt_ComponentList.ResumeLayout(false);
-            this.pnt_ComponentList.PerformLayout();
+            this.pnl_ComponentList.ResumeLayout(false);
+            this.pnl_ComponentList.PerformLayout();
             this.pnl_TopBar.ResumeLayout(false);
             this.pnl_TopBar.PerformLayout();
             this.ResumeLayout(false);
@@ -372,9 +380,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel pnt_ComponentList;
+        private System.Windows.Forms.Panel pnl_ComponentList;
         private System.Windows.Forms.Panel pnl_TopBar;
-        private System.Windows.Forms.Panel pnt_DashBoard;
+        private System.Windows.Forms.Panel pnl_DashBoard;
         private System.Windows.Forms.Label lbl_RoleName;
         private System.Windows.Forms.Label lbl_Role;
         private System.Windows.Forms.Label lbl_Username;

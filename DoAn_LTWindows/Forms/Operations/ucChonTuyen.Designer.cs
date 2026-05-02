@@ -60,6 +60,7 @@
             this.btn_TXNoiThanh.Text = "TUYẾN XE\r\nNỘI THÀNH";
             this.btn_TXNoiThanh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_TXNoiThanh.UseVisualStyleBackColor = true;
+            this.btn_TXNoiThanh.Click += new System.EventHandler(this.btn_NoiThanh_Click);
             // 
             // btn_TXNgoaiThanh
             // 
@@ -73,6 +74,7 @@
             this.btn_TXNgoaiThanh.Text = "TUYẾN XE\r\nNGOẠI THÀNH";
             this.btn_TXNgoaiThanh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_TXNgoaiThanh.UseVisualStyleBackColor = true;
+            this.btn_TXNgoaiThanh.Click += new System.EventHandler(this.btn_NgoaiThanh_Click);
             // 
             // btn_Return
             // 
@@ -87,6 +89,7 @@
             this.btn_Return.TabIndex = 3;
             this.btn_Return.Text = "Quay Lại";
             this.btn_Return.UseVisualStyleBackColor = false;
+            this.btn_Return.Click += new System.EventHandler(this.btn_Return_Click);
             // 
             // ucChonTuyen
             // 

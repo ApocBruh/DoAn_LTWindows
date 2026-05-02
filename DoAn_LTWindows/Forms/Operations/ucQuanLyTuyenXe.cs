@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace DoAn_LTWindows.Forms.Operations
 {
-    public partial class ucTraCuuVe : UserControl
+    public partial class ucQuanLyTuyenXe : UserControl
     {
-        public ucTraCuuVe()
+        public ucQuanLyTuyenXe()
         {
             InitializeComponent();
         }
-
-
     }
 }

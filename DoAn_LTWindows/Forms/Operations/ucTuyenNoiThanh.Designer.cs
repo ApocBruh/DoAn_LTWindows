@@ -140,6 +140,7 @@
             this.btn_Return.TabIndex = 9;
             this.btn_Return.Text = "Quay Lại";
             this.btn_Return.UseVisualStyleBackColor = false;
+            this.btn_Return.Click += new System.EventHandler(this.btn_Return_Click);
             // 
             // btn_Previous
             // 

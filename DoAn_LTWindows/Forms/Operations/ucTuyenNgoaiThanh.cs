@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAn_LTWindows.Forms.Systems;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace DoAn_LTWindows.Forms.Operations
         public ucTuyenNgoaiThanh()
         {
             InitializeComponent();
+        }
+
+        private void btn_Return_Click(object sender, EventArgs e)
+        {
+            ucChonTuyen uc = new ucChonTuyen();
+            frmMain.Instance.NavigationControl(uc);
         }
     }
 }
