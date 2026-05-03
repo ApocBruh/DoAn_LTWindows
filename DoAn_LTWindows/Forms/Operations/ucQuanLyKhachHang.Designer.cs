@@ -47,6 +47,7 @@
             this.txt_SoDienThoai = new System.Windows.Forms.TextBox();
             this.txt_TenKhachHang = new System.Windows.Forms.TextBox();
             this.lbl_Title = new System.Windows.Forms.Label();
+            this.btn_Return = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_KhachHang)).BeginInit();
             this.pnl_Import.SuspendLayout();
             this.SuspendLayout();
@@ -54,9 +55,9 @@
             // dgv_KhachHang
             // 
             this.dgv_KhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_KhachHang.Location = new System.Drawing.Point(44, 329);
+            this.dgv_KhachHang.Location = new System.Drawing.Point(44, 323);
             this.dgv_KhachHang.Name = "dgv_KhachHang";
-            this.dgv_KhachHang.Size = new System.Drawing.Size(905, 271);
+            this.dgv_KhachHang.Size = new System.Drawing.Size(905, 237);
             this.dgv_KhachHang.TabIndex = 37;
             // 
             // btn_FindData
@@ -207,7 +208,7 @@
             this.pnl_Import.Controls.Add(this.btn_Find);
             this.pnl_Import.Controls.Add(this.lbl_SoDienThoai);
             this.pnl_Import.Controls.Add(this.lbl_TenKhachHang);
-            this.pnl_Import.Location = new System.Drawing.Point(88, 133);
+            this.pnl_Import.Location = new System.Drawing.Point(88, 127);
             this.pnl_Import.Name = "pnl_Import";
             this.pnl_Import.Size = new System.Drawing.Size(816, 190);
             this.pnl_Import.TabIndex = 35;
@@ -278,11 +279,27 @@
             this.lbl_Title.TabIndex = 32;
             this.lbl_Title.Text = "QUẢN LÝ KHÁCH HÀNG";
             // 
+            // btn_Return
+            // 
+            this.btn_Return.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Return.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._75pxbtn1;
+            this.btn_Return.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Return.FlatAppearance.BorderSize = 0;
+            this.btn_Return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Return.Font = new System.Drawing.Font("Oswald", 14F);
+            this.btn_Return.Location = new System.Drawing.Point(432, 564);
+            this.btn_Return.Name = "btn_Return";
+            this.btn_Return.Size = new System.Drawing.Size(129, 41);
+            this.btn_Return.TabIndex = 64;
+            this.btn_Return.Text = "Quay Lại";
+            this.btn_Return.UseVisualStyleBackColor = false;
+            // 
             // ucQuanLyKhachHang
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.btn_Return);
             this.Controls.Add(this.dgv_KhachHang);
             this.Controls.Add(this.btn_FindData);
             this.Controls.Add(this.txt_Find);
@@ -326,5 +343,6 @@
         private System.Windows.Forms.Label lbl_DiaChi;
         private System.Windows.Forms.TextBox txt_SoDienThoai;
         private System.Windows.Forms.TextBox txt_TenKhachHang;
+        private System.Windows.Forms.Button btn_Return;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnl_ComponentList = new System.Windows.Forms.Panel();
             this.btn_QuanLyTaiKhoan = new System.Windows.Forms.Button();
             this.lbl_HeThong = new System.Windows.Forms.Label();
@@ -49,6 +50,7 @@
             this.lbl_Username = new System.Windows.Forms.Label();
             this.lbl_Hello = new System.Windows.Forms.Label();
             this.pnl_DashBoard = new System.Windows.Forms.Panel();
+            this.Timer = new System.Windows.Forms.Timer(this.components);
             this.pnl_ComponentList.SuspendLayout();
             this.pnl_TopBar.SuspendLayout();
             this.SuspendLayout();
@@ -334,6 +336,7 @@
             this.lbl_Username.Size = new System.Drawing.Size(65, 46);
             this.lbl_Username.TabIndex = 1;
             this.lbl_Username.Text = "User";
+            this.lbl_Username.Click += new System.EventHandler(this.frmMain_Load);
             // 
             // lbl_Hello
             // 
@@ -356,6 +359,12 @@
             this.pnl_DashBoard.Size = new System.Drawing.Size(992, 623);
             this.pnl_DashBoard.TabIndex = 2;
             // 
+            // Timer
+            // 
+            this.Timer.Enabled = true;
+            this.Timer.Interval = 1000;
+            this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
+            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -370,6 +379,7 @@
             this.MinimumSize = new System.Drawing.Size(1366, 768);
             this.Name = "frmMain";
             this.Text = "Quản Lý Bán Vé Xe Buýt Client - Menu Chính";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.pnl_ComponentList.ResumeLayout(false);
             this.pnl_ComponentList.PerformLayout();
             this.pnl_TopBar.ResumeLayout(false);
@@ -401,5 +411,6 @@
         private System.Windows.Forms.Button btn_KhachHang;
         private System.Windows.Forms.Button btn_LichTrinh;
         private System.Windows.Forms.Label lbl_QuanTriDanhMuc;
+        private System.Windows.Forms.Timer Timer;
     }
 }

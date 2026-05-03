@@ -121,11 +121,17 @@
   <data name="75pxbtn_c" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\75pxbtn_c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="75pxbtnd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\75pxbtnd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="c_button1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\c_button1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="busbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\busbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="75pxbtn1_c" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\75pxbtn1_c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="choosebutton1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\choosebutton11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -138,6 +144,9 @@
   </data>
   <data name="mainbackgroundlist" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mainbackgroundlist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="choosebutton03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\choosebutton03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="loginbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loginbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,16 +163,34 @@
   <data name="160pxtab" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\160pxtab.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="choosebutton2_c" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\choosebutton2_c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="choosebutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\choosebutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="choosebutton1_c" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\choosebutton1_c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="button_c" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button_c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="choosebutton02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\choosebutton02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="choosebutton2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\choosebutton21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="75pxbtnd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\75pxbtnd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="choosebutton01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\choosebutton01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="choosebutton02_c" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\choosebutton02_c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="choosebutton03_c" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\choosebutton03_c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="choosebutton01_c" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\choosebutton01_c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -39,6 +39,7 @@
             this.pnl_Usename = new System.Windows.Forms.Panel();
             this.txt_Username = new System.Windows.Forms.TextBox();
             this.lbl_Usename = new System.Windows.Forms.Label();
+            this.btn_Exit = new System.Windows.Forms.Button();
             this.pnl_Login.SuspendLayout();
             this.pnl_Password.SuspendLayout();
             this.pnl_Usename.SuspendLayout();
@@ -60,6 +61,7 @@
             this.pnl_Login.BackColor = System.Drawing.Color.Transparent;
             this.pnl_Login.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl_Login.BackgroundImage")));
             this.pnl_Login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnl_Login.Controls.Add(this.btn_Exit);
             this.pnl_Login.Controls.Add(this.btn_Login);
             this.pnl_Login.Controls.Add(this.lbl_ForgotPassword);
             this.pnl_Login.Controls.Add(this.pnl_Password);
@@ -81,12 +83,13 @@
             this.btn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Login.Font = new System.Drawing.Font("Oswald", 20.25F, System.Drawing.FontStyle.Bold);
             this.btn_Login.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_Login.Location = new System.Drawing.Point(344, 393);
+            this.btn_Login.Location = new System.Drawing.Point(227, 394);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(217, 67);
             this.btn_Login.TabIndex = 5;
             this.btn_Login.Text = "Đăng Nhập";
             this.btn_Login.UseVisualStyleBackColor = true;
+            this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
             // lbl_ForgotPassword
             // 
@@ -97,6 +100,7 @@
             this.lbl_ForgotPassword.TabIndex = 4;
             this.lbl_ForgotPassword.TabStop = true;
             this.lbl_ForgotPassword.Text = "Quên Mật Khẩu?";
+            this.lbl_ForgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbl_ForgotPassword_LinkClicked);
             // 
             // pnl_Password
             // 
@@ -161,6 +165,24 @@
             this.lbl_Usename.TabIndex = 0;
             this.lbl_Usename.Text = "Tên Đăng Nhập";
             // 
+            // btn_Exit
+            // 
+            this.btn_Exit.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.button1;
+            this.btn_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Exit.FlatAppearance.BorderSize = 0;
+            this.btn_Exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Exit.Font = new System.Drawing.Font("Oswald", 20.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Exit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Exit.Location = new System.Drawing.Point(461, 394);
+            this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.Size = new System.Drawing.Size(217, 67);
+            this.btn_Exit.TabIndex = 6;
+            this.btn_Exit.Text = "Thoát";
+            this.btn_Exit.UseVisualStyleBackColor = true;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -197,5 +219,6 @@
         private System.Windows.Forms.Label lbl_Password;
         private System.Windows.Forms.LinkLabel lbl_ForgotPassword;
         private System.Windows.Forms.Button btn_Login;
+        private System.Windows.Forms.Button btn_Exit;
     }
 }

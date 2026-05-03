@@ -14,8 +14,10 @@ namespace DoAn_LTWindows.Forms.Systems
     public partial class frmMain : Form
     {
         public static frmMain Instance;
+        private string currentUser;
+        private string currentRole;
 
-        public frmMain()
+        public frmMain(string tenNguoiDung, string vaiTro)
         {
             InitializeComponent();
 
@@ -37,6 +39,20 @@ namespace DoAn_LTWindows.Forms.Systems
             };
 
             Instance = this;
+            this.currentUser = tenNguoiDung;
+            this.currentRole = vaiTro;
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            lbl_Username.Text = this.currentUser;
+            lbl_RoleName.Text = this.currentRole;
+
+            if (this.currentRole == "User")
+            {
+                // Ẩn nút theo tên control thực tế của bạn
+                // btn_QuanLyTaiKhoan.Visible = false; 
+            }
         }
 
         public void NavigationControl(UserControl uc)
@@ -59,7 +75,7 @@ namespace DoAn_LTWindows.Forms.Systems
 
         private void btn_LichTrinh_Click(object sender, EventArgs e)
         {
-            ucQuanLyChuyenXe uc = new ucQuanLyChuyenXe();
+            ucLuaChonLichTrinh uc = new ucLuaChonLichTrinh();
             NavigationControl(uc);
         }
 
@@ -87,12 +103,25 @@ namespace DoAn_LTWindows.Forms.Systems
             NavigationControl(uc);
         }
 
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            // Lấy thời gian hiện tại của hệ thống
+            DateTime now = DateTime.Now;
+
+            // Cập nhật ngày theo định dạng DD/MM/YYYY                                                           
+            lbl_Date.Text = now.ToString("dd/MM/yyyy");
+
+            // Cập nhật giờ theo định dạng HH:mm:ss (24 giờ)
+            lbl_Time.Text = now.ToString("HH:mm:ss");
+        }
+
         private void btn_LogOut_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có chắc muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
             if (result == DialogResult.Yes)
             {
-                this.Close();
+                Application.Restart();
             }
         }
 

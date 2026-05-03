@@ -47,6 +47,7 @@
             this.cmb_Tuyen = new System.Windows.Forms.ComboBox();
             this.btn_FindData = new System.Windows.Forms.Button();
             this.dgv_ChuyenXe = new System.Windows.Forms.DataGridView();
+            this.btn_Return = new System.Windows.Forms.Button();
             this.pnl_Import.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ChuyenXe)).BeginInit();
             this.SuspendLayout();
@@ -99,7 +100,7 @@
             this.pnl_Import.Controls.Add(this.cmb_Xe);
             this.pnl_Import.Controls.Add(this.lbl_ChonTuyen);
             this.pnl_Import.Controls.Add(this.cmb_Tuyen);
-            this.pnl_Import.Location = new System.Drawing.Point(88, 133);
+            this.pnl_Import.Location = new System.Drawing.Point(88, 127);
             this.pnl_Import.Name = "pnl_Import";
             this.pnl_Import.Size = new System.Drawing.Size(816, 190);
             this.pnl_Import.TabIndex = 15;
@@ -277,16 +278,32 @@
             // dgv_ChuyenXe
             // 
             this.dgv_ChuyenXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_ChuyenXe.Location = new System.Drawing.Point(44, 329);
+            this.dgv_ChuyenXe.Location = new System.Drawing.Point(44, 323);
             this.dgv_ChuyenXe.Name = "dgv_ChuyenXe";
-            this.dgv_ChuyenXe.Size = new System.Drawing.Size(905, 271);
+            this.dgv_ChuyenXe.Size = new System.Drawing.Size(905, 237);
             this.dgv_ChuyenXe.TabIndex = 25;
+            // 
+            // btn_Return
+            // 
+            this.btn_Return.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Return.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._75pxbtn1;
+            this.btn_Return.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Return.FlatAppearance.BorderSize = 0;
+            this.btn_Return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Return.Font = new System.Drawing.Font("Oswald", 14F);
+            this.btn_Return.Location = new System.Drawing.Point(432, 564);
+            this.btn_Return.Name = "btn_Return";
+            this.btn_Return.Size = new System.Drawing.Size(129, 41);
+            this.btn_Return.TabIndex = 64;
+            this.btn_Return.Text = "Quay Lại";
+            this.btn_Return.UseVisualStyleBackColor = false;
             // 
             // ucQuanLyChuyenXe
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.btn_Return);
             this.Controls.Add(this.dgv_ChuyenXe);
             this.Controls.Add(this.btn_FindData);
             this.Controls.Add(this.pnl_Import);
@@ -329,5 +346,6 @@
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.Button btn_Find;
         private System.Windows.Forms.DataGridView dgv_ChuyenXe;
+        private System.Windows.Forms.Button btn_Return;
     }
 }

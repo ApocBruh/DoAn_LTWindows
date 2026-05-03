@@ -16,6 +16,29 @@ namespace DoAn_LTWindows.Forms.Operations
         public ucChonTuyen()
         {
             InitializeComponent();
+
+            btn_TXNoiThanh.MouseDown += (s, e) => {
+                btn_TXNoiThanh.BackgroundImage = Properties.Resources.choosebutton1_c;
+            };
+
+            btn_TXNoiThanh.MouseUp += (s, e) => {
+                btn_TXNoiThanh.BackgroundImage = Properties.Resources.choosebutton1;
+            };
+
+            btn_TXNgoaiThanh.MouseDown += (s, e) => {
+                btn_TXNgoaiThanh.BackgroundImage = Properties.Resources.choosebutton2_c;
+            };
+
+            btn_TXNgoaiThanh.MouseUp += (s, e) => {
+                btn_TXNgoaiThanh.BackgroundImage = Properties.Resources.choosebutton2;
+            };
+            btn_Return.MouseDown += (s, e) => {
+                btn_Return.BackgroundImage = Properties.Resources._75pxbtn1_c;
+            };
+
+            btn_Return.MouseUp += (s, e) => {
+                btn_Return.BackgroundImage = Properties.Resources._75pxbtn1;
+            };
         }
 
         private void btn_NoiThanh_Click(object sender, EventArgs e)

@@ -93,6 +93,16 @@ namespace DoAn_LTWindows.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _75pxbtn1_c {
+            get {
+                object obj = ResourceManager.GetObject("75pxbtn1_c", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _75pxbtnd {
             get {
                 object obj = ResourceManager.GetObject("75pxbtnd", resourceCulture);
@@ -163,6 +173,66 @@ namespace DoAn_LTWindows.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap choosebutton01 {
+            get {
+                object obj = ResourceManager.GetObject("choosebutton01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap choosebutton01_c {
+            get {
+                object obj = ResourceManager.GetObject("choosebutton01_c", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap choosebutton02 {
+            get {
+                object obj = ResourceManager.GetObject("choosebutton02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap choosebutton02_c {
+            get {
+                object obj = ResourceManager.GetObject("choosebutton02_c", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap choosebutton03 {
+            get {
+                object obj = ResourceManager.GetObject("choosebutton03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap choosebutton03_c {
+            get {
+                object obj = ResourceManager.GetObject("choosebutton03_c", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap choosebutton1 {
             get {
                 object obj = ResourceManager.GetObject("choosebutton1", resourceCulture);
@@ -173,9 +243,29 @@ namespace DoAn_LTWindows.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap choosebutton1_c {
+            get {
+                object obj = ResourceManager.GetObject("choosebutton1_c", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap choosebutton2 {
             get {
                 object obj = ResourceManager.GetObject("choosebutton2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap choosebutton2_c {
+            get {
+                object obj = ResourceManager.GetObject("choosebutton2_c", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

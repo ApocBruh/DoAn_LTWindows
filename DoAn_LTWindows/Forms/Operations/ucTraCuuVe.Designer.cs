@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.chk_SoDienThoai = new System.Windows.Forms.CheckBox();
             this.chk_MaVe = new System.Windows.Forms.CheckBox();
@@ -39,9 +41,20 @@
             this.btn_FindMaSoVe = new System.Windows.Forms.Button();
             this.txt_MaSoVe = new System.Windows.Forms.TextBox();
             this.lbl_MaSoVe = new System.Windows.Forms.Label();
-            this.dgv_Ve = new System.Windows.Forms.DataGridView();
             this.lbl_ThongTinVe = new System.Windows.Forms.Label();
             this.btn_Refund = new System.Windows.Forms.Button();
+            this.lbl_Data = new System.Windows.Forms.Label();
+            this.dgv_Ve = new System.Windows.Forms.DataGridView();
+            this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLoaiVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTuyenXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNgayDi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSoGhe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGiaVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_Return = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Ve)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,6 +81,7 @@
             this.chk_SoDienThoai.TabIndex = 47;
             this.chk_SoDienThoai.Text = "Theo Số Điện Thoại";
             this.chk_SoDienThoai.UseVisualStyleBackColor = false;
+            this.chk_SoDienThoai.CheckedChanged += new System.EventHandler(this.chk_SoDienThoai_CheckedChanged);
             // 
             // chk_MaVe
             // 
@@ -80,6 +94,7 @@
             this.chk_MaVe.TabIndex = 48;
             this.chk_MaVe.Text = "Theo Mã Vé";
             this.chk_MaVe.UseVisualStyleBackColor = false;
+            this.chk_MaVe.CheckedChanged += new System.EventHandler(this.chk_MaVe_CheckedChanged);
             // 
             // lbl_TimKiem
             // 
@@ -136,6 +151,7 @@
             this.btn_FindSoDienThoai.TabIndex = 53;
             this.btn_FindSoDienThoai.Text = "Tìm Kiếm";
             this.btn_FindSoDienThoai.UseVisualStyleBackColor = false;
+            this.btn_FindSoDienThoai.MouseCaptureChanged += new System.EventHandler(this.btn_FindSoDienThoai_Click);
             // 
             // btn_FindMaSoVe
             // 
@@ -151,6 +167,7 @@
             this.btn_FindMaSoVe.TabIndex = 56;
             this.btn_FindMaSoVe.Text = "Tìm Kiếm";
             this.btn_FindMaSoVe.UseVisualStyleBackColor = false;
+            this.btn_FindMaSoVe.MouseCaptureChanged += new System.EventHandler(this.btn_FindMaSoVe_Click);
             // 
             // txt_MaSoVe
             // 
@@ -171,20 +188,12 @@
             this.lbl_MaSoVe.TabIndex = 54;
             this.lbl_MaSoVe.Text = "Mã Số Vé:";
             // 
-            // dgv_Ve
-            // 
-            this.dgv_Ve.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Ve.Location = new System.Drawing.Point(29, 321);
-            this.dgv_Ve.Name = "dgv_Ve";
-            this.dgv_Ve.Size = new System.Drawing.Size(927, 232);
-            this.dgv_Ve.TabIndex = 57;
-            // 
             // lbl_ThongTinVe
             // 
             this.lbl_ThongTinVe.AutoSize = true;
             this.lbl_ThongTinVe.BackColor = System.Drawing.Color.Transparent;
             this.lbl_ThongTinVe.Font = new System.Drawing.Font("Oswald", 16F);
-            this.lbl_ThongTinVe.Location = new System.Drawing.Point(27, 560);
+            this.lbl_ThongTinVe.Location = new System.Drawing.Point(29, 560);
             this.lbl_ThongTinVe.Name = "lbl_ThongTinVe";
             this.lbl_ThongTinVe.Size = new System.Drawing.Size(122, 37);
             this.lbl_ThongTinVe.TabIndex = 58;
@@ -198,21 +207,163 @@
             this.btn_Refund.FlatAppearance.BorderSize = 0;
             this.btn_Refund.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Refund.Font = new System.Drawing.Font("Oswald", 14F);
-            this.btn_Refund.Location = new System.Drawing.Point(793, 559);
+            this.btn_Refund.Location = new System.Drawing.Point(658, 560);
             this.btn_Refund.Name = "btn_Refund";
             this.btn_Refund.Size = new System.Drawing.Size(163, 41);
             this.btn_Refund.TabIndex = 59;
             this.btn_Refund.Text = "Hủy Vé / Hoàn Tiền";
             this.btn_Refund.UseVisualStyleBackColor = false;
+            this.btn_Refund.Click += new System.EventHandler(this.btn_Refund_Click);
+            // 
+            // lbl_Data
+            // 
+            this.lbl_Data.AutoSize = true;
+            this.lbl_Data.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Data.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_Data.Location = new System.Drawing.Point(144, 560);
+            this.lbl_Data.Name = "lbl_Data";
+            this.lbl_Data.Size = new System.Drawing.Size(94, 37);
+            this.lbl_Data.TabIndex = 60;
+            this.lbl_Data.Text = "Thông Tin";
+            // 
+            // dgv_Ve
+            // 
+            this.dgv_Ve.AllowUserToAddRows = false;
+            this.dgv_Ve.AllowUserToDeleteRows = false;
+            this.dgv_Ve.AllowUserToResizeColumns = false;
+            this.dgv_Ve.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Oswald", 14F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Ve.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_Ve.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Ve.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colSTT,
+            this.colMaVe,
+            this.colLoaiVe,
+            this.colTuyenXe,
+            this.colNgayDi,
+            this.colSoGhe,
+            this.colGiaVe,
+            this.colTrangThai,
+            this.colSDT});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Oswald", 14F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Ve.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_Ve.Location = new System.Drawing.Point(33, 321);
+            this.dgv_Ve.Name = "dgv_Ve";
+            this.dgv_Ve.RowHeadersVisible = false;
+            this.dgv_Ve.RowTemplate.Height = 40;
+            this.dgv_Ve.Size = new System.Drawing.Size(923, 232);
+            this.dgv_Ve.TabIndex = 61;
+            this.dgv_Ve.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_Ve_CellFormatting);
+            this.dgv_Ve.SelectionChanged += new System.EventHandler(this.dgv_Ve_SelectionChanged);
+            // 
+            // colSTT
+            // 
+            this.colSTT.HeaderText = "STT";
+            this.colSTT.Name = "colSTT";
+            this.colSTT.ReadOnly = true;
+            this.colSTT.Width = 50;
+            // 
+            // colMaVe
+            // 
+            this.colMaVe.DataPropertyName = "MaSoVe";
+            this.colMaVe.HeaderText = "Mã Số Vé";
+            this.colMaVe.Name = "colMaVe";
+            this.colMaVe.ReadOnly = true;
+            this.colMaVe.Width = 110;
+            // 
+            // colLoaiVe
+            // 
+            this.colLoaiVe.DataPropertyName = "LoaiVe";
+            this.colLoaiVe.HeaderText = "Loại Vé";
+            this.colLoaiVe.Name = "colLoaiVe";
+            this.colLoaiVe.ReadOnly = true;
+            this.colLoaiVe.Width = 90;
+            // 
+            // colTuyenXe
+            // 
+            this.colTuyenXe.DataPropertyName = "TuyenXe";
+            this.colTuyenXe.HeaderText = "Tuyến Xe";
+            this.colTuyenXe.Name = "colTuyenXe";
+            this.colTuyenXe.ReadOnly = true;
+            this.colTuyenXe.Width = 200;
+            // 
+            // colNgayDi
+            // 
+            this.colNgayDi.DataPropertyName = "NgayDi";
+            this.colNgayDi.HeaderText = "Thời Gian";
+            this.colNgayDi.Name = "colNgayDi";
+            this.colNgayDi.ReadOnly = true;
+            this.colNgayDi.Width = 200;
+            // 
+            // colSoGhe
+            // 
+            this.colSoGhe.DataPropertyName = "SoGhe";
+            this.colSoGhe.HeaderText = "Số Ghế";
+            this.colSoGhe.Name = "colSoGhe";
+            this.colSoGhe.ReadOnly = true;
+            this.colSoGhe.Width = 85;
+            // 
+            // colGiaVe
+            // 
+            this.colGiaVe.DataPropertyName = "GiaVe";
+            this.colGiaVe.HeaderText = "Giá Vé";
+            this.colGiaVe.Name = "colGiaVe";
+            this.colGiaVe.ReadOnly = true;
+            this.colGiaVe.Width = 90;
+            // 
+            // colTrangThai
+            // 
+            this.colTrangThai.DataPropertyName = "TrangThai";
+            this.colTrangThai.HeaderText = "Trạng Thái";
+            this.colTrangThai.Name = "colTrangThai";
+            this.colTrangThai.ReadOnly = true;
+            this.colTrangThai.Width = 108;
+            // 
+            // colSDT
+            // 
+            this.colSDT.DataPropertyName = "SoDienThoai";
+            this.colSDT.HeaderText = "SĐT";
+            this.colSDT.Name = "colSDT";
+            this.colSDT.ReadOnly = true;
+            this.colSDT.Width = 120;
+            // 
+            // btn_Return
+            // 
+            this.btn_Return.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Return.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._75pxbtn1;
+            this.btn_Return.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Return.FlatAppearance.BorderSize = 0;
+            this.btn_Return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Return.Font = new System.Drawing.Font("Oswald", 14F);
+            this.btn_Return.Location = new System.Drawing.Point(827, 560);
+            this.btn_Return.Name = "btn_Return";
+            this.btn_Return.Size = new System.Drawing.Size(129, 41);
+            this.btn_Return.TabIndex = 62;
+            this.btn_Return.Text = "Quay Lại";
+            this.btn_Return.UseVisualStyleBackColor = false;
             // 
             // ucTraCuuVe
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.btn_Return);
+            this.Controls.Add(this.dgv_Ve);
+            this.Controls.Add(this.lbl_Data);
             this.Controls.Add(this.btn_Refund);
             this.Controls.Add(this.lbl_ThongTinVe);
-            this.Controls.Add(this.dgv_Ve);
             this.Controls.Add(this.btn_FindMaSoVe);
             this.Controls.Add(this.txt_MaSoVe);
             this.Controls.Add(this.lbl_MaSoVe);
@@ -225,12 +376,13 @@
             this.Controls.Add(this.chk_SoDienThoai);
             this.Controls.Add(this.lbl_Title);
             this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Oswald", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Oswald", 14F);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.MaximumSize = new System.Drawing.Size(992, 623);
             this.MinimumSize = new System.Drawing.Size(992, 623);
             this.Name = "ucTraCuuVe";
             this.Size = new System.Drawing.Size(992, 623);
+            this.Load += new System.EventHandler(this.ucTraCuuVe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Ve)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -250,8 +402,19 @@
         private System.Windows.Forms.Button btn_FindMaSoVe;
         private System.Windows.Forms.TextBox txt_MaSoVe;
         private System.Windows.Forms.Label lbl_MaSoVe;
-        private System.Windows.Forms.DataGridView dgv_Ve;
         private System.Windows.Forms.Label lbl_ThongTinVe;
         private System.Windows.Forms.Button btn_Refund;
+        private System.Windows.Forms.Label lbl_Data;
+        private System.Windows.Forms.DataGridView dgv_Ve;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSTT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaVe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colLoaiVe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTuyenXe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNgayDi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSoGhe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colGiaVe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTrangThai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSDT;
+        private System.Windows.Forms.Button btn_Return;
     }
 }

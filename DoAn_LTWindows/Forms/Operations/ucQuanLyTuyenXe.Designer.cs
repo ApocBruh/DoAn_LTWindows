@@ -43,26 +43,27 @@
             this.lbl_TenTuyen = new System.Windows.Forms.Label();
             this.lbl_MaTuyen = new System.Windows.Forms.Label();
             this.pnl_Import = new System.Windows.Forms.Panel();
-            this.lbl_Title = new System.Windows.Forms.Label();
-            this.txt_MaTuyen = new System.Windows.Forms.TextBox();
-            this.txt_TenTuyen = new System.Windows.Forms.TextBox();
-            this.txt_End = new System.Windows.Forms.TextBox();
-            this.nud_Distance = new System.Windows.Forms.NumericUpDown();
-            this.lbl_KhoangCach = new System.Windows.Forms.Label();
             this.lbl_ThoiGianChay = new System.Windows.Forms.Label();
             this.nud_Time = new System.Windows.Forms.NumericUpDown();
+            this.lbl_KhoangCach = new System.Windows.Forms.Label();
+            this.nud_Distance = new System.Windows.Forms.NumericUpDown();
+            this.txt_End = new System.Windows.Forms.TextBox();
+            this.txt_TenTuyen = new System.Windows.Forms.TextBox();
+            this.txt_MaTuyen = new System.Windows.Forms.TextBox();
+            this.lbl_Title = new System.Windows.Forms.Label();
+            this.btn_Return = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TuyenXe)).BeginInit();
             this.pnl_Import.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_Distance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_Time)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Distance)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_TuyenXe
             // 
             this.dgv_TuyenXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_TuyenXe.Location = new System.Drawing.Point(44, 329);
+            this.dgv_TuyenXe.Location = new System.Drawing.Point(44, 323);
             this.dgv_TuyenXe.Name = "dgv_TuyenXe";
-            this.dgv_TuyenXe.Size = new System.Drawing.Size(905, 271);
+            this.dgv_TuyenXe.Size = new System.Drawing.Size(905, 237);
             this.dgv_TuyenXe.TabIndex = 31;
             // 
             // btn_FindData
@@ -248,65 +249,10 @@
             this.pnl_Import.Controls.Add(this.lbl_DiemXuatPhat);
             this.pnl_Import.Controls.Add(this.lbl_TenTuyen);
             this.pnl_Import.Controls.Add(this.lbl_MaTuyen);
-            this.pnl_Import.Location = new System.Drawing.Point(88, 133);
+            this.pnl_Import.Location = new System.Drawing.Point(88, 127);
             this.pnl_Import.Name = "pnl_Import";
             this.pnl_Import.Size = new System.Drawing.Size(816, 190);
             this.pnl_Import.TabIndex = 29;
-            // 
-            // lbl_Title
-            // 
-            this.lbl_Title.AutoSize = true;
-            this.lbl_Title.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Title.Font = new System.Drawing.Font("Oswald", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Title.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lbl_Title.Location = new System.Drawing.Point(346, 16);
-            this.lbl_Title.Name = "lbl_Title";
-            this.lbl_Title.Size = new System.Drawing.Size(300, 63);
-            this.lbl_Title.TabIndex = 26;
-            this.lbl_Title.Text = "QUẢN LÝ TUYẾN XE";
-            // 
-            // txt_MaTuyen
-            // 
-            this.txt_MaTuyen.Font = new System.Drawing.Font("Oswald", 14F);
-            this.txt_MaTuyen.Location = new System.Drawing.Point(181, 11);
-            this.txt_MaTuyen.Name = "txt_MaTuyen";
-            this.txt_MaTuyen.Size = new System.Drawing.Size(188, 35);
-            this.txt_MaTuyen.TabIndex = 30;
-            // 
-            // txt_TenTuyen
-            // 
-            this.txt_TenTuyen.Font = new System.Drawing.Font("Oswald", 14F);
-            this.txt_TenTuyen.Location = new System.Drawing.Point(557, 15);
-            this.txt_TenTuyen.Name = "txt_TenTuyen";
-            this.txt_TenTuyen.Size = new System.Drawing.Size(223, 35);
-            this.txt_TenTuyen.TabIndex = 31;
-            // 
-            // txt_End
-            // 
-            this.txt_End.Font = new System.Drawing.Font("Oswald", 14F);
-            this.txt_End.Location = new System.Drawing.Point(557, 56);
-            this.txt_End.Name = "txt_End";
-            this.txt_End.Size = new System.Drawing.Size(223, 35);
-            this.txt_End.TabIndex = 32;
-            // 
-            // nud_Distance
-            // 
-            this.nud_Distance.Font = new System.Drawing.Font("Oswald", 14F);
-            this.nud_Distance.Location = new System.Drawing.Point(203, 94);
-            this.nud_Distance.Name = "nud_Distance";
-            this.nud_Distance.Size = new System.Drawing.Size(166, 35);
-            this.nud_Distance.TabIndex = 33;
-            // 
-            // lbl_KhoangCach
-            // 
-            this.lbl_KhoangCach.AutoSize = true;
-            this.lbl_KhoangCach.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_KhoangCach.Font = new System.Drawing.Font("Oswald", 16F);
-            this.lbl_KhoangCach.Location = new System.Drawing.Point(29, 93);
-            this.lbl_KhoangCach.Name = "lbl_KhoangCach";
-            this.lbl_KhoangCach.Size = new System.Drawing.Size(168, 37);
-            this.lbl_KhoangCach.TabIndex = 34;
-            this.lbl_KhoangCach.Text = "Khoảng Cách (Km):";
             // 
             // lbl_ThoiGianChay
             // 
@@ -327,11 +273,82 @@
             this.nud_Time.Size = new System.Drawing.Size(141, 35);
             this.nud_Time.TabIndex = 35;
             // 
+            // lbl_KhoangCach
+            // 
+            this.lbl_KhoangCach.AutoSize = true;
+            this.lbl_KhoangCach.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_KhoangCach.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_KhoangCach.Location = new System.Drawing.Point(29, 93);
+            this.lbl_KhoangCach.Name = "lbl_KhoangCach";
+            this.lbl_KhoangCach.Size = new System.Drawing.Size(168, 37);
+            this.lbl_KhoangCach.TabIndex = 34;
+            this.lbl_KhoangCach.Text = "Khoảng Cách (Km):";
+            // 
+            // nud_Distance
+            // 
+            this.nud_Distance.Font = new System.Drawing.Font("Oswald", 14F);
+            this.nud_Distance.Location = new System.Drawing.Point(203, 94);
+            this.nud_Distance.Name = "nud_Distance";
+            this.nud_Distance.Size = new System.Drawing.Size(166, 35);
+            this.nud_Distance.TabIndex = 33;
+            // 
+            // txt_End
+            // 
+            this.txt_End.Font = new System.Drawing.Font("Oswald", 14F);
+            this.txt_End.Location = new System.Drawing.Point(557, 56);
+            this.txt_End.Name = "txt_End";
+            this.txt_End.Size = new System.Drawing.Size(223, 35);
+            this.txt_End.TabIndex = 32;
+            // 
+            // txt_TenTuyen
+            // 
+            this.txt_TenTuyen.Font = new System.Drawing.Font("Oswald", 14F);
+            this.txt_TenTuyen.Location = new System.Drawing.Point(557, 15);
+            this.txt_TenTuyen.Name = "txt_TenTuyen";
+            this.txt_TenTuyen.Size = new System.Drawing.Size(223, 35);
+            this.txt_TenTuyen.TabIndex = 31;
+            // 
+            // txt_MaTuyen
+            // 
+            this.txt_MaTuyen.Font = new System.Drawing.Font("Oswald", 14F);
+            this.txt_MaTuyen.Location = new System.Drawing.Point(181, 11);
+            this.txt_MaTuyen.Name = "txt_MaTuyen";
+            this.txt_MaTuyen.Size = new System.Drawing.Size(188, 35);
+            this.txt_MaTuyen.TabIndex = 30;
+            // 
+            // lbl_Title
+            // 
+            this.lbl_Title.AutoSize = true;
+            this.lbl_Title.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Title.Font = new System.Drawing.Font("Oswald", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Title.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lbl_Title.Location = new System.Drawing.Point(346, 16);
+            this.lbl_Title.Name = "lbl_Title";
+            this.lbl_Title.Size = new System.Drawing.Size(300, 63);
+            this.lbl_Title.TabIndex = 26;
+            this.lbl_Title.Text = "QUẢN LÝ TUYẾN XE";
+            // 
+            // btn_Return
+            // 
+            this.btn_Return.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Return.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._75pxbtn1;
+            this.btn_Return.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Return.FlatAppearance.BorderSize = 0;
+            this.btn_Return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Return.Font = new System.Drawing.Font("Oswald", 14F);
+            this.btn_Return.Location = new System.Drawing.Point(432, 564);
+            this.btn_Return.Name = "btn_Return";
+            this.btn_Return.Size = new System.Drawing.Size(129, 41);
+            this.btn_Return.TabIndex = 63;
+            this.btn_Return.Text = "Quay Lại";
+            this.btn_Return.UseVisualStyleBackColor = false;
+            // 
             // ucQuanLyTuyenXe
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.btn_Return);
             this.Controls.Add(this.dgv_TuyenXe);
             this.Controls.Add(this.btn_FindData);
             this.Controls.Add(this.txt_Find);
@@ -348,8 +365,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TuyenXe)).EndInit();
             this.pnl_Import.ResumeLayout(false);
             this.pnl_Import.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_Distance)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_Time)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Distance)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -380,5 +397,6 @@
         private System.Windows.Forms.Label lbl_KhoangCach;
         private System.Windows.Forms.NumericUpDown nud_Distance;
         private System.Windows.Forms.TextBox txt_End;
+        private System.Windows.Forms.Button btn_Return;
     }
 }
