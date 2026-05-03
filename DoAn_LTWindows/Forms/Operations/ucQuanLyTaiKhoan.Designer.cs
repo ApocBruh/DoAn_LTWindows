@@ -51,6 +51,11 @@
             this.btn_FindData = new System.Windows.Forms.Button();
             this.dgv_Account = new System.Windows.Forms.DataGridView();
             this.btn_Return = new System.Windows.Forms.Button();
+            this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenDangNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colVaiTro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTrangThaiText = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnl_Import.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Account)).BeginInit();
             this.SuspendLayout();
@@ -72,7 +77,6 @@
             this.txt_Password.Font = new System.Drawing.Font("Oswald", 16F);
             this.txt_Password.Location = new System.Drawing.Point(551, 9);
             this.txt_Password.Name = "txt_Password";
-            this.txt_Password.PasswordChar = '*';
             this.txt_Password.Size = new System.Drawing.Size(235, 39);
             this.txt_Password.TabIndex = 43;
             // 
@@ -128,6 +132,7 @@
             this.btn_Reset.TabIndex = 29;
             this.btn_Reset.Text = "Đặt Lại";
             this.btn_Reset.UseVisualStyleBackColor = false;
+            this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
             // 
             // btn_Delete
             // 
@@ -143,6 +148,7 @@
             this.btn_Delete.TabIndex = 28;
             this.btn_Delete.Text = "Xóa";
             this.btn_Delete.UseVisualStyleBackColor = false;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // btn_Edit
             // 
@@ -158,6 +164,7 @@
             this.btn_Edit.TabIndex = 27;
             this.btn_Edit.Text = "Sửa";
             this.btn_Edit.UseVisualStyleBackColor = false;
+            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
             // 
             // pnl_Import
             // 
@@ -221,8 +228,12 @@
             // 
             // cmb_Role
             // 
+            this.cmb_Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Role.Font = new System.Drawing.Font("Oswald", 14F);
             this.cmb_Role.FormattingEnabled = true;
+            this.cmb_Role.Items.AddRange(new object[] {
+            "Admin",
+            "Nhân Viên"});
             this.cmb_Role.Location = new System.Drawing.Point(551, 52);
             this.cmb_Role.Name = "cmb_Role";
             this.cmb_Role.Size = new System.Drawing.Size(235, 40);
@@ -242,6 +253,7 @@
             this.btn_Save.TabIndex = 26;
             this.btn_Save.Text = "Lưu";
             this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // btn_Find
             // 
@@ -257,6 +269,7 @@
             this.btn_Find.TabIndex = 25;
             this.btn_Find.Text = "Tìm Kiếm";
             this.btn_Find.UseVisualStyleBackColor = false;
+            this.btn_Find.Click += new System.EventHandler(this.btn_Find_Click);
             // 
             // lbl_TenNhanVien
             // 
@@ -313,14 +326,28 @@
             this.btn_FindData.TabIndex = 42;
             this.btn_FindData.Text = "Tìm Kiếm";
             this.btn_FindData.UseVisualStyleBackColor = false;
+            this.btn_FindData.Click += new System.EventHandler(this.btn_FindData_Click);
             // 
             // dgv_Account
             // 
+            this.dgv_Account.AllowUserToAddRows = false;
+            this.dgv_Account.AllowUserToDeleteRows = false;
+            this.dgv_Account.AllowUserToResizeColumns = false;
+            this.dgv_Account.AllowUserToResizeRows = false;
             this.dgv_Account.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Account.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colSTT,
+            this.colTenDangNhap,
+            this.colTenNhanVien,
+            this.colVaiTro,
+            this.colTrangThaiText});
             this.dgv_Account.Location = new System.Drawing.Point(44, 323);
             this.dgv_Account.Name = "dgv_Account";
+            this.dgv_Account.RowHeadersVisible = false;
             this.dgv_Account.Size = new System.Drawing.Size(905, 237);
             this.dgv_Account.TabIndex = 43;
+            this.dgv_Account.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_Account_CellFormatting);
+            this.dgv_Account.SelectionChanged += new System.EventHandler(this.dgv_Account_SelectionChanged);
             // 
             // btn_Return
             // 
@@ -336,6 +363,46 @@
             this.btn_Return.TabIndex = 65;
             this.btn_Return.Text = "Quay Lại";
             this.btn_Return.UseVisualStyleBackColor = false;
+            this.btn_Return.Click += new System.EventHandler(this.btn_Return_Click);
+            // 
+            // colSTT
+            // 
+            this.colSTT.HeaderText = "STT";
+            this.colSTT.Name = "colSTT";
+            this.colSTT.ReadOnly = true;
+            this.colSTT.Width = 50;
+            // 
+            // colTenDangNhap
+            // 
+            this.colTenDangNhap.DataPropertyName = "TenDangNhap";
+            this.colTenDangNhap.HeaderText = "Tên Đăng Nhập";
+            this.colTenDangNhap.Name = "colTenDangNhap";
+            this.colTenDangNhap.ReadOnly = true;
+            this.colTenDangNhap.Width = 200;
+            // 
+            // colTenNhanVien
+            // 
+            this.colTenNhanVien.DataPropertyName = "TenNhanVien";
+            this.colTenNhanVien.HeaderText = "Tên Nhân Viên";
+            this.colTenNhanVien.Name = "colTenNhanVien";
+            this.colTenNhanVien.ReadOnly = true;
+            this.colTenNhanVien.Width = 250;
+            // 
+            // colVaiTro
+            // 
+            this.colVaiTro.DataPropertyName = "VaiTro";
+            this.colVaiTro.HeaderText = "Vai Trò";
+            this.colVaiTro.Name = "colVaiTro";
+            this.colVaiTro.ReadOnly = true;
+            this.colVaiTro.Width = 200;
+            // 
+            // colTrangThaiText
+            // 
+            this.colTrangThaiText.DataPropertyName = "TrangThaiText";
+            this.colTrangThaiText.HeaderText = "Trạng Thái";
+            this.colTrangThaiText.Name = "colTrangThaiText";
+            this.colTrangThaiText.ReadOnly = true;
+            this.colTrangThaiText.Width = 202;
             // 
             // ucQuanLyTaiKhoan
             // 
@@ -350,12 +417,13 @@
             this.Controls.Add(this.btn_FindData);
             this.Controls.Add(this.dgv_Account);
             this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Oswald", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Oswald", 14F);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.MaximumSize = new System.Drawing.Size(992, 623);
             this.MinimumSize = new System.Drawing.Size(992, 623);
             this.Name = "ucQuanLyTaiKhoan";
             this.Size = new System.Drawing.Size(992, 623);
+            this.Load += new System.EventHandler(this.ucQuanLyTaiKhoan_Load);
             this.pnl_Import.ResumeLayout(false);
             this.pnl_Import.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Account)).EndInit();
@@ -389,5 +457,10 @@
         private System.Windows.Forms.CheckBox chk_Lock;
         private System.Windows.Forms.Label lbl_Status;
         private System.Windows.Forms.Button btn_Return;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSTT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTenDangNhap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTenNhanVien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colVaiTro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTrangThaiText;
     }
 }

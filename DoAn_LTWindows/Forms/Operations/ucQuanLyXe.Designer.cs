@@ -48,6 +48,12 @@
             this.nud_SoGhe = new System.Windows.Forms.NumericUpDown();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.btn_Return = new System.Windows.Forms.Button();
+            this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBienSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLoaiXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSoGhe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Xe)).BeginInit();
             this.pnl_Import.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_SoGhe)).BeginInit();
@@ -55,11 +61,26 @@
             // 
             // dgv_Xe
             // 
+            this.dgv_Xe.AllowUserToAddRows = false;
+            this.dgv_Xe.AllowUserToDeleteRows = false;
+            this.dgv_Xe.AllowUserToResizeColumns = false;
+            this.dgv_Xe.AllowUserToResizeRows = false;
             this.dgv_Xe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Xe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colSTT,
+            this.colMaXe,
+            this.colBienSo,
+            this.colLoaiXe,
+            this.colSoGhe,
+            this.colTinhTrang});
             this.dgv_Xe.Location = new System.Drawing.Point(44, 323);
             this.dgv_Xe.Name = "dgv_Xe";
+            this.dgv_Xe.RowHeadersVisible = false;
+            this.dgv_Xe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Xe.Size = new System.Drawing.Size(905, 237);
             this.dgv_Xe.TabIndex = 31;
+            this.dgv_Xe.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_Xe_CellFormatting);
+            this.dgv_Xe.SelectionChanged += new System.EventHandler(this.dgv_Xe_SelectionChanged);
             // 
             // btn_FindData
             // 
@@ -75,6 +96,7 @@
             this.btn_FindData.TabIndex = 30;
             this.btn_FindData.Text = "Tìm Kiếm";
             this.btn_FindData.UseVisualStyleBackColor = false;
+            this.btn_FindData.Click += new System.EventHandler(this.btn_FindData_Click);
             // 
             // btn_Reset
             // 
@@ -90,6 +112,7 @@
             this.btn_Reset.TabIndex = 29;
             this.btn_Reset.Text = "Đặt Lại";
             this.btn_Reset.UseVisualStyleBackColor = false;
+            this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
             // 
             // btn_Delete
             // 
@@ -105,6 +128,7 @@
             this.btn_Delete.TabIndex = 28;
             this.btn_Delete.Text = "Xóa";
             this.btn_Delete.UseVisualStyleBackColor = false;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // btn_Edit
             // 
@@ -120,6 +144,7 @@
             this.btn_Edit.TabIndex = 27;
             this.btn_Edit.Text = "Sửa";
             this.btn_Edit.UseVisualStyleBackColor = false;
+            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
             // 
             // btn_Save
             // 
@@ -135,6 +160,7 @@
             this.btn_Save.TabIndex = 26;
             this.btn_Save.Text = "Lưu";
             this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // btn_Find
             // 
@@ -150,9 +176,11 @@
             this.btn_Find.TabIndex = 25;
             this.btn_Find.Text = "Tìm Kiếm";
             this.btn_Find.UseVisualStyleBackColor = false;
+            this.btn_Find.Click += new System.EventHandler(this.btn_Find_Click);
             // 
             // cmb_TinhTrang
             // 
+            this.cmb_TinhTrang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_TinhTrang.Font = new System.Drawing.Font("Oswald", 14F);
             this.cmb_TinhTrang.FormattingEnabled = true;
             this.cmb_TinhTrang.Location = new System.Drawing.Point(459, 54);
@@ -215,6 +243,7 @@
             // 
             // cmb_LoaiXe
             // 
+            this.cmb_LoaiXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_LoaiXe.Font = new System.Drawing.Font("Oswald", 14F);
             this.cmb_LoaiXe.FormattingEnabled = true;
             this.cmb_LoaiXe.Location = new System.Drawing.Point(547, 8);
@@ -267,9 +296,19 @@
             // 
             this.nud_SoGhe.Font = new System.Drawing.Font("Oswald", 14F);
             this.nud_SoGhe.Location = new System.Drawing.Point(141, 58);
+            this.nud_SoGhe.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nud_SoGhe.Name = "nud_SoGhe";
             this.nud_SoGhe.Size = new System.Drawing.Size(120, 35);
             this.nud_SoGhe.TabIndex = 30;
+            this.nud_SoGhe.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // lbl_Title
             // 
@@ -297,6 +336,53 @@
             this.btn_Return.TabIndex = 66;
             this.btn_Return.Text = "Quay Lại";
             this.btn_Return.UseVisualStyleBackColor = false;
+            this.btn_Return.Click += new System.EventHandler(this.btn_Return_Click);
+            // 
+            // colSTT
+            // 
+            this.colSTT.HeaderText = "STT";
+            this.colSTT.Name = "colSTT";
+            this.colSTT.ReadOnly = true;
+            this.colSTT.Width = 50;
+            // 
+            // colMaXe
+            // 
+            this.colMaXe.DataPropertyName = "MaXe";
+            this.colMaXe.HeaderText = "Mã Xe";
+            this.colMaXe.Name = "colMaXe";
+            this.colMaXe.ReadOnly = true;
+            this.colMaXe.Width = 150;
+            // 
+            // colBienSo
+            // 
+            this.colBienSo.DataPropertyName = "BienSo";
+            this.colBienSo.HeaderText = "Biển Số Xe";
+            this.colBienSo.Name = "colBienSo";
+            this.colBienSo.ReadOnly = true;
+            this.colBienSo.Width = 170;
+            // 
+            // colLoaiXe
+            // 
+            this.colLoaiXe.DataPropertyName = "LoaiXe";
+            this.colLoaiXe.HeaderText = "Loại Xe";
+            this.colLoaiXe.Name = "colLoaiXe";
+            this.colLoaiXe.ReadOnly = true;
+            this.colLoaiXe.Width = 150;
+            // 
+            // colSoGhe
+            // 
+            this.colSoGhe.DataPropertyName = "SoGhe";
+            this.colSoGhe.HeaderText = "Số Ghế";
+            this.colSoGhe.Name = "colSoGhe";
+            this.colSoGhe.ReadOnly = true;
+            // 
+            // colTinhTrang
+            // 
+            this.colTinhTrang.DataPropertyName = "TinhTrang";
+            this.colTinhTrang.HeaderText = "Tình Trạng";
+            this.colTinhTrang.Name = "colTinhTrang";
+            this.colTinhTrang.ReadOnly = true;
+            this.colTinhTrang.Width = 282;
             // 
             // ucQuanLyXe
             // 
@@ -311,12 +397,13 @@
             this.Controls.Add(this.pnl_Import);
             this.Controls.Add(this.lbl_Title);
             this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Oswald", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Oswald", 14F);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.MaximumSize = new System.Drawing.Size(992, 623);
             this.MinimumSize = new System.Drawing.Size(992, 623);
             this.Name = "ucQuanLyXe";
             this.Size = new System.Drawing.Size(992, 623);
+            this.Load += new System.EventHandler(this.ucQuanLyXe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Xe)).EndInit();
             this.pnl_Import.ResumeLayout(false);
             this.pnl_Import.PerformLayout();
@@ -348,5 +435,11 @@
         private System.Windows.Forms.NumericUpDown nud_SoGhe;
         private System.Windows.Forms.TextBox txt_BienSoXe;
         private System.Windows.Forms.Button btn_Return;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSTT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaXe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colBienSo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colLoaiXe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSoGhe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTinhTrang;
     }
 }

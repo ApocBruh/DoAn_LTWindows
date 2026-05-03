@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAn_LTWindows.Forms.Systems;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +24,38 @@ namespace DoAn_LTWindows.Forms.Operations
             dgv_Ve.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv_Ve.AutoGenerateColumns = false;
             dgv_Ve.SelectionChanged += dgv_Ve_SelectionChanged;
+
+            btn_FindMaSoVe.MouseDown += (s, e) => {
+                btn_FindMaSoVe.BackgroundImage = Properties.Resources._75pxbtn1_c;
+            };
+
+            btn_FindMaSoVe.MouseUp += (s, e) => {
+                btn_FindMaSoVe.BackgroundImage = Properties.Resources._75pxbtn1;
+            };
+
+            btn_FindSoDienThoai.MouseDown += (s, e) => {
+                btn_FindSoDienThoai.BackgroundImage = Properties.Resources._75pxbtn1_c;
+            };
+
+            btn_FindSoDienThoai.MouseUp += (s, e) => {
+                btn_FindSoDienThoai.BackgroundImage = Properties.Resources._75pxbtn1;
+            };
+
+            btn_Refund.MouseDown += (s, e) => {
+                btn_Refund.BackgroundImage = Properties.Resources._75pxbtnd_c;
+            };
+
+            btn_Refund.MouseUp += (s, e) => {
+                btn_Refund.BackgroundImage = Properties.Resources._75pxbtnd;
+            };
+
+            btn_Return.MouseDown += (s, e) => {
+                btn_Return.BackgroundImage = Properties.Resources._75pxbtn1_c;
+            };
+
+            btn_Return.MouseUp += (s, e) => {
+                btn_Return.BackgroundImage = Properties.Resources._75pxbtn1;
+            };
         }
 
         private void ucTraCuuVe_Load(object sender, EventArgs e)
@@ -98,7 +131,14 @@ namespace DoAn_LTWindows.Forms.Operations
                         -- BÊN NỘI THÀNH
                         SELECT 
                             v.MaSoVe, N'Nội Thành' AS LoaiVe, t.TenTuyen AS TuyenXe, 
-                            v.ThoiGian AS NgayDi, N'-' AS SoGhe, v.GiaVe, v.TrangThai, v.SoDienThoai
+                            
+                            -- Cột này map lên DataGridView để hiển thị cho khách xem
+                            v.ThoiGian AS NgayDi, 
+                            
+                            -- Cột ẩn này lưu thời gian bấm nút mua vé để đẩy lên dòng 1
+                            v.ThoiGian AS ThoiGianGiaoDich, 
+                            
+                            N'-' AS SoGhe, v.GiaVe, v.TrangThai, v.SoDienThoai
                         FROM VeXeNoiThanh v
                         JOIN TuyenXeNoiThanh t ON v.MaTuyen = t.MaTuyen
                         
@@ -107,11 +147,19 @@ namespace DoAn_LTWindows.Forms.Operations
                         -- BÊN NGOẠI THÀNH
                         SELECT 
                             v.MaSoVe, N'Ngoại Thành' AS LoaiVe, t.TenTuyen AS TuyenXe, 
-                            v.ThoiGian AS NgayDi, v.SoGhe, v.GiaVe, v.TrangThai, v.SoDienThoai 
+                            
+                            -- TRẢ LẠI ĐÚNG NGÀY ĐI TRONG TƯƠNG LAI LÊN MÀN HÌNH
+                            v.NgayDi AS NgayDi, 
+                            
+                            -- Giữ lại thời gian mua vé để sắp xếp nổi lên đầu
+                            v.ThoiGian AS ThoiGianGiaoDich, 
+                            
+                            v.SoGhe, v.GiaVe, v.TrangThai, v.SoDienThoai 
                         FROM VeXeNgoaiThanh v
                         JOIN TuyenXeNgoaiThanh t ON v.MaTuyen = t.MaTuyen
 
-                        ORDER BY NgayDi DESC -- Bây giờ sẽ sắp xếp chuẩn xác theo Thời Gian Giao Dịch
+                        -- Sắp xếp ngầm dựa trên thời gian thực hiện giao dịch
+                        ORDER BY ThoiGianGiaoDich DESC 
                     ";
 
                     SqlCommand cmd = new SqlCommand(query, conn);
@@ -149,7 +197,14 @@ namespace DoAn_LTWindows.Forms.Operations
                         -- BÊN NỘI THÀNH
                         SELECT 
                             v.MaSoVe, N'Nội Thành' AS LoaiVe, t.TenTuyen AS TuyenXe, 
-                            v.ThoiGian AS NgayDi, N'-' AS SoGhe, v.GiaVe, v.TrangThai, v.SoDienThoai
+                            
+                            -- Cột này map lên DataGridView để hiển thị cho khách xem
+                            v.ThoiGian AS NgayDi, 
+                            
+                            -- Cột ẩn này lưu thời gian bấm nút mua vé để đẩy lên dòng 1
+                            v.ThoiGian AS ThoiGianGiaoDich, 
+                            
+                            N'-' AS SoGhe, v.GiaVe, v.TrangThai, v.SoDienThoai
                         FROM VeXeNoiThanh v
                         JOIN TuyenXeNoiThanh t ON v.MaTuyen = t.MaTuyen
                         
@@ -158,11 +213,19 @@ namespace DoAn_LTWindows.Forms.Operations
                         -- BÊN NGOẠI THÀNH
                         SELECT 
                             v.MaSoVe, N'Ngoại Thành' AS LoaiVe, t.TenTuyen AS TuyenXe, 
-                            v.ThoiGian AS NgayDi, v.SoGhe, v.GiaVe, v.TrangThai, v.SoDienThoai 
+                            
+                            -- TRẢ LẠI ĐÚNG NGÀY ĐI TRONG TƯƠNG LAI LÊN MÀN HÌNH
+                            v.NgayDi AS NgayDi, 
+                            
+                            -- Giữ lại thời gian mua vé để sắp xếp nổi lên đầu
+                            v.ThoiGian AS ThoiGianGiaoDich, 
+                            
+                            v.SoGhe, v.GiaVe, v.TrangThai, v.SoDienThoai 
                         FROM VeXeNgoaiThanh v
                         JOIN TuyenXeNgoaiThanh t ON v.MaTuyen = t.MaTuyen
 
-                        ORDER BY NgayDi DESC -- Bây giờ sẽ sắp xếp chuẩn xác theo Thời Gian Giao Dịch
+                        -- Sắp xếp ngầm dựa trên thời gian thực hiện giao dịch
+                        ORDER BY ThoiGianGiaoDich DESC 
                     ";
 
                     SqlDataAdapter da = new SqlDataAdapter(query, conn);
@@ -235,10 +298,9 @@ namespace DoAn_LTWindows.Forms.Operations
                     string strTrangThai = trangThai == 1 ? "HỢP LỆ" : "ĐÃ HỦY";
 
                     // In ra màn hình
-                    lbl_Data.Text = $"MÃ VÉ: {maVe}  |  SĐT KHÁCH: {sdt}  |  TRẠNG THÁI: {strTrangThai}\n" +
+                    lbl_Data.Text = $"Mã Vé: {maVe} | SĐT: {sdt} | Trạng Thái: {strTrangThai}\n" +
                                     $"Loại: {loaiVe}  -  Tuyến xe: {tuyenXe}\n" +
-                                    $"Khởi hành: {ngayDi}\n" +
-                                    $"Số tiền thanh toán: {giaVe} VNĐ";
+                                    $"Khởi hành: {ngayDi} - Số tiền thanh toán: {giaVe} VNĐ";
                 }
                 catch (Exception ex)
                 {
@@ -327,6 +389,11 @@ namespace DoAn_LTWindows.Forms.Operations
                 }
                 e.FormattingApplied = true;
             }
+        }
+
+        private void btn_Return_Click(object sender, EventArgs e)
+        {
+            frmMain.Instance.BackToDashboard();
         }
     }
 }

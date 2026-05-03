@@ -36,6 +36,62 @@ namespace DoAn_LTWindows.Forms.Operations
 
             // 2. Ép nội dung các ô (Cells) căn trái
             dgv_TuyenXe.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+
+            btn_Delete.MouseDown += (s, e) => {
+                btn_Delete.BackgroundImage = Properties.Resources._75pxbtn1_c;
+            };
+
+            btn_Delete.MouseUp += (s, e) => {
+                btn_Delete.BackgroundImage = Properties.Resources._75pxbtn1;
+            };
+
+            btn_Edit.MouseDown += (s, e) => {
+                btn_Edit.BackgroundImage = Properties.Resources._75pxbtn1_c;
+            };
+
+            btn_Edit.MouseUp += (s, e) => {
+                btn_Edit.BackgroundImage = Properties.Resources._75pxbtn1;
+            };
+
+            btn_Find.MouseDown += (s, e) => {
+                btn_Find.BackgroundImage = Properties.Resources._75pxbtn1_c;
+            };
+
+            btn_Find.MouseUp += (s, e) => {
+                btn_Find.BackgroundImage = Properties.Resources._75pxbtn1;
+            };
+
+            btn_FindData.MouseDown += (s, e) => {
+                btn_FindData.BackgroundImage = Properties.Resources._75pxbtn1_c;
+            };
+
+            btn_FindData.MouseUp += (s, e) => {
+                btn_FindData.BackgroundImage = Properties.Resources._75pxbtn1;
+            };
+
+            btn_Reset.MouseDown += (s, e) => {
+                btn_Reset.BackgroundImage = Properties.Resources._75pxbtn1_c;
+            };
+
+            btn_Reset.MouseUp += (s, e) => {
+                btn_Reset.BackgroundImage = Properties.Resources._75pxbtn1;
+            };
+
+            btn_Return.MouseDown += (s, e) => {
+                btn_Return.BackgroundImage = Properties.Resources._75pxbtn1_c;
+            };
+
+            btn_Return.MouseUp += (s, e) => {
+                btn_Return.BackgroundImage = Properties.Resources._75pxbtn1;
+            };
+
+            btn_Save.MouseDown += (s, e) => {
+                btn_Save.BackgroundImage = Properties.Resources._75pxbtn1_c;
+            };
+
+            btn_Save.MouseUp += (s, e) => {
+                btn_Save.BackgroundImage = Properties.Resources._75pxbtn1;
+            };
         }
 
         private void ucQuanLyTuyenXe_Load(object sender, EventArgs e)

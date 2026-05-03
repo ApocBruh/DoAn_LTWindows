@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.chk_SoDienThoai = new System.Windows.Forms.CheckBox();
             this.chk_MaVe = new System.Windows.Forms.CheckBox();
@@ -75,7 +75,7 @@
             this.chk_SoDienThoai.AutoSize = true;
             this.chk_SoDienThoai.BackColor = System.Drawing.Color.Transparent;
             this.chk_SoDienThoai.Font = new System.Drawing.Font("Oswald", 18F);
-            this.chk_SoDienThoai.Location = new System.Drawing.Point(53, 101);
+            this.chk_SoDienThoai.Location = new System.Drawing.Point(53, 99);
             this.chk_SoDienThoai.Name = "chk_SoDienThoai";
             this.chk_SoDienThoai.Size = new System.Drawing.Size(199, 45);
             this.chk_SoDienThoai.TabIndex = 47;
@@ -88,7 +88,7 @@
             this.chk_MaVe.AutoSize = true;
             this.chk_MaVe.BackColor = System.Drawing.Color.Transparent;
             this.chk_MaVe.Font = new System.Drawing.Font("Oswald", 18F);
-            this.chk_MaVe.Location = new System.Drawing.Point(53, 142);
+            this.chk_MaVe.Location = new System.Drawing.Point(53, 135);
             this.chk_MaVe.Name = "chk_MaVe";
             this.chk_MaVe.Size = new System.Drawing.Size(135, 45);
             this.chk_MaVe.TabIndex = 48;
@@ -101,7 +101,7 @@
             this.lbl_TimKiem.AutoSize = true;
             this.lbl_TimKiem.BackColor = System.Drawing.Color.Transparent;
             this.lbl_TimKiem.Font = new System.Drawing.Font("Oswald", 16F);
-            this.lbl_TimKiem.Location = new System.Drawing.Point(26, 190);
+            this.lbl_TimKiem.Location = new System.Drawing.Point(26, 181);
             this.lbl_TimKiem.Name = "lbl_TimKiem";
             this.lbl_TimKiem.Size = new System.Drawing.Size(204, 37);
             this.lbl_TimKiem.TabIndex = 49;
@@ -112,7 +112,7 @@
             this.lbl_TraCuuTheo.AutoSize = true;
             this.lbl_TraCuuTheo.BackColor = System.Drawing.Color.Transparent;
             this.lbl_TraCuuTheo.Font = new System.Drawing.Font("Oswald", 16F);
-            this.lbl_TraCuuTheo.Location = new System.Drawing.Point(26, 71);
+            this.lbl_TraCuuTheo.Location = new System.Drawing.Point(26, 69);
             this.lbl_TraCuuTheo.Name = "lbl_TraCuuTheo";
             this.lbl_TraCuuTheo.Size = new System.Drawing.Size(123, 37);
             this.lbl_TraCuuTheo.TabIndex = 50;
@@ -123,7 +123,7 @@
             this.lbl_SoDienThoai.AutoSize = true;
             this.lbl_SoDienThoai.BackColor = System.Drawing.Color.Transparent;
             this.lbl_SoDienThoai.Font = new System.Drawing.Font("Oswald", 16F);
-            this.lbl_SoDienThoai.Location = new System.Drawing.Point(76, 230);
+            this.lbl_SoDienThoai.Location = new System.Drawing.Point(76, 221);
             this.lbl_SoDienThoai.Name = "lbl_SoDienThoai";
             this.lbl_SoDienThoai.Size = new System.Drawing.Size(128, 37);
             this.lbl_SoDienThoai.TabIndex = 51;
@@ -132,7 +132,7 @@
             // txt_SoDienThoai
             // 
             this.txt_SoDienThoai.Font = new System.Drawing.Font("Oswald", 16F);
-            this.txt_SoDienThoai.Location = new System.Drawing.Point(210, 230);
+            this.txt_SoDienThoai.Location = new System.Drawing.Point(210, 221);
             this.txt_SoDienThoai.Name = "txt_SoDienThoai";
             this.txt_SoDienThoai.Size = new System.Drawing.Size(258, 39);
             this.txt_SoDienThoai.TabIndex = 52;
@@ -145,12 +145,13 @@
             this.btn_FindSoDienThoai.FlatAppearance.BorderSize = 0;
             this.btn_FindSoDienThoai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_FindSoDienThoai.Font = new System.Drawing.Font("Oswald", 14F);
-            this.btn_FindSoDienThoai.Location = new System.Drawing.Point(489, 229);
+            this.btn_FindSoDienThoai.Location = new System.Drawing.Point(489, 220);
             this.btn_FindSoDienThoai.Name = "btn_FindSoDienThoai";
             this.btn_FindSoDienThoai.Size = new System.Drawing.Size(129, 41);
             this.btn_FindSoDienThoai.TabIndex = 53;
             this.btn_FindSoDienThoai.Text = "Tìm Kiếm";
             this.btn_FindSoDienThoai.UseVisualStyleBackColor = false;
+            this.btn_FindSoDienThoai.Click += new System.EventHandler(this.btn_FindSoDienThoai_Click);
             this.btn_FindSoDienThoai.MouseCaptureChanged += new System.EventHandler(this.btn_FindSoDienThoai_Click);
             // 
             // btn_FindMaSoVe
@@ -161,18 +162,19 @@
             this.btn_FindMaSoVe.FlatAppearance.BorderSize = 0;
             this.btn_FindMaSoVe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_FindMaSoVe.Font = new System.Drawing.Font("Oswald", 14F);
-            this.btn_FindMaSoVe.Location = new System.Drawing.Point(489, 274);
+            this.btn_FindMaSoVe.Location = new System.Drawing.Point(489, 265);
             this.btn_FindMaSoVe.Name = "btn_FindMaSoVe";
             this.btn_FindMaSoVe.Size = new System.Drawing.Size(129, 41);
             this.btn_FindMaSoVe.TabIndex = 56;
             this.btn_FindMaSoVe.Text = "Tìm Kiếm";
             this.btn_FindMaSoVe.UseVisualStyleBackColor = false;
+            this.btn_FindMaSoVe.Click += new System.EventHandler(this.btn_FindMaSoVe_Click);
             this.btn_FindMaSoVe.MouseCaptureChanged += new System.EventHandler(this.btn_FindMaSoVe_Click);
             // 
             // txt_MaSoVe
             // 
             this.txt_MaSoVe.Font = new System.Drawing.Font("Oswald", 16F);
-            this.txt_MaSoVe.Location = new System.Drawing.Point(210, 275);
+            this.txt_MaSoVe.Location = new System.Drawing.Point(210, 266);
             this.txt_MaSoVe.Name = "txt_MaSoVe";
             this.txt_MaSoVe.Size = new System.Drawing.Size(258, 39);
             this.txt_MaSoVe.TabIndex = 55;
@@ -182,7 +184,7 @@
             this.lbl_MaSoVe.AutoSize = true;
             this.lbl_MaSoVe.BackColor = System.Drawing.Color.Transparent;
             this.lbl_MaSoVe.Font = new System.Drawing.Font("Oswald", 16F);
-            this.lbl_MaSoVe.Location = new System.Drawing.Point(76, 275);
+            this.lbl_MaSoVe.Location = new System.Drawing.Point(76, 266);
             this.lbl_MaSoVe.Name = "lbl_MaSoVe";
             this.lbl_MaSoVe.Size = new System.Drawing.Size(93, 37);
             this.lbl_MaSoVe.TabIndex = 54;
@@ -193,7 +195,7 @@
             this.lbl_ThongTinVe.AutoSize = true;
             this.lbl_ThongTinVe.BackColor = System.Drawing.Color.Transparent;
             this.lbl_ThongTinVe.Font = new System.Drawing.Font("Oswald", 16F);
-            this.lbl_ThongTinVe.Location = new System.Drawing.Point(29, 560);
+            this.lbl_ThongTinVe.Location = new System.Drawing.Point(27, 498);
             this.lbl_ThongTinVe.Name = "lbl_ThongTinVe";
             this.lbl_ThongTinVe.Size = new System.Drawing.Size(122, 37);
             this.lbl_ThongTinVe.TabIndex = 58;
@@ -207,7 +209,7 @@
             this.btn_Refund.FlatAppearance.BorderSize = 0;
             this.btn_Refund.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Refund.Font = new System.Drawing.Font("Oswald", 14F);
-            this.btn_Refund.Location = new System.Drawing.Point(658, 560);
+            this.btn_Refund.Location = new System.Drawing.Point(793, 508);
             this.btn_Refund.Name = "btn_Refund";
             this.btn_Refund.Size = new System.Drawing.Size(163, 41);
             this.btn_Refund.TabIndex = 59;
@@ -220,7 +222,7 @@
             this.lbl_Data.AutoSize = true;
             this.lbl_Data.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Data.Font = new System.Drawing.Font("Oswald", 16F);
-            this.lbl_Data.Location = new System.Drawing.Point(144, 560);
+            this.lbl_Data.Location = new System.Drawing.Point(140, 498);
             this.lbl_Data.Name = "lbl_Data";
             this.lbl_Data.Size = new System.Drawing.Size(94, 37);
             this.lbl_Data.TabIndex = 60;
@@ -232,14 +234,14 @@
             this.dgv_Ve.AllowUserToDeleteRows = false;
             this.dgv_Ve.AllowUserToResizeColumns = false;
             this.dgv_Ve.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Oswald", 14F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Ve.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Oswald", 14F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Ve.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgv_Ve.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Ve.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colSTT,
@@ -251,19 +253,19 @@
             this.colGiaVe,
             this.colTrangThai,
             this.colSDT});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Oswald", 14F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Ve.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_Ve.Location = new System.Drawing.Point(33, 321);
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Oswald", 14F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Ve.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgv_Ve.Location = new System.Drawing.Point(33, 309);
             this.dgv_Ve.Name = "dgv_Ve";
             this.dgv_Ve.RowHeadersVisible = false;
             this.dgv_Ve.RowTemplate.Height = 40;
-            this.dgv_Ve.Size = new System.Drawing.Size(923, 232);
+            this.dgv_Ve.Size = new System.Drawing.Size(923, 183);
             this.dgv_Ve.TabIndex = 61;
             this.dgv_Ve.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_Ve_CellFormatting);
             this.dgv_Ve.SelectionChanged += new System.EventHandler(this.dgv_Ve_SelectionChanged);
@@ -347,12 +349,13 @@
             this.btn_Return.FlatAppearance.BorderSize = 0;
             this.btn_Return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Return.Font = new System.Drawing.Font("Oswald", 14F);
-            this.btn_Return.Location = new System.Drawing.Point(827, 560);
+            this.btn_Return.Location = new System.Drawing.Point(827, 555);
             this.btn_Return.Name = "btn_Return";
             this.btn_Return.Size = new System.Drawing.Size(129, 41);
             this.btn_Return.TabIndex = 62;
             this.btn_Return.Text = "Quay Lại";
             this.btn_Return.UseVisualStyleBackColor = false;
+            this.btn_Return.Click += new System.EventHandler(this.btn_Return_Click);
             // 
             // ucTraCuuVe
             // 

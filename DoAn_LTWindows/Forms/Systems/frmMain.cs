@@ -48,10 +48,23 @@ namespace DoAn_LTWindows.Forms.Systems
             lbl_Username.Text = this.currentUser;
             lbl_RoleName.Text = this.currentRole;
 
-            if (this.currentRole == "User")
+            // Thay vì kiểm tra == "User", ta nên kiểm tra != "Admin" để bảo mật chặt chẽ hơn.
+            // Bất cứ ai không phải Admin (VD: "User", "Nhân viên") đều bị khóa chức năng này.
+            if (this.currentRole != "Admin")
             {
-                // Ẩn nút theo tên control thực tế của bạn
-                // btn_QuanLyTaiKhoan.Visible = false; 
+                // Làm mờ cụm Label Hệ Thống
+                lbl_HeThong.ForeColor = Color.Gray;
+
+                // Khóa nút Quản Lý Tài Khoản và làm mờ chữ
+                btn_QuanLyTaiKhoan.Enabled = false;
+                btn_QuanLyTaiKhoan.ForeColor = Color.Gray;
+            }
+            else
+            {
+                // Trạng thái bình thường cho Admin (Mở khóa và set lại màu trắng/màu mặc định)
+                lbl_HeThong.ForeColor = Color.White;
+                btn_QuanLyTaiKhoan.Enabled = true;
+                btn_QuanLyTaiKhoan.ForeColor = Color.White;
             }
         }
 
