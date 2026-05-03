@@ -37,7 +37,6 @@
             this.btn_Edit = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
             this.btn_Find = new System.Windows.Forms.Button();
-            this.cmb_DateTime = new System.Windows.Forms.ComboBox();
             this.lbl_ChonNgayGioXuatBen = new System.Windows.Forms.Label();
             this.txt_Price = new System.Windows.Forms.TextBox();
             this.lbl_NhapGiaVe = new System.Windows.Forms.Label();
@@ -48,6 +47,7 @@
             this.btn_FindData = new System.Windows.Forms.Button();
             this.dgv_ChuyenXe = new System.Windows.Forms.DataGridView();
             this.btn_Return = new System.Windows.Forms.Button();
+            this.dtp_DateTime = new System.Windows.Forms.DateTimePicker();
             this.pnl_Import.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ChuyenXe)).BeginInit();
             this.SuspendLayout();
@@ -87,12 +87,12 @@
             // 
             this.pnl_Import.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackground;
             this.pnl_Import.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnl_Import.Controls.Add(this.dtp_DateTime);
             this.pnl_Import.Controls.Add(this.btn_Reset);
             this.pnl_Import.Controls.Add(this.btn_Delete);
             this.pnl_Import.Controls.Add(this.btn_Edit);
             this.pnl_Import.Controls.Add(this.btn_Save);
             this.pnl_Import.Controls.Add(this.btn_Find);
-            this.pnl_Import.Controls.Add(this.cmb_DateTime);
             this.pnl_Import.Controls.Add(this.lbl_ChonNgayGioXuatBen);
             this.pnl_Import.Controls.Add(this.txt_Price);
             this.pnl_Import.Controls.Add(this.lbl_NhapGiaVe);
@@ -180,21 +180,12 @@
             this.btn_Find.Text = "Tìm Kiếm";
             this.btn_Find.UseVisualStyleBackColor = false;
             // 
-            // cmb_DateTime
-            // 
-            this.cmb_DateTime.Font = new System.Drawing.Font("Oswald", 14F);
-            this.cmb_DateTime.FormattingEnabled = true;
-            this.cmb_DateTime.Location = new System.Drawing.Point(267, 95);
-            this.cmb_DateTime.Name = "cmb_DateTime";
-            this.cmb_DateTime.Size = new System.Drawing.Size(329, 40);
-            this.cmb_DateTime.TabIndex = 23;
-            // 
             // lbl_ChonNgayGioXuatBen
             // 
             this.lbl_ChonNgayGioXuatBen.AutoSize = true;
             this.lbl_ChonNgayGioXuatBen.BackColor = System.Drawing.Color.Transparent;
             this.lbl_ChonNgayGioXuatBen.Font = new System.Drawing.Font("Oswald", 16F);
-            this.lbl_ChonNgayGioXuatBen.Location = new System.Drawing.Point(29, 98);
+            this.lbl_ChonNgayGioXuatBen.Location = new System.Drawing.Point(50, 98);
             this.lbl_ChonNgayGioXuatBen.Name = "lbl_ChonNgayGioXuatBen";
             this.lbl_ChonNgayGioXuatBen.Size = new System.Drawing.Size(232, 37);
             this.lbl_ChonNgayGioXuatBen.TabIndex = 22;
@@ -204,7 +195,7 @@
             // txt_Price
             // 
             this.txt_Price.Font = new System.Drawing.Font("Oswald", 14F);
-            this.txt_Price.Location = new System.Drawing.Point(165, 54);
+            this.txt_Price.Location = new System.Drawing.Point(578, 51);
             this.txt_Price.Name = "txt_Price";
             this.txt_Price.Size = new System.Drawing.Size(188, 35);
             this.txt_Price.TabIndex = 20;
@@ -214,7 +205,7 @@
             this.lbl_NhapGiaVe.AutoSize = true;
             this.lbl_NhapGiaVe.BackColor = System.Drawing.Color.Transparent;
             this.lbl_NhapGiaVe.Font = new System.Drawing.Font("Oswald", 16F);
-            this.lbl_NhapGiaVe.Location = new System.Drawing.Point(29, 54);
+            this.lbl_NhapGiaVe.Location = new System.Drawing.Point(455, 51);
             this.lbl_NhapGiaVe.Name = "lbl_NhapGiaVe";
             this.lbl_NhapGiaVe.Size = new System.Drawing.Size(117, 37);
             this.lbl_NhapGiaVe.TabIndex = 21;
@@ -225,7 +216,7 @@
             this.lbl_ChonXe.AutoSize = true;
             this.lbl_ChonXe.BackColor = System.Drawing.Color.Transparent;
             this.lbl_ChonXe.Font = new System.Drawing.Font("Oswald", 16F);
-            this.lbl_ChonXe.Location = new System.Drawing.Point(523, 11);
+            this.lbl_ChonXe.Location = new System.Drawing.Point(50, 51);
             this.lbl_ChonXe.Name = "lbl_ChonXe";
             this.lbl_ChonXe.Size = new System.Drawing.Size(86, 37);
             this.lbl_ChonXe.TabIndex = 18;
@@ -235,9 +226,9 @@
             // 
             this.cmb_Xe.Font = new System.Drawing.Font("Oswald", 14F);
             this.cmb_Xe.FormattingEnabled = true;
-            this.cmb_Xe.Location = new System.Drawing.Point(615, 8);
+            this.cmb_Xe.Location = new System.Drawing.Point(168, 51);
             this.cmb_Xe.Name = "cmb_Xe";
-            this.cmb_Xe.Size = new System.Drawing.Size(173, 40);
+            this.cmb_Xe.Size = new System.Drawing.Size(269, 40);
             this.cmb_Xe.TabIndex = 19;
             // 
             // lbl_ChonTuyen
@@ -245,7 +236,7 @@
             this.lbl_ChonTuyen.AutoSize = true;
             this.lbl_ChonTuyen.BackColor = System.Drawing.Color.Transparent;
             this.lbl_ChonTuyen.Font = new System.Drawing.Font("Oswald", 16F);
-            this.lbl_ChonTuyen.Location = new System.Drawing.Point(29, 11);
+            this.lbl_ChonTuyen.Location = new System.Drawing.Point(50, 11);
             this.lbl_ChonTuyen.Name = "lbl_ChonTuyen";
             this.lbl_ChonTuyen.Size = new System.Drawing.Size(112, 37);
             this.lbl_ChonTuyen.TabIndex = 16;
@@ -255,9 +246,9 @@
             // 
             this.cmb_Tuyen.Font = new System.Drawing.Font("Oswald", 14F);
             this.cmb_Tuyen.FormattingEnabled = true;
-            this.cmb_Tuyen.Location = new System.Drawing.Point(165, 8);
+            this.cmb_Tuyen.Location = new System.Drawing.Point(168, 6);
             this.cmb_Tuyen.Name = "cmb_Tuyen";
-            this.cmb_Tuyen.Size = new System.Drawing.Size(329, 40);
+            this.cmb_Tuyen.Size = new System.Drawing.Size(598, 40);
             this.cmb_Tuyen.TabIndex = 17;
             // 
             // btn_FindData
@@ -298,6 +289,14 @@
             this.btn_Return.Text = "Quay Lại";
             this.btn_Return.UseVisualStyleBackColor = false;
             // 
+            // dtp_DateTime
+            // 
+            this.dtp_DateTime.Font = new System.Drawing.Font("Oswald", 14F);
+            this.dtp_DateTime.Location = new System.Drawing.Point(288, 98);
+            this.dtp_DateTime.Name = "dtp_DateTime";
+            this.dtp_DateTime.Size = new System.Drawing.Size(257, 35);
+            this.dtp_DateTime.TabIndex = 30;
+            // 
             // ucQuanLyChuyenXe
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -335,7 +334,6 @@
         private System.Windows.Forms.ComboBox cmb_Tuyen;
         private System.Windows.Forms.Label lbl_ChonXe;
         private System.Windows.Forms.ComboBox cmb_Xe;
-        private System.Windows.Forms.ComboBox cmb_DateTime;
         private System.Windows.Forms.Label lbl_ChonNgayGioXuatBen;
         private System.Windows.Forms.TextBox txt_Price;
         private System.Windows.Forms.Label lbl_NhapGiaVe;
@@ -347,5 +345,6 @@
         private System.Windows.Forms.Button btn_Find;
         private System.Windows.Forms.DataGridView dgv_ChuyenXe;
         private System.Windows.Forms.Button btn_Return;
+        private System.Windows.Forms.DateTimePicker dtp_DateTime;
     }
 }

@@ -24,8 +24,18 @@ namespace DoAn_LTWindows.Forms.Operations
             dgv_TuyenXe.ReadOnly = true;
             dgv_TuyenXe.AutoGenerateColumns = false; // Ngăn SQL tự đẻ cột
 
-            // Cài đặt DataGridView (Gọi hàm nối dây sự kiện bằng code cho chắc chắn)
-            dgv_TuyenXe.SelectionChanged += dgv_TuyenXe_SelectionChanged;
+            // Nối sự kiện STT (Thêm dòng này)a
+
+            dgv_TuyenXe.DefaultCellStyle.ForeColor = Color.Black;
+
+            // Tùy chọn: Ép màu chữ của cột tiêu đề (Header) thành màu đen luôn cho chắc chắn
+            dgv_TuyenXe.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+
+            // 1. Ép tiêu đề (Header) căn giữa
+            dgv_TuyenXe.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            // 2. Ép nội dung các ô (Cells) căn trái
+            dgv_TuyenXe.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
         }
 
         private void ucQuanLyTuyenXe_Load(object sender, EventArgs e)
@@ -87,6 +97,12 @@ namespace DoAn_LTWindows.Forms.Operations
         // --- 3. NÚT ĐẶT LẠI (RESET FORM) ---
         private void btn_Reset_Click(object sender, EventArgs e)
         {
+            // Bước 1: Làm mới bảng dữ liệu trước (Nó sẽ tự động bị bỏ chọn dòng nhờ code ở trên)
+            LoadTatCaDuLieu();
+
+            // Bước 2: BÂY GIỜ mới tiến hành mở khóa và xóa trắng các ô nhập liệu
+            txt_MaTuyen.ReadOnly = false;
+
             txt_MaTuyen.Clear();
             txt_TenTuyen.Clear();
             txt_Start.Clear();
@@ -95,10 +111,8 @@ namespace DoAn_LTWindows.Forms.Operations
             nud_Time.Value = 0;
             txt_Find.Clear();
 
-            txt_MaTuyen.ReadOnly = false; // Mở khóa để thêm mới
+            // Đưa con trỏ chuột nháy sẵn ở ô Mã Tuyến để người dùng gõ ngay
             txt_MaTuyen.Focus();
-
-            LoadData(); // Tải lại toàn bộ dữ liệu
         }
 
         // --- 4. NÚT LƯU (THÊM MỚI) ---
@@ -210,12 +224,15 @@ namespace DoAn_LTWindows.Forms.Operations
         }
 
         // --- 7. NÚT TÌM KIẾM (TRÊN THANH TÌM KIẾM) ---
+        // --- TÌM KIẾM CHUNG CHUNG (THANH TÌM KIẾM TRÊN CÙNG) ---
         private void btn_FindData_Click(object sender, EventArgs e)
         {
             string tuKhoa = txt_Find.Text.Trim();
+
+            // Nếu người dùng xóa sạch thanh tìm kiếm và bấm -> Load lại toàn bộ
             if (string.IsNullOrWhiteSpace(tuKhoa))
             {
-                LoadData();
+                LoadTatCaDuLieu();
                 return;
             }
 
@@ -224,12 +241,95 @@ namespace DoAn_LTWindows.Forms.Operations
                 try
                 {
                     conn.Open();
-                    // Tìm kiếm tương đối (%LIKE%) theo Mã Tuyến HOẶC Tên Tuyến
+                    // Dùng CAST để tránh lỗi tìm chữ trong cột số nguyên
                     string query = @"SELECT MaTuyen, TenTuyen, DiemXuatPhat, DiemDen, KhoangCach, ThoiGianChay 
                                      FROM TuyenXe 
-                                     WHERE MaTuyen LIKE @TuKhoa OR TenTuyen LIKE @TuKhoa";
+                                     WHERE CAST(MaTuyen AS VARCHAR) LIKE @TuKhoa 
+                                        OR TenTuyen LIKE @TuKhoa 
+                                        OR DiemXuatPhat LIKE @TuKhoa 
+                                        OR DiemDen LIKE @TuKhoa";
+
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@TuKhoa", "%" + tuKhoa + "%");
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    dgv_TuyenXe.DataSource = dt;
+
+                    if (dt.Rows.Count == 0)
+                        MessageBox.Show("Không tìm thấy tuyến xe nào khớp với từ khóa!", "Kết quả", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex) { MessageBox.Show("Lỗi tìm kiếm: " + ex.Message); }
+            }
+        }
+
+        // --- TÌM KIẾM CHI TIẾT (LỌC THEO CÁC Ô NHẬP LIỆU BÊN TRONG PANEL) ---
+        private void btn_Find_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra xem tất cả các ô có đang trống/bằng 0 hay không
+            if (string.IsNullOrWhiteSpace(txt_MaTuyen.Text) &&
+                string.IsNullOrWhiteSpace(txt_TenTuyen.Text) &&
+                string.IsNullOrWhiteSpace(txt_Start.Text) &&
+                string.IsNullOrWhiteSpace(txt_End.Text) &&
+                nud_Distance.Value == 0 &&
+                nud_Time.Value == 0)
+            {
+                LoadTatCaDuLieu();
+                return;
+            }
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    // Tạo một danh sách chứa các điều kiện lọc
+                    List<string> conditions = new List<string>();
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = conn;
+
+                    if (!string.IsNullOrWhiteSpace(txt_MaTuyen.Text))
+                    {
+                        conditions.Add("MaTuyen = @Ma");
+                        cmd.Parameters.AddWithValue("@Ma", txt_MaTuyen.Text.Trim());
+                    }
+                    if (!string.IsNullOrWhiteSpace(txt_TenTuyen.Text))
+                    {
+                        conditions.Add("TenTuyen LIKE @Ten");
+                        cmd.Parameters.AddWithValue("@Ten", "%" + txt_TenTuyen.Text.Trim() + "%");
+                    }
+                    if (!string.IsNullOrWhiteSpace(txt_Start.Text))
+                    {
+                        conditions.Add("DiemXuatPhat LIKE @Start");
+                        cmd.Parameters.AddWithValue("@Start", "%" + txt_Start.Text.Trim() + "%");
+                    }
+                    if (!string.IsNullOrWhiteSpace(txt_End.Text))
+                    {
+                        conditions.Add("DiemDen LIKE @End");
+                        cmd.Parameters.AddWithValue("@End", "%" + txt_End.Text.Trim() + "%");
+                    }
+                    // Với số, chỉ tìm nếu người dùng nhập số lớn hơn 0
+                    if (nud_Distance.Value > 0)
+                    {
+                        conditions.Add("KhoangCach = @KhoangCach");
+                        cmd.Parameters.AddWithValue("@KhoangCach", nud_Distance.Value);
+                    }
+                    if (nud_Time.Value > 0)
+                    {
+                        conditions.Add("ThoiGianChay = @ThoiGian");
+                        cmd.Parameters.AddWithValue("@ThoiGian", nud_Time.Value);
+                    }
+
+                    // Ghép các điều kiện lại với chữ AND
+                    string query = "SELECT MaTuyen, TenTuyen, DiemXuatPhat, DiemDen, KhoangCach, ThoiGianChay FROM TuyenXe";
+                    if (conditions.Count > 0)
+                    {
+                        query += " WHERE " + string.Join(" AND ", conditions);
+                    }
+
+                    cmd.CommandText = query;
 
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -237,9 +337,61 @@ namespace DoAn_LTWindows.Forms.Operations
                     dgv_TuyenXe.DataSource = dt;
 
                     if (dt.Rows.Count == 0)
-                        MessageBox.Show("Không tìm thấy dữ liệu khớp với từ khóa!", "Kết quả tìm kiếm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Không có tuyến xe nào thỏa mãn các tiêu chí lọc này!", "Kết quả", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (Exception ex) { MessageBox.Show("Lỗi: " + ex.Message); }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi lọc chi tiết (Vui lòng nhập đúng số cho Mã Tuyến): " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        // --- TỰ ĐỘNG ĐÁNH SỐ THỨ TỰ CHO BẢNG ---
+        private void dgv_TuyenXe_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            // Lưu ý: Đảm bảo bạn đã đặt tên (thuộc tính Name) cho cột STT trong UI Design là "colSTT"
+            if (dgv_TuyenXe.Columns[e.ColumnIndex].Name == "colSTT" && e.RowIndex >= 0)
+            {
+                e.Value = e.RowIndex + 1;
+            }
+        }
+
+        // --- NÚT QUAY LẠI MÀN HÌNH CHỌN LỊCH TRÌNH ---
+        private void btn_Return_Click(object sender, EventArgs e)
+        {
+            Panel pnlParent = (Panel)this.Parent;
+            if (pnlParent != null)
+            {
+                pnlParent.Controls.Clear();
+
+                // Gọi User Control Menu Lựa Chọn ra
+                ucLuaChonLichTrinh uc = new ucLuaChonLichTrinh();
+                uc.Dock = DockStyle.Fill;
+                pnlParent.Controls.Add(uc);
+            }
+        }
+
+        // --- 1. HÀM TẢI TOÀN BỘ DỮ LIỆU ---
+        private void LoadTatCaDuLieu()
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT MaTuyen, TenTuyen, DiemXuatPhat, DiemDen, KhoangCach, ThoiGianChay FROM TuyenXe";
+                    SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dgv_TuyenXe.DataSource = dt;
+
+                    // THÊM DÒNG NÀY: Ép bảng không được tự động chọn dòng đầu tiên lúc mới load
+                    dgv_TuyenXe.ClearSelection();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi tải toàn bộ dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }
