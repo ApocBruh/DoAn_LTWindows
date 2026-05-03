@@ -17,6 +17,10 @@ namespace DoAn_LTWindows.Forms.Systems
         {
             InitializeComponent();
 
+            this.AcceptButton = btn_Login;
+
+            this.CancelButton = btn_Exit;
+
             btn_Login.MouseDown += (s, e) => {
                 btn_Login.BackgroundImage = Properties.Resources.c_button1;
             };

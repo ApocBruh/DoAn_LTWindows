@@ -42,6 +42,16 @@
             this.lbl_SoVeDaBan = new System.Windows.Forms.Label();
             this.btn_ExportData = new System.Windows.Forms.Button();
             this.btn_Return = new System.Windows.Forms.Button();
+            this.lbl_TSVDBData = new System.Windows.Forms.Label();
+            this.lbl_TSVDHData = new System.Windows.Forms.Label();
+            this.lbl_TSCDTHData = new System.Windows.Forms.Label();
+            this.lbl_TSCDHData = new System.Windows.Forms.Label();
+            this.lbl_TSTDHTData = new System.Windows.Forms.Label();
+            this.lbl_TSTTTData = new System.Windows.Forms.Label();
+            this.lbl_TSTTQData = new System.Windows.Forms.Label();
+            this.lbl_TSTTNData = new System.Windows.Forms.Label();
+            this.lbl_TSTCPBTData = new System.Windows.Forms.Label();
+            this.lbl_TDTData = new System.Windows.Forms.Label();
             this.pnl_Data.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +71,16 @@
             // 
             this.pnl_Data.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackground;
             this.pnl_Data.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnl_Data.Controls.Add(this.lbl_TDTData);
+            this.pnl_Data.Controls.Add(this.lbl_TSTCPBTData);
+            this.pnl_Data.Controls.Add(this.lbl_TSTTNData);
+            this.pnl_Data.Controls.Add(this.lbl_TSTTQData);
+            this.pnl_Data.Controls.Add(this.lbl_TSTTTData);
+            this.pnl_Data.Controls.Add(this.lbl_TSTDHTData);
+            this.pnl_Data.Controls.Add(this.lbl_TSCDHData);
+            this.pnl_Data.Controls.Add(this.lbl_TSCDTHData);
+            this.pnl_Data.Controls.Add(this.lbl_TSVDHData);
+            this.pnl_Data.Controls.Add(this.lbl_TSVDBData);
             this.pnl_Data.Controls.Add(this.lbl_TongDoanhThu);
             this.pnl_Data.Controls.Add(this.lbl_SoTienChiPhiBaoTri);
             this.pnl_Data.Controls.Add(this.lbl_SoTienTheoNam);
@@ -200,6 +220,7 @@
             this.btn_ExportData.TabIndex = 57;
             this.btn_ExportData.Text = "Xuất Số Liệu";
             this.btn_ExportData.UseVisualStyleBackColor = false;
+            this.btn_ExportData.Click += new System.EventHandler(this.btn_ExportData_Click);
             // 
             // btn_Return
             // 
@@ -215,6 +236,117 @@
             this.btn_Return.TabIndex = 58;
             this.btn_Return.Text = "Quay Lại";
             this.btn_Return.UseVisualStyleBackColor = false;
+            this.btn_Return.Click += new System.EventHandler(this.btn_Return_Click);
+            // 
+            // lbl_TSVDBData
+            // 
+            this.lbl_TSVDBData.AutoSize = true;
+            this.lbl_TSVDBData.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_TSVDBData.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_TSVDBData.Location = new System.Drawing.Point(177, 15);
+            this.lbl_TSVDBData.Name = "lbl_TSVDBData";
+            this.lbl_TSVDBData.Size = new System.Drawing.Size(71, 37);
+            this.lbl_TSVDBData.TabIndex = 62;
+            this.lbl_TSVDBData.Text = "TSVDB";
+            // 
+            // lbl_TSVDHData
+            // 
+            this.lbl_TSVDHData.AutoSize = true;
+            this.lbl_TSVDHData.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_TSVDHData.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_TSVDHData.Location = new System.Drawing.Point(178, 57);
+            this.lbl_TSVDHData.Name = "lbl_TSVDHData";
+            this.lbl_TSVDHData.Size = new System.Drawing.Size(71, 37);
+            this.lbl_TSVDHData.TabIndex = 63;
+            this.lbl_TSVDHData.Text = "TSVDH";
+            // 
+            // lbl_TSCDTHData
+            // 
+            this.lbl_TSCDTHData.AutoSize = true;
+            this.lbl_TSCDTHData.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_TSCDTHData.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_TSCDTHData.Location = new System.Drawing.Point(266, 99);
+            this.lbl_TSCDTHData.Name = "lbl_TSCDTHData";
+            this.lbl_TSCDTHData.Size = new System.Drawing.Size(80, 37);
+            this.lbl_TSCDTHData.TabIndex = 64;
+            this.lbl_TSCDTHData.Text = "TSCDTH";
+            // 
+            // lbl_TSCDHData
+            // 
+            this.lbl_TSCDHData.AutoSize = true;
+            this.lbl_TSCDHData.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_TSCDHData.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_TSCDHData.Location = new System.Drawing.Point(218, 141);
+            this.lbl_TSCDHData.Name = "lbl_TSCDHData";
+            this.lbl_TSCDHData.Size = new System.Drawing.Size(71, 37);
+            this.lbl_TSCDHData.TabIndex = 65;
+            this.lbl_TSCDHData.Text = "TSCDH";
+            // 
+            // lbl_TSTDHTData
+            // 
+            this.lbl_TSTDHTData.AutoSize = true;
+            this.lbl_TSTDHTData.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_TSTDHTData.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_TSTDHTData.Location = new System.Drawing.Point(230, 183);
+            this.lbl_TSTDHTData.Name = "lbl_TSTDHTData";
+            this.lbl_TSTDHTData.Size = new System.Drawing.Size(78, 37);
+            this.lbl_TSTDHTData.TabIndex = 66;
+            this.lbl_TSTDHTData.Text = "TSTDHT";
+            // 
+            // lbl_TSTTTData
+            // 
+            this.lbl_TSTTTData.AutoSize = true;
+            this.lbl_TSTTTData.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_TSTTTData.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_TSTTTData.Location = new System.Drawing.Point(225, 223);
+            this.lbl_TSTTTData.Name = "lbl_TSTTTData";
+            this.lbl_TSTTTData.Size = new System.Drawing.Size(63, 37);
+            this.lbl_TSTTTData.TabIndex = 67;
+            this.lbl_TSTTTData.Text = "TSTTT";
+            // 
+            // lbl_TSTTQData
+            // 
+            this.lbl_TSTTQData.AutoSize = true;
+            this.lbl_TSTTQData.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_TSTTQData.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_TSTTQData.Location = new System.Drawing.Point(208, 266);
+            this.lbl_TSTTQData.Name = "lbl_TSTTQData";
+            this.lbl_TSTTQData.Size = new System.Drawing.Size(66, 37);
+            this.lbl_TSTTQData.TabIndex = 68;
+            this.lbl_TSTTQData.Text = "TSTTQ";
+            // 
+            // lbl_TSTTNData
+            // 
+            this.lbl_TSTTNData.AutoSize = true;
+            this.lbl_TSTTNData.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_TSTTNData.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_TSTTNData.Location = new System.Drawing.Point(213, 307);
+            this.lbl_TSTTNData.Name = "lbl_TSTTNData";
+            this.lbl_TSTTNData.Size = new System.Drawing.Size(66, 37);
+            this.lbl_TSTTNData.TabIndex = 69;
+            this.lbl_TSTTNData.Text = "TSTTN";
+            // 
+            // lbl_TSTCPBTData
+            // 
+            this.lbl_TSTCPBTData.AutoSize = true;
+            this.lbl_TSTCPBTData.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_TSTCPBTData.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_TSTCPBTData.Location = new System.Drawing.Point(252, 346);
+            this.lbl_TSTCPBTData.Name = "lbl_TSTCPBTData";
+            this.lbl_TSTCPBTData.Size = new System.Drawing.Size(87, 37);
+            this.lbl_TSTCPBTData.TabIndex = 70;
+            this.lbl_TSTCPBTData.Text = "TSTCPBT";
+            // 
+            // lbl_TDTData
+            // 
+            this.lbl_TDTData.AutoSize = true;
+            this.lbl_TDTData.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_TDTData.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_TDTData.Location = new System.Drawing.Point(415, 395);
+            this.lbl_TDTData.Name = "lbl_TDTData";
+            this.lbl_TDTData.Size = new System.Drawing.Size(47, 37);
+            this.lbl_TDTData.TabIndex = 71;
+            this.lbl_TDTData.Text = "TDT";
             // 
             // ucTongSoLieuThongKe
             // 
@@ -232,6 +364,7 @@
             this.MinimumSize = new System.Drawing.Size(992, 623);
             this.Name = "ucTongSoLieuThongKe";
             this.Size = new System.Drawing.Size(992, 623);
+            this.Load += new System.EventHandler(this.ucTongSoLieuThongKe_Load);
             this.pnl_Data.ResumeLayout(false);
             this.pnl_Data.PerformLayout();
             this.ResumeLayout(false);
@@ -255,5 +388,15 @@
         private System.Windows.Forms.Label lbl_SoTienTheoNam;
         private System.Windows.Forms.Label lbl_SoTienTheoQuy;
         private System.Windows.Forms.Label lbl_SoTienTheoThang;
+        private System.Windows.Forms.Label lbl_TSCDTHData;
+        private System.Windows.Forms.Label lbl_TSVDHData;
+        private System.Windows.Forms.Label lbl_TSVDBData;
+        private System.Windows.Forms.Label lbl_TDTData;
+        private System.Windows.Forms.Label lbl_TSTCPBTData;
+        private System.Windows.Forms.Label lbl_TSTTNData;
+        private System.Windows.Forms.Label lbl_TSTTQData;
+        private System.Windows.Forms.Label lbl_TSTTTData;
+        private System.Windows.Forms.Label lbl_TSTDHTData;
+        private System.Windows.Forms.Label lbl_TSCDHData;
     }
 }

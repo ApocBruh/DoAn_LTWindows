@@ -48,23 +48,26 @@ namespace DoAn_LTWindows.Forms.Systems
             lbl_Username.Text = this.currentUser;
             lbl_RoleName.Text = this.currentRole;
 
-            // Thay vì kiểm tra == "User", ta nên kiểm tra != "Admin" để bảo mật chặt chẽ hơn.
-            // Bất cứ ai không phải Admin (VD: "User", "Nhân viên") đều bị khóa chức năng này.
             if (this.currentRole != "Admin")
             {
-                // Làm mờ cụm Label Hệ Thống
+                // Khóa Quản Lý Tài Khoản
                 lbl_HeThong.ForeColor = Color.Gray;
-
-                // Khóa nút Quản Lý Tài Khoản và làm mờ chữ
                 btn_QuanLyTaiKhoan.Enabled = false;
                 btn_QuanLyTaiKhoan.ForeColor = Color.Gray;
+
+                // THÊM: Khóa Báo Cáo Doanh Thu
+                btn_BaoCaoDoanhThu.Enabled = false;
+                btn_BaoCaoDoanhThu.ForeColor = Color.Gray;
             }
             else
             {
-                // Trạng thái bình thường cho Admin (Mở khóa và set lại màu trắng/màu mặc định)
                 lbl_HeThong.ForeColor = Color.White;
                 btn_QuanLyTaiKhoan.Enabled = true;
                 btn_QuanLyTaiKhoan.ForeColor = Color.White;
+
+                // Mở khóa Báo Cáo Doanh Thu
+                btn_BaoCaoDoanhThu.Enabled = true;
+                btn_BaoCaoDoanhThu.ForeColor = Color.White;
             }
         }
 

@@ -72,9 +72,6 @@ namespace DoAn_LTWindows.Forms.Operations
             // Tùy chọn: Ép màu chữ của cột tiêu đề (Header) thành màu đen luôn cho chắc chắn
             dgv_Ve.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
 
-            // 1. Ép tiêu đề (Header) căn giữa
-            dgv_Ve.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
             // 2. Ép nội dung các ô (Cells) căn trái
             dgv_Ve.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
 
