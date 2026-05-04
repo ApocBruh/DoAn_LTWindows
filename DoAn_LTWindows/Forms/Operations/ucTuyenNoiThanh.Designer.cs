@@ -369,7 +369,7 @@
             this.nud_SoLuongVe.Name = "nud_SoLuongVe";
             this.nud_SoLuongVe.Size = new System.Drawing.Size(102, 35);
             this.nud_SoLuongVe.TabIndex = 12;
-            this.nud_SoLuongVe.ValueChanged += new System.EventHandler(this.nud_SoLuongVe_ValueChanged_1);
+            this.nud_SoLuongVe.ValueChanged += new System.EventHandler(this.nud_SoLuongVe_ValueChanged);
             // 
             // ucTuyenNoiThanh
             // 

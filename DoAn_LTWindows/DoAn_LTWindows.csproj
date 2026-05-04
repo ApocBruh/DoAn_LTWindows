@@ -46,6 +46,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\BaoCaoDoanhThuBUS.cs" />
+    <Compile Include="BUS\ChuyenXeBUS.cs" />
+    <Compile Include="BUS\KhachHangBUS.cs" />
+    <Compile Include="BUS\NhanVienBUS.cs" />
+    <Compile Include="BUS\TaiKhoanBUS.cs" />
+    <Compile Include="BUS\TraCuuVeBUS.cs" />
+    <Compile Include="BUS\TuyenXeBUS.cs" />
+    <Compile Include="BUS\TuyenXeNgoaiThanhBUS.cs" />
+    <Compile Include="BUS\TuyenXeNoiThanhBUS.cs" />
+    <Compile Include="BUS\VeXeNgoaiThanhBUS.cs" />
+    <Compile Include="BUS\VeXeNoiThanhBUS.cs" />
+    <Compile Include="BUS\XeBUS.cs" />
+    <Compile Include="DAL\BaoCaoDoanhThuDAL.cs" />
+    <Compile Include="DAL\ChuyenXeDAL.cs" />
+    <Compile Include="DAL\DBConnection.cs" />
+    <Compile Include="DAL\KhachHangDAL.cs" />
+    <Compile Include="DAL\NhanVienDAL.cs" />
+    <Compile Include="DAL\TaiKhoanDAL.cs" />
+    <Compile Include="DAL\TraCuuVeDAL.cs" />
+    <Compile Include="DAL\TuyenXeDAL.cs" />
+    <Compile Include="DAL\TuyenXeNgoaiThanhDAL.cs" />
+    <Compile Include="DAL\TuyenXeNoiThanhDAL.cs" />
+    <Compile Include="DAL\VeXeNgoaiThanhDAL.cs" />
+    <Compile Include="DAL\VeXeNoiThanhDAL.cs" />
+    <Compile Include="DAL\XeDAL.cs" />
+    <Compile Include="DTO\BaoCaoDoanhThuDTO.cs" />
+    <Compile Include="DTO\ChuyenXeDTO.cs" />
+    <Compile Include="DTO\KhachHangDTO.cs" />
+    <Compile Include="DTO\NhanVienDTO.cs" />
+    <Compile Include="DTO\TaiKhoanDTO.cs" />
+    <Compile Include="DTO\TuyenXeDTO.cs" />
+    <Compile Include="DTO\TuyenXeNgoaiThanhDTO.cs" />
+    <Compile Include="DTO\TuyenXeNoiThanhDTO.cs" />
+    <Compile Include="DTO\VeXeDTO.cs" />
+    <Compile Include="DTO\VeXeNgoaiThanhDTO.cs" />
+    <Compile Include="DTO\VeXeNoiThanhDTO.cs" />
+    <Compile Include="DTO\XeDTO.cs" />
     <Compile Include="Forms\Operations\ucBaoCaoDoanhThu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -197,11 +234,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BUS\" />
-    <Folder Include="DAL\" />
-    <Folder Include="DTO\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\busbackground.png" />
   </ItemGroup>
