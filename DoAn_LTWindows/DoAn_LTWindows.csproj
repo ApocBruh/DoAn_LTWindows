@@ -198,12 +198,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\Fonts\" />
-    <Folder Include="Assets\Images\" />
-    <Folder Include="Core\" />
-    <Folder Include="Forms\MasterData\" />
-    <Folder Include="Forms\Reports\" />
-    <Folder Include="UserControls\" />
+    <Folder Include="BUS\" />
+    <Folder Include="DAL\" />
+    <Folder Include="DTO\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\busbackground.png" />
