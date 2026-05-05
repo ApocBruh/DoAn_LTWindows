@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnl_ComponentList = new System.Windows.Forms.Panel();
             this.btn_QuanLyTaiKhoan = new System.Windows.Forms.Button();
             this.lbl_HeThong = new System.Windows.Forms.Label();
@@ -375,6 +376,7 @@
             this.Controls.Add(this.pnl_TopBar);
             this.Controls.Add(this.pnl_ComponentList);
             this.Font = new System.Drawing.Font("Oswald", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1366, 768);
             this.MinimumSize = new System.Drawing.Size(1366, 768);
             this.Name = "frmMain";
