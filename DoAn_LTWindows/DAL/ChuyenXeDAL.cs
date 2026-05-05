@@ -115,21 +115,54 @@ namespace DoAn_LTWindows.DAL
         {
             using (SqlConnection conn = DBConnection.GetConnection())
             {
-                try
+                conn.Open();
+
+                // BƯỚC 1: Lấy Mã Tuyến và Ngày Xuất Bến của chuyến xe chuẩn bị xóa
+                int maTuyen = 0;
+                DateTime ngayXuatBen = DateTime.Now;
+
+                string queryGetInfo = "SELECT MaTuyen, ThoiGianXuatBen FROM ChuyenXe WHERE MaChuyen = @MaChuyen";
+                using (SqlCommand cmdGet = new SqlCommand(queryGetInfo, conn))
                 {
-                    conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("DELETE FROM ChuyenXe WHERE MaChuyen = @MaChuyen", conn))
+                    cmdGet.Parameters.AddWithValue("@MaChuyen", maChuyen);
+                    using (SqlDataReader reader = cmdGet.ExecuteReader())
                     {
-                        cmd.Parameters.AddWithValue("@MaChuyen", maChuyen);
-                        cmd.ExecuteNonQuery();
+                        if (reader.Read())
+                        {
+                            maTuyen = Convert.ToInt32(reader["MaTuyen"]);
+                            ngayXuatBen = Convert.ToDateTime(reader["ThoiGianXuatBen"]);
+                        }
+                        else
+                        {
+                            throw new Exception("Không tìm thấy chuyến xe trong hệ thống!");
+                        }
                     }
                 }
-                catch (SqlException ex)
+
+                // BƯỚC 2: QUAN TRỌNG NHẤT - Kiểm tra xem Tuyến này, Ngày này đã có khách đặt vé chưa?
+                string queryCheck = @"SELECT COUNT(*) FROM VeXeNgoaiThanh 
+                              WHERE MaTuyen = @MaTuyen 
+                                AND CAST(NgayDi AS DATE) = CAST(@Ngay AS DATE)";
+                using (SqlCommand cmdCheck = new SqlCommand(queryCheck, conn))
                 {
-                    if (ex.Number == 547)
-                        throw new Exception("Không thể xóa chuyến xe vì đã có vé được bán thuộc chuyến này!");
-                    else
-                        throw new Exception("Lỗi CSDL: " + ex.Message);
+                    cmdCheck.Parameters.AddWithValue("@MaTuyen", maTuyen);
+                    cmdCheck.Parameters.AddWithValue("@Ngay", ngayXuatBen.Date);
+
+                    int soVeDaBan = (int)cmdCheck.ExecuteScalar();
+
+                    // Ràng buộc toàn vẹn dữ liệu: Nếu đã có vé, CHẶN LỆNH XÓA và ném lỗi
+                    if (soVeDaBan > 0)
+                    {
+                        throw new Exception($"Vi phạm ràng buộc toàn vẹn dữ liệu (Error 547)!\nKhông thể xóa chuyến xe vì đã có {soVeDaBan} vé được bán thuộc lịch trình này.");
+                    }
+                }
+
+                // BƯỚC 3: Nếu qua được vòng kiểm tra (chưa có vé nào bán), tiến hành Xóa an toàn
+                string queryDelete = "DELETE FROM ChuyenXe WHERE MaChuyen = @MaChuyen";
+                using (SqlCommand cmdDelete = new SqlCommand(queryDelete, conn))
+                {
+                    cmdDelete.Parameters.AddWithValue("@MaChuyen", maChuyen);
+                    cmdDelete.ExecuteNonQuery();
                 }
             }
         }
@@ -233,6 +266,91 @@ namespace DoAn_LTWindows.DAL
                 }
             }
             return list;
+        }
+
+        // TỰ ĐỘNG ĐỒNG BỘ VÀ TẠO CHUYẾN XE KHI BÁN VÉ
+        public void TaoChuyenXeTuDong(int maTuyen, string tenTuyen, string bienSoXe, decimal giaVe, DateTime ngayXuatBen)
+        {
+            using (SqlConnection conn = DBConnection.GetConnection())
+            {
+                conn.Open();
+
+                // 1. ĐỒNG BỘ TUYẾN XE (Xử lý dứt điểm lỗi Khóa Ngoại)
+                string checkTuyen = "SELECT COUNT(*) FROM TuyenXe WHERE MaTuyen = @MaTuyen";
+                using (SqlCommand cmdTuyen = new SqlCommand(checkTuyen, conn))
+                {
+                    cmdTuyen.Parameters.AddWithValue("@MaTuyen", maTuyen);
+                    int countTuyen = (int)cmdTuyen.ExecuteScalar();
+
+                    if (countTuyen == 0) // Nếu chưa có tuyến này bên bảng TuyenXe
+                    {
+                        try
+                        {
+                            // Thử Insert với IDENTITY_INSERT (Dành cho bảng có tự tăng ID)
+                            string insertTuyen = @"SET IDENTITY_INSERT TuyenXe ON; 
+                                                   INSERT INTO TuyenXe (MaTuyen, TenTuyen) VALUES (@MaTuyen, @TenTuyen); 
+                                                   SET IDENTITY_INSERT TuyenXe OFF;";
+                            using (SqlCommand cmdInsert = new SqlCommand(insertTuyen, conn))
+                            {
+                                cmdInsert.Parameters.AddWithValue("@MaTuyen", maTuyen);
+                                cmdInsert.Parameters.AddWithValue("@TenTuyen", tenTuyen);
+                                cmdInsert.ExecuteNonQuery();
+                            }
+                        }
+                        catch
+                        {
+                            // Nếu bảng không có tự tăng ID, Insert bình thường
+                            string insertTuyenNormal = "INSERT INTO TuyenXe (MaTuyen, TenTuyen) VALUES (@MaTuyen, @TenTuyen)";
+                            using (SqlCommand cmdInsertN = new SqlCommand(insertTuyenNormal, conn))
+                            {
+                                cmdInsertN.Parameters.AddWithValue("@MaTuyen", maTuyen);
+                                cmdInsertN.Parameters.AddWithValue("@TenTuyen", tenTuyen);
+                                cmdInsertN.ExecuteNonQuery();
+                            }
+                        }
+                    }
+                }
+
+                // 2. KIỂM TRA CHUYẾN XE (Tránh tạo trùng lịch)
+                string checkChuyen = @"SELECT COUNT(*) FROM ChuyenXe 
+                                       WHERE MaTuyen = @MaTuyen AND CAST(ThoiGianXuatBen AS DATE) = CAST(@Ngay AS DATE)";
+                using (SqlCommand cmdCheck = new SqlCommand(checkChuyen, conn))
+                {
+                    cmdCheck.Parameters.AddWithValue("@MaTuyen", maTuyen);
+                    cmdCheck.Parameters.AddWithValue("@Ngay", ngayXuatBen.Date);
+                    if ((int)cmdCheck.ExecuteScalar() > 0) return; // Đã có chuyến thì bỏ qua
+                }
+
+                // 3. TÌM ID XE (Dựa vào Biển Số)
+                int maXe = 1;
+                using (SqlCommand cmdGetXe = new SqlCommand("SELECT TOP 1 MaXe FROM Xe WHERE BienSo = @BienSo", conn))
+                {
+                    cmdGetXe.Parameters.AddWithValue("@BienSo", bienSoXe);
+                    object result = cmdGetXe.ExecuteScalar();
+                    if (result != null) maXe = Convert.ToInt32(result);
+                    else
+                    {
+                        // Lấy xe mặc định nếu biển số sai
+                        using (SqlCommand cmdFb = new SqlCommand("SELECT TOP 1 MaXe FROM Xe", conn))
+                        {
+                            object fb = cmdFb.ExecuteScalar();
+                            if (fb != null) maXe = Convert.ToInt32(fb);
+                        }
+                    }
+                }
+
+                // 4. TẠO CHUYẾN XE MỚI
+                string insertChuyen = @"INSERT INTO ChuyenXe (MaTuyen, MaXe, GiaVe, ThoiGianXuatBen) 
+                                        VALUES (@MaTuyen, @MaXe, @GiaVe, @ThoiGian)";
+                using (SqlCommand cmdInsertChuyen = new SqlCommand(insertChuyen, conn))
+                {
+                    cmdInsertChuyen.Parameters.AddWithValue("@MaTuyen", maTuyen);
+                    cmdInsertChuyen.Parameters.AddWithValue("@MaXe", maXe);
+                    cmdInsertChuyen.Parameters.AddWithValue("@GiaVe", giaVe);
+                    cmdInsertChuyen.Parameters.AddWithValue("@ThoiGian", ngayXuatBen);
+                    cmdInsertChuyen.ExecuteNonQuery();
+                }
+            }
         }
     }
 }

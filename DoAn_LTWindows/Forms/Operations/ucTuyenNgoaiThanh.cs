@@ -18,6 +18,7 @@ namespace DoAn_LTWindows.Forms.Operations
     {
         private TuyenXeNgoaiThanhBUS tuyenXeBUS = new TuyenXeNgoaiThanhBUS();
         private VeXeNgoaiThanhBUS veXeBUS = new VeXeNgoaiThanhBUS();
+        private ChuyenXeBUS chuyenXeBUS = new ChuyenXeBUS();
 
         private List<VeXeNgoaiThanhDTO> danhSachVePopup;
         private int viTriPopupHienTai = 0;
@@ -321,9 +322,17 @@ namespace DoAn_LTWindows.Forms.Operations
         {
             try
             {
+                TuyenXeNgoaiThanhDTO tuyenChon = (TuyenXeNgoaiThanhDTO)cmb_TuyenXe.SelectedItem;
+                DateTime ngayDi = dtp_NgayDi.Value;
+
+                // Truyền thêm tuyenChon.TenTuyen vào đây
+                chuyenXeBUS.TaoChuyenXeTuDong(tuyenChon.MaTuyen, tuyenChon.TenTuyen, tuyenChon.SoXe, tuyenChon.GiaVe, ngayDi);
+                // ----------------------------------------------------------
+
                 // Ném list vé sang lớp BUS để thực hiện Insert
                 veXeBUS.LuuDanhSachVe(danhSachVePopup);
 
+                // ... (Phần code hiện thông báo và reset giữ nguyên)
                 decimal tongTien = giaVeHienTai * danhSachGheDaChon.Count;
                 MessageBox.Show($"Đã in thành công {danhSachGheDaChon.Count} vé!\n\nTổng thu: {tongTien:N0} VNĐ",
                                 "Hoàn tất", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -45,6 +45,11 @@ namespace DoAn_LTWindows.BUS
             dal.XoaChuyenXe(maChuyen);
         }
 
+        public void TaoChuyenXeTuDong(int maTuyen, string tenTuyen, string bienSoXe, decimal giaVe, DateTime ngayXuatBen)
+        {
+            dal.TaoChuyenXeTuDong(maTuyen, tenTuyen, bienSoXe, giaVe, ngayXuatBen);
+        }
+
         public List<ChuyenXeDTO> TimKiemChung(string tuKhoa) => dal.TimKiemChung(tuKhoa);
 
         public List<ChuyenXeDTO> TimKiemChiTiet(ChuyenXeDTO dieuKien) => dal.TimKiemChiTiet(dieuKien);
