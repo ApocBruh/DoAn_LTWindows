@@ -95,6 +95,10 @@ namespace DoAn_LTWindows.Forms.Operations
             int soGhe = tuyenChon.SoGheTieuChuan;
             giaVeHienTai = tuyenChon.GiaVe;
 
+            // BƯỚC QUAN TRỌNG: Lấy danh sách ghế đã bị người khác đặt từ DB
+            DateTime ngayDi = dtp_NgayDi.Value;
+            List<string> gheDaDat = veXeBUS.LayDanhSachGheDaDat(tuyenChon.MaTuyen, ngayDi);
+
             int btnWidth = 50, btnHeight = 45, spacing = 10, aisle = 40;
             int soCot = (int)Math.Ceiling((double)soGhe / 4);
             int totalWidth = soCot * btnWidth + (soCot - 1) * spacing;
@@ -112,15 +116,27 @@ namespace DoAn_LTWindows.Forms.Operations
                 btnGhe.Text = (i + 1).ToString("D2");
                 btnGhe.Name = "Ghe_" + btnGhe.Text;
                 btnGhe.Size = new Size(btnWidth, btnHeight);
-                btnGhe.BackColor = Color.White;
                 btnGhe.FlatStyle = FlatStyle.Flat;
-                btnGhe.Cursor = Cursors.Hand;
                 btnGhe.Font = new Font("Oswald", 11F, FontStyle.Bold);
-                btnGhe.ForeColor = Color.Black;
                 btnGhe.Padding = new Padding(0);
                 btnGhe.TextAlign = ContentAlignment.MiddleCenter;
 
-                btnGhe.Click += BtnGhe_Click;
+                // KIỂM TRA ĐỔI MÀU: Nếu ghế nằm trong danh sách đã đặt
+                if (gheDaDat.Contains(btnGhe.Text))
+                {
+                    btnGhe.BackColor = Color.Red;
+                    btnGhe.ForeColor = Color.White;
+                    btnGhe.Enabled = false; // Khóa luôn, không cho bấm
+                    btnGhe.Cursor = Cursors.No;
+                }
+                else
+                {
+                    btnGhe.BackColor = Color.White;
+                    btnGhe.ForeColor = Color.Black;
+                    btnGhe.Enabled = true;
+                    btnGhe.Cursor = Cursors.Hand;
+                    btnGhe.Click += BtnGhe_Click; // Chỉ gắn sự kiện Click cho ghế trống
+                }
 
                 int cotIdx = i / 4;
                 int hangIdx = i % 4;
@@ -321,6 +337,5 @@ namespace DoAn_LTWindows.Forms.Operations
                 MessageBox.Show("Lỗi lưu CSDL: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
     }
 }

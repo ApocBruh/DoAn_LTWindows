@@ -50,5 +50,34 @@ namespace DoAn_LTWindows.DAL
                 }
             }
         }
+
+        public List<string> LayDanhSachGheDaDat(int maTuyen, DateTime ngayDi)
+        {
+            List<string> danhSachGhe = new List<string>();
+            using (SqlConnection conn = DBConnection.GetConnection())
+            {
+                conn.Open();
+                // Tìm các ghế trùng MaTuyen, trùng Ngày (bỏ qua Giờ), và trạng thái hợp lệ
+                string query = @"SELECT SoGhe FROM VeXeNgoaiThanh 
+                                 WHERE MaTuyen = @MaTuyen 
+                                   AND CAST(NgayDi AS DATE) = CAST(@NgayDi AS DATE)";
+                // Nếu CSDL bạn có cột TrangThai, hãy thêm: AND TrangThai = 1
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@MaTuyen", maTuyen);
+                    cmd.Parameters.AddWithValue("@NgayDi", ngayDi.Date);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            danhSachGhe.Add(reader["SoGhe"].ToString().Trim());
+                        }
+                    }
+                }
+            }
+            return danhSachGhe;
+        }
     }
 }

@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -39,6 +40,11 @@ namespace DoAn_LTWindows.Forms.Systems
             btn_Exit.MouseUp += (s, e) => {
                 btn_Exit.BackgroundImage = Properties.Resources.button1;
             };
+
+            chk_HienMatKhau.CheckedChanged += (s, e) =>
+            {
+                txt_Password.PasswordChar = chk_HienMatKhau.Checked ? '\0' : '*';
+            };
         }
 
         private void lbl_ForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -50,6 +56,15 @@ namespace DoAn_LTWindows.Forms.Systems
         {
             string user = txt_Username.Text.Trim();
             string pass = txt_Password.Text.Trim();
+
+            string pattern = @"^[a-zA-Z0-9]+$";
+
+            if (!Regex.IsMatch(user, pattern))
+            {
+                MessageBox.Show("Tên đăng nhập không được chứa ký tự đặc biệt hoặc khoảng trắng!",
+                                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             try
             {
@@ -85,6 +100,18 @@ namespace DoAn_LTWindows.Forms.Systems
             if (result == DialogResult.Yes)
             {
                 Application.Exit();
+            }
+        }
+
+        private void chk_HienMatKhau_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk_HienMatKhau.Checked)
+            {
+                txt_Password.PasswordChar = '\0';
+            }
+            else
+            {
+                txt_Password.PasswordChar = '*';
             }
         }
     }

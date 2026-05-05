@@ -19,5 +19,10 @@ namespace DoAn_LTWindows.BUS
 
             dal.LuuDanhSachVe(danhSachVe);
         }
+
+        public List<string> LayDanhSachGheDaDat(int maTuyen, DateTime ngayDi)
+        {
+            return dal.LayDanhSachGheDaDat(maTuyen, ngayDi);
+        }
     }
 }

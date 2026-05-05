@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.lbl_Title = new System.Windows.Forms.Label();
             this.pnl_Login = new System.Windows.Forms.Panel();
+            this.chk_HienMatKhau = new System.Windows.Forms.CheckBox();
+            this.btn_Exit = new System.Windows.Forms.Button();
             this.btn_Login = new System.Windows.Forms.Button();
             this.lbl_ForgotPassword = new System.Windows.Forms.LinkLabel();
             this.pnl_Password = new System.Windows.Forms.Panel();
@@ -39,7 +41,6 @@
             this.pnl_Usename = new System.Windows.Forms.Panel();
             this.txt_Username = new System.Windows.Forms.TextBox();
             this.lbl_Usename = new System.Windows.Forms.Label();
-            this.btn_Exit = new System.Windows.Forms.Button();
             this.pnl_Login.SuspendLayout();
             this.pnl_Password.SuspendLayout();
             this.pnl_Usename.SuspendLayout();
@@ -61,6 +62,7 @@
             this.pnl_Login.BackColor = System.Drawing.Color.Transparent;
             this.pnl_Login.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl_Login.BackgroundImage")));
             this.pnl_Login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnl_Login.Controls.Add(this.chk_HienMatKhau);
             this.pnl_Login.Controls.Add(this.btn_Exit);
             this.pnl_Login.Controls.Add(this.btn_Login);
             this.pnl_Login.Controls.Add(this.lbl_ForgotPassword);
@@ -72,6 +74,37 @@
             this.pnl_Login.Name = "pnl_Login";
             this.pnl_Login.Size = new System.Drawing.Size(904, 577);
             this.pnl_Login.TabIndex = 1;
+            // 
+            // chk_HienMatKhau
+            // 
+            this.chk_HienMatKhau.AutoSize = true;
+            this.chk_HienMatKhau.Font = new System.Drawing.Font("Oswald", 18F);
+            this.chk_HienMatKhau.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.chk_HienMatKhau.Location = new System.Drawing.Point(481, 290);
+            this.chk_HienMatKhau.Name = "chk_HienMatKhau";
+            this.chk_HienMatKhau.Size = new System.Drawing.Size(163, 45);
+            this.chk_HienMatKhau.TabIndex = 7;
+            this.chk_HienMatKhau.Text = "Hiện Mật Khẩu";
+            this.chk_HienMatKhau.UseVisualStyleBackColor = true;
+            this.chk_HienMatKhau.CheckedChanged += new System.EventHandler(this.chk_HienMatKhau_CheckedChanged);
+            // 
+            // btn_Exit
+            // 
+            this.btn_Exit.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.button1;
+            this.btn_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Exit.FlatAppearance.BorderSize = 0;
+            this.btn_Exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Exit.Font = new System.Drawing.Font("Oswald", 20.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Exit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Exit.Location = new System.Drawing.Point(461, 394);
+            this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.Size = new System.Drawing.Size(217, 67);
+            this.btn_Exit.TabIndex = 6;
+            this.btn_Exit.Text = "Thoát";
+            this.btn_Exit.UseVisualStyleBackColor = true;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // btn_Login
             // 
@@ -107,28 +140,28 @@
             this.pnl_Password.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._160pxtab;
             this.pnl_Password.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnl_Password.Controls.Add(this.txt_Password);
-            this.pnl_Password.Location = new System.Drawing.Point(154, 245);
+            this.pnl_Password.Location = new System.Drawing.Point(260, 235);
             this.pnl_Password.Name = "pnl_Password";
-            this.pnl_Password.Size = new System.Drawing.Size(517, 51);
+            this.pnl_Password.Size = new System.Drawing.Size(384, 51);
             this.pnl_Password.TabIndex = 3;
             // 
             // txt_Password
             // 
             this.txt_Password.BackColor = System.Drawing.SystemColors.MenuText;
             this.txt_Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Password.Font = new System.Drawing.Font("Oswald", 18F);
+            this.txt_Password.Font = new System.Drawing.Font("Oswald", 17F);
             this.txt_Password.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txt_Password.Location = new System.Drawing.Point(21, 6);
+            this.txt_Password.Location = new System.Drawing.Point(20, 8);
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.PasswordChar = '*';
-            this.txt_Password.Size = new System.Drawing.Size(475, 36);
+            this.txt_Password.Size = new System.Drawing.Size(343, 34);
             this.txt_Password.TabIndex = 0;
             // 
             // lbl_Password
             // 
             this.lbl_Password.AutoSize = true;
             this.lbl_Password.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_Password.Location = new System.Drawing.Point(178, 196);
+            this.lbl_Password.Location = new System.Drawing.Point(252, 186);
             this.lbl_Password.Name = "lbl_Password";
             this.lbl_Password.Size = new System.Drawing.Size(111, 46);
             this.lbl_Password.TabIndex = 2;
@@ -139,49 +172,31 @@
             this.pnl_Usename.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._160pxtab;
             this.pnl_Usename.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnl_Usename.Controls.Add(this.txt_Username);
-            this.pnl_Usename.Location = new System.Drawing.Point(154, 122);
+            this.pnl_Usename.Location = new System.Drawing.Point(260, 122);
             this.pnl_Usename.Name = "pnl_Usename";
-            this.pnl_Usename.Size = new System.Drawing.Size(517, 51);
+            this.pnl_Usename.Size = new System.Drawing.Size(384, 51);
             this.pnl_Usename.TabIndex = 1;
             // 
             // txt_Username
             // 
             this.txt_Username.BackColor = System.Drawing.SystemColors.MenuText;
             this.txt_Username.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Username.Font = new System.Drawing.Font("Oswald", 18F);
+            this.txt_Username.Font = new System.Drawing.Font("Oswald", 17F);
             this.txt_Username.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txt_Username.Location = new System.Drawing.Point(21, 6);
+            this.txt_Username.Location = new System.Drawing.Point(20, 8);
             this.txt_Username.Name = "txt_Username";
-            this.txt_Username.Size = new System.Drawing.Size(475, 36);
+            this.txt_Username.Size = new System.Drawing.Size(343, 34);
             this.txt_Username.TabIndex = 0;
             // 
             // lbl_Usename
             // 
             this.lbl_Usename.AutoSize = true;
             this.lbl_Usename.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_Usename.Location = new System.Drawing.Point(178, 73);
+            this.lbl_Usename.Location = new System.Drawing.Point(252, 73);
             this.lbl_Usename.Name = "lbl_Usename";
             this.lbl_Usename.Size = new System.Drawing.Size(162, 46);
             this.lbl_Usename.TabIndex = 0;
             this.lbl_Usename.Text = "Tên Đăng Nhập";
-            // 
-            // btn_Exit
-            // 
-            this.btn_Exit.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.button1;
-            this.btn_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Exit.FlatAppearance.BorderSize = 0;
-            this.btn_Exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Exit.Font = new System.Drawing.Font("Oswald", 20.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Exit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_Exit.Location = new System.Drawing.Point(461, 394);
-            this.btn_Exit.Name = "btn_Exit";
-            this.btn_Exit.Size = new System.Drawing.Size(217, 67);
-            this.btn_Exit.TabIndex = 6;
-            this.btn_Exit.Text = "Thoát";
-            this.btn_Exit.UseVisualStyleBackColor = true;
-            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // frmLogin
             // 
@@ -192,6 +207,7 @@
             this.Controls.Add(this.pnl_Login);
             this.Controls.Add(this.lbl_Title);
             this.Font = new System.Drawing.Font("Oswald", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1366, 768);
             this.MinimumSize = new System.Drawing.Size(1366, 768);
             this.Name = "frmLogin";
@@ -220,5 +236,6 @@
         private System.Windows.Forms.LinkLabel lbl_ForgotPassword;
         private System.Windows.Forms.Button btn_Login;
         private System.Windows.Forms.Button btn_Exit;
+        private System.Windows.Forms.CheckBox chk_HienMatKhau;
     }
 }

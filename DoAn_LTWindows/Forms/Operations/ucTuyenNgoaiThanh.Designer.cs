@@ -70,9 +70,11 @@
             this.lbl_PopupThongTinChiTiet = new System.Windows.Forms.Label();
             this.lbl_SoDienThoai = new System.Windows.Forms.Label();
             this.txt_SoDienThoai = new System.Windows.Forms.TextBox();
+            this.pnl_Background = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.nud_SoLuongVe)).BeginInit();
             this.pnl_PopupXacNhan.SuspendLayout();
             this.pnl_PopupThongTin.SuspendLayout();
+            this.pnl_Background.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_Title
@@ -102,7 +104,7 @@
             this.lbl_SoLuongVe.AutoSize = true;
             this.lbl_SoLuongVe.BackColor = System.Drawing.Color.Transparent;
             this.lbl_SoLuongVe.Font = new System.Drawing.Font("Oswald", 16F);
-            this.lbl_SoLuongVe.Location = new System.Drawing.Point(592, 139);
+            this.lbl_SoLuongVe.Location = new System.Drawing.Point(592, 133);
             this.lbl_SoLuongVe.Name = "lbl_SoLuongVe";
             this.lbl_SoLuongVe.Size = new System.Drawing.Size(117, 37);
             this.lbl_SoLuongVe.TabIndex = 8;
@@ -124,7 +126,7 @@
             this.lbl_ChonNgayDi.AutoSize = true;
             this.lbl_ChonNgayDi.BackColor = System.Drawing.Color.Transparent;
             this.lbl_ChonNgayDi.Font = new System.Drawing.Font("Oswald", 16F);
-            this.lbl_ChonNgayDi.Location = new System.Drawing.Point(109, 137);
+            this.lbl_ChonNgayDi.Location = new System.Drawing.Point(109, 131);
             this.lbl_ChonNgayDi.Name = "lbl_ChonNgayDi";
             this.lbl_ChonNgayDi.Size = new System.Drawing.Size(127, 37);
             this.lbl_ChonNgayDi.TabIndex = 11;
@@ -138,7 +140,7 @@
             this.btn_Load.FlatAppearance.BorderSize = 0;
             this.btn_Load.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Load.Font = new System.Drawing.Font("Oswald", 18F);
-            this.btn_Load.Location = new System.Drawing.Point(404, 185);
+            this.btn_Load.Location = new System.Drawing.Point(404, 178);
             this.btn_Load.Name = "btn_Load";
             this.btn_Load.Size = new System.Drawing.Size(185, 49);
             this.btn_Load.TabIndex = 13;
@@ -165,15 +167,15 @@
             // pnl_Data
             // 
             this.pnl_Data.AutoScroll = true;
-            this.pnl_Data.Location = new System.Drawing.Point(67, 240);
+            this.pnl_Data.Location = new System.Drawing.Point(10, 10);
             this.pnl_Data.Name = "pnl_Data";
-            this.pnl_Data.Size = new System.Drawing.Size(858, 305);
+            this.pnl_Data.Size = new System.Drawing.Size(858, 292);
             this.pnl_Data.TabIndex = 16;
             // 
             // nud_SoLuongVe
             // 
             this.nud_SoLuongVe.Font = new System.Drawing.Font("Oswald", 14F);
-            this.nud_SoLuongVe.Location = new System.Drawing.Point(726, 140);
+            this.nud_SoLuongVe.Location = new System.Drawing.Point(726, 134);
             this.nud_SoLuongVe.Name = "nud_SoLuongVe";
             this.nud_SoLuongVe.Size = new System.Drawing.Size(102, 35);
             this.nud_SoLuongVe.TabIndex = 13;
@@ -189,7 +191,7 @@
             this.dtp_NgayDi.CustomFormat = "dd/MM/yyyy";
             this.dtp_NgayDi.Font = new System.Drawing.Font("Oswald", 14F);
             this.dtp_NgayDi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_NgayDi.Location = new System.Drawing.Point(252, 139);
+            this.dtp_NgayDi.Location = new System.Drawing.Point(252, 133);
             this.dtp_NgayDi.Name = "dtp_NgayDi";
             this.dtp_NgayDi.Size = new System.Drawing.Size(243, 35);
             this.dtp_NgayDi.TabIndex = 17;
@@ -593,6 +595,16 @@
             this.txt_SoDienThoai.Size = new System.Drawing.Size(157, 35);
             this.txt_SoDienThoai.TabIndex = 23;
             // 
+            // pnl_Background
+            // 
+            this.pnl_Background.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackground;
+            this.pnl_Background.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnl_Background.Controls.Add(this.pnl_Data);
+            this.pnl_Background.Location = new System.Drawing.Point(57, 233);
+            this.pnl_Background.Name = "pnl_Background";
+            this.pnl_Background.Size = new System.Drawing.Size(877, 312);
+            this.pnl_Background.TabIndex = 24;
+            // 
             // ucTuyenNgoaiThanh
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -603,7 +615,6 @@
             this.Controls.Add(this.btn_Reset);
             this.Controls.Add(this.dtp_NgayDi);
             this.Controls.Add(this.nud_SoLuongVe);
-            this.Controls.Add(this.pnl_Data);
             this.Controls.Add(this.btn_Return);
             this.Controls.Add(this.btn_Load);
             this.Controls.Add(this.lbl_ChonNgayDi);
@@ -613,6 +624,7 @@
             this.Controls.Add(this.lbl_Title);
             this.Controls.Add(this.lbl_SoDienThoai);
             this.Controls.Add(this.txt_SoDienThoai);
+            this.Controls.Add(this.pnl_Background);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Oswald", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -626,6 +638,7 @@
             this.pnl_PopupXacNhan.PerformLayout();
             this.pnl_PopupThongTin.ResumeLayout(false);
             this.pnl_PopupThongTin.PerformLayout();
+            this.pnl_Background.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -675,5 +688,6 @@
         private System.Windows.Forms.TextBox txt_SoDienThoai;
         private System.Windows.Forms.Label lbl_PopupSoDienThoai;
         private System.Windows.Forms.Label lbl_PopupSDTData;
+        private System.Windows.Forms.Panel pnl_Background;
     }
 }
