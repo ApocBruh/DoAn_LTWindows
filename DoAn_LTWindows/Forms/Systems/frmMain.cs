@@ -56,6 +56,7 @@ namespace DoAn_LTWindows.Forms.Systems
                 btn_QuanLyTaiKhoan.ForeColor = Color.Gray;
 
                 // THÊM: Khóa Báo Cáo Doanh Thu
+                lbl_ThongKe.ForeColor = Color.Gray;
                 btn_BaoCaoDoanhThu.Enabled = false;
                 btn_BaoCaoDoanhThu.ForeColor = Color.Gray;
             }

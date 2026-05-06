@@ -99,7 +99,7 @@
             this.lbl_HeThong.AutoSize = true;
             this.lbl_HeThong.Font = new System.Drawing.Font("Oswald", 20F);
             this.lbl_HeThong.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_HeThong.Location = new System.Drawing.Point(20, 591);
+            this.lbl_HeThong.Location = new System.Drawing.Point(10, 591);
             this.lbl_HeThong.Name = "lbl_HeThong";
             this.lbl_HeThong.Size = new System.Drawing.Size(110, 46);
             this.lbl_HeThong.TabIndex = 16;
