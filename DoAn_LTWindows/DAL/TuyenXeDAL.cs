@@ -61,16 +61,23 @@ namespace DoAn_LTWindows.DAL
             using (SqlConnection conn = DBConnection.GetConnection())
             {
                 conn.Open();
-                string query = @"INSERT INTO TuyenXe (MaTuyen, TenTuyen, DiemXuatPhat, DiemDen, KhoangCach, ThoiGianChay) 
-                                 VALUES (@Ma, @Ten, @BatDau, @KetThuc, @KhoangCach, @ThoiGian)";
+
+                // BỔ SUNG THÊM CỘT 'GiaVe' VÀO CÂU LỆNH INSERT
+                string query = @"INSERT INTO TuyenXe (TenTuyen, DiemXuatPhat, DiemDen, KhoangCach, ThoiGianChay, LoaiTuyen, GiaVe) 
+                         VALUES (@TenTuyen, @DiemXuatPhat, @DiemDen, @KhoangCach, @ThoiGianChay, @LoaiTuyen, @GiaVe)";
+
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@Ma", tuyen.MaTuyen);
-                    cmd.Parameters.AddWithValue("@Ten", tuyen.TenTuyen);
-                    cmd.Parameters.AddWithValue("@BatDau", tuyen.DiemXuatPhat);
-                    cmd.Parameters.AddWithValue("@KetThuc", tuyen.DiemDen);
+                    cmd.Parameters.AddWithValue("@TenTuyen", tuyen.TenTuyen);
+                    cmd.Parameters.AddWithValue("@DiemXuatPhat", string.IsNullOrEmpty(tuyen.DiemXuatPhat) ? (object)DBNull.Value : tuyen.DiemXuatPhat);
+                    cmd.Parameters.AddWithValue("@DiemDen", string.IsNullOrEmpty(tuyen.DiemDen) ? (object)DBNull.Value : tuyen.DiemDen);
                     cmd.Parameters.AddWithValue("@KhoangCach", tuyen.KhoangCach);
-                    cmd.Parameters.AddWithValue("@ThoiGian", tuyen.ThoiGianChay);
+                    cmd.Parameters.AddWithValue("@ThoiGianChay", tuyen.ThoiGianChay);
+                    cmd.Parameters.AddWithValue("@LoaiTuyen", 1); // Xử lý lỗi Loại tuyến lúc nãy
+
+                    // THÊM DÒNG NÀY ĐỂ XỬ LÝ LỖI GIAVE: Truyền mặc định là 0
+                    cmd.Parameters.AddWithValue("@GiaVe", 0);
+
                     cmd.ExecuteNonQuery();
                 }
             }

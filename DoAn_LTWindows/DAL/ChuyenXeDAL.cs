@@ -275,7 +275,7 @@ namespace DoAn_LTWindows.DAL
             {
                 conn.Open();
 
-                // 1. ĐỒNG BỘ TUYẾN XE (Xử lý dứt điểm lỗi Khóa Ngoại)
+                // 1. ĐỒNG BỘ TUYẾN XE (Xử lý dứt điểm lỗi Khóa Ngoại và NOT NULL)
                 string checkTuyen = "SELECT COUNT(*) FROM TuyenXe WHERE MaTuyen = @MaTuyen";
                 using (SqlCommand cmdTuyen = new SqlCommand(checkTuyen, conn))
                 {
@@ -284,29 +284,19 @@ namespace DoAn_LTWindows.DAL
 
                     if (countTuyen == 0) // Nếu chưa có tuyến này bên bảng TuyenXe
                     {
-                        try
+                        // Bật IDENTITY_INSERT và chèn ĐẦY ĐỦ các cột để không bị dính lỗi NOT NULL
+                        string insertTuyen = @"SET IDENTITY_INSERT TuyenXe ON; 
+                               INSERT INTO TuyenXe (MaTuyen, TenTuyen, DiemXuatPhat, DiemDen, KhoangCach, ThoiGianChay, LoaiTuyen, GiaVe) 
+                               VALUES (@MaTuyen, @TenTuyen, N'Chưa rõ', N'Chưa rõ', 0, 0, 1, @GiaVe); 
+                               SET IDENTITY_INSERT TuyenXe OFF;";
+
+                        using (SqlCommand cmdInsert = new SqlCommand(insertTuyen, conn))
                         {
-                            // Thử Insert với IDENTITY_INSERT (Dành cho bảng có tự tăng ID)
-                            string insertTuyen = @"SET IDENTITY_INSERT TuyenXe ON; 
-                                                   INSERT INTO TuyenXe (MaTuyen, TenTuyen) VALUES (@MaTuyen, @TenTuyen); 
-                                                   SET IDENTITY_INSERT TuyenXe OFF;";
-                            using (SqlCommand cmdInsert = new SqlCommand(insertTuyen, conn))
-                            {
-                                cmdInsert.Parameters.AddWithValue("@MaTuyen", maTuyen);
-                                cmdInsert.Parameters.AddWithValue("@TenTuyen", tenTuyen);
-                                cmdInsert.ExecuteNonQuery();
-                            }
-                        }
-                        catch
-                        {
-                            // Nếu bảng không có tự tăng ID, Insert bình thường
-                            string insertTuyenNormal = "INSERT INTO TuyenXe (MaTuyen, TenTuyen) VALUES (@MaTuyen, @TenTuyen)";
-                            using (SqlCommand cmdInsertN = new SqlCommand(insertTuyenNormal, conn))
-                            {
-                                cmdInsertN.Parameters.AddWithValue("@MaTuyen", maTuyen);
-                                cmdInsertN.Parameters.AddWithValue("@TenTuyen", tenTuyen);
-                                cmdInsertN.ExecuteNonQuery();
-                            }
+                            cmdInsert.Parameters.AddWithValue("@MaTuyen", maTuyen);
+                            cmdInsert.Parameters.AddWithValue("@TenTuyen", tenTuyen);
+                            cmdInsert.Parameters.AddWithValue("@GiaVe", giaVe);
+
+                            cmdInsert.ExecuteNonQuery(); // Thực thi một phát ăn ngay!
                         }
                     }
                 }
