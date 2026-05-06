@@ -105,6 +105,7 @@
             // 
             // cmb_TuyenXe
             // 
+            this.cmb_TuyenXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_TuyenXe.Font = new System.Drawing.Font("Oswald", 14F);
             this.cmb_TuyenXe.FormattingEnabled = true;
             this.cmb_TuyenXe.Location = new System.Drawing.Point(214, 81);

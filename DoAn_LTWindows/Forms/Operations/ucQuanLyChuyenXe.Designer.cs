@@ -32,6 +32,7 @@
             this.lbl_TimKiem = new System.Windows.Forms.Label();
             this.txt_Find = new System.Windows.Forms.TextBox();
             this.pnl_Import = new System.Windows.Forms.Panel();
+            this.dtp_DateTime = new System.Windows.Forms.DateTimePicker();
             this.btn_Reset = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Edit = new System.Windows.Forms.Button();
@@ -46,13 +47,12 @@
             this.cmb_Tuyen = new System.Windows.Forms.ComboBox();
             this.btn_FindData = new System.Windows.Forms.Button();
             this.dgv_ChuyenXe = new System.Windows.Forms.DataGridView();
-            this.btn_Return = new System.Windows.Forms.Button();
-            this.dtp_DateTime = new System.Windows.Forms.DateTimePicker();
             this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTenTuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colBienSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGiaVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colThoiGianXuatBen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_Return = new System.Windows.Forms.Button();
             this.pnl_Import.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ChuyenXe)).BeginInit();
             this.SuspendLayout();
@@ -109,6 +109,16 @@
             this.pnl_Import.Name = "pnl_Import";
             this.pnl_Import.Size = new System.Drawing.Size(816, 190);
             this.pnl_Import.TabIndex = 15;
+            // 
+            // dtp_DateTime
+            // 
+            this.dtp_DateTime.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtp_DateTime.Font = new System.Drawing.Font("Oswald", 14F);
+            this.dtp_DateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_DateTime.Location = new System.Drawing.Point(288, 98);
+            this.dtp_DateTime.Name = "dtp_DateTime";
+            this.dtp_DateTime.Size = new System.Drawing.Size(257, 35);
+            this.dtp_DateTime.TabIndex = 30;
             // 
             // btn_Reset
             // 
@@ -234,6 +244,7 @@
             // 
             // cmb_Xe
             // 
+            this.cmb_Xe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Xe.Font = new System.Drawing.Font("Oswald", 14F);
             this.cmb_Xe.FormattingEnabled = true;
             this.cmb_Xe.Location = new System.Drawing.Point(168, 51);
@@ -254,6 +265,7 @@
             // 
             // cmb_Tuyen
             // 
+            this.cmb_Tuyen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Tuyen.Font = new System.Drawing.Font("Oswald", 14F);
             this.cmb_Tuyen.FormattingEnabled = true;
             this.cmb_Tuyen.Location = new System.Drawing.Point(168, 6);
@@ -300,32 +312,6 @@
             this.dgv_ChuyenXe.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_ChuyenXe_CellFormatting);
             this.dgv_ChuyenXe.SelectionChanged += new System.EventHandler(this.dgv_ChuyenXe_SelectionChanged);
             // 
-            // btn_Return
-            // 
-            this.btn_Return.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Return.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._75pxbtn1;
-            this.btn_Return.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Return.FlatAppearance.BorderSize = 0;
-            this.btn_Return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Return.Font = new System.Drawing.Font("Oswald", 14F);
-            this.btn_Return.Location = new System.Drawing.Point(432, 564);
-            this.btn_Return.Name = "btn_Return";
-            this.btn_Return.Size = new System.Drawing.Size(129, 41);
-            this.btn_Return.TabIndex = 64;
-            this.btn_Return.Text = "Quay Lại";
-            this.btn_Return.UseVisualStyleBackColor = false;
-            this.btn_Return.Click += new System.EventHandler(this.btn_Return_Click);
-            // 
-            // dtp_DateTime
-            // 
-            this.dtp_DateTime.CustomFormat = "dd/MM/yyyy HH:mm";
-            this.dtp_DateTime.Font = new System.Drawing.Font("Oswald", 14F);
-            this.dtp_DateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_DateTime.Location = new System.Drawing.Point(288, 98);
-            this.dtp_DateTime.Name = "dtp_DateTime";
-            this.dtp_DateTime.Size = new System.Drawing.Size(257, 35);
-            this.dtp_DateTime.TabIndex = 30;
-            // 
             // colSTT
             // 
             this.colSTT.HeaderText = "STT";
@@ -364,6 +350,22 @@
             this.colThoiGianXuatBen.Name = "colThoiGianXuatBen";
             this.colThoiGianXuatBen.ReadOnly = true;
             this.colThoiGianXuatBen.Width = 222;
+            // 
+            // btn_Return
+            // 
+            this.btn_Return.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Return.BackgroundImage = global::DoAn_LTWindows.Properties.Resources._75pxbtn1;
+            this.btn_Return.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Return.FlatAppearance.BorderSize = 0;
+            this.btn_Return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Return.Font = new System.Drawing.Font("Oswald", 14F);
+            this.btn_Return.Location = new System.Drawing.Point(432, 564);
+            this.btn_Return.Name = "btn_Return";
+            this.btn_Return.Size = new System.Drawing.Size(129, 41);
+            this.btn_Return.TabIndex = 64;
+            this.btn_Return.Text = "Quay Lại";
+            this.btn_Return.UseVisualStyleBackColor = false;
+            this.btn_Return.Click += new System.EventHandler(this.btn_Return_Click);
             // 
             // ucQuanLyChuyenXe
             // 
