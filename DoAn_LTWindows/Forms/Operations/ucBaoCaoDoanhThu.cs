@@ -41,6 +41,9 @@ namespace DoAn_LTWindows.Forms.Operations
             dtp_FromDate.Value = new DateTime(today.Year, today.Month, 1);
             dtp_ToDate.Value = today;
 
+            // THÊM
+            LoadComboBoxTuyen();
+
             btn_ThongKe_Click(null, null);
 
             dgv_DoanhThu.DefaultCellStyle.ForeColor = Color.Black;
@@ -51,8 +54,15 @@ namespace DoAn_LTWindows.Forms.Operations
         {
             try
             {
+                // THÊM
+                int maTuyen = 0; // Mặc định là 0 (Tất cả)
+                if (cmb_Tuyem.SelectedValue != null)
+                {
+                    int.TryParse(cmb_Tuyem.SelectedValue.ToString(), out maTuyen);
+                }
+
                 // Gọi BUS để lấy dữ liệu (BUS sẽ tự động kiểm tra lỗi ngày tháng)
-                List<BaoCaoDoanhThuDTO> list = baoCaoBUS.LayBaoCaoDoanhThu(dtp_FromDate.Value.Date, dtp_ToDate.Value.Date);
+                List<BaoCaoDoanhThuDTO> list = baoCaoBUS.LayBaoCaoDoanhThu(dtp_FromDate.Value.Date, dtp_ToDate.Value.Date, maTuyen);
 
                 dgv_DoanhThu.DataSource = list;
                 dgv_DoanhThu.ClearSelection();
@@ -140,6 +150,30 @@ namespace DoAn_LTWindows.Forms.Operations
             if (pnlParent != null)
             {
                 pnlParent.Controls.Clear();
+            }
+        }
+
+        // THÊM
+        private void LoadComboBoxTuyen()
+        {
+            try
+            {
+                DoAn_LTWindows.BUS.TuyenXeBUS tuyenBus = new DoAn_LTWindows.BUS.TuyenXeBUS();
+                var listTuyen = tuyenBus.LayDanhSachTuyen(); 
+
+                DoAn_LTWindows.DTO.TuyenXeDTO tatCa = new DoAn_LTWindows.DTO.TuyenXeDTO();
+                tatCa.MaTuyen = 0; 
+                tatCa.TenTuyen = "Tất cả";
+
+                listTuyen.Insert(0, tatCa);
+
+                cmb_Tuyem.DataSource = listTuyen;
+                cmb_Tuyem.DisplayMember = "TenTuyen";
+                cmb_Tuyem.ValueMember = "MaTuyen";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tải danh sách tuyến: " + ex.Message);
             }
         }
     }

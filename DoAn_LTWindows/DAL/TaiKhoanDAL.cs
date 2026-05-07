@@ -16,7 +16,8 @@ namespace DoAn_LTWindows.DAL
             using (SqlConnection conn = DBConnection.GetConnection())
             {
                 conn.Open();
-                string query = "SELECT TenDangNhap, MatKhau, TenNhanVien, VaiTro, TrangThai FROM TaiKhoan";
+                // Đã sửa 'TaiKhoan' thành 'NhanVien'
+                string query = "SELECT TenDangNhap, MatKhau, TenNhanVien, VaiTro, TrangThai FROM NhanVien";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
@@ -41,7 +42,8 @@ namespace DoAn_LTWindows.DAL
             using (SqlConnection conn = DBConnection.GetConnection())
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM TaiKhoan WHERE TenDangNhap = @User", conn);
+                // Đã sửa 'TaiKhoan' thành 'NhanVien'
+                SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM NhanVien WHERE TenDangNhap = @User", conn);
                 cmd.Parameters.AddWithValue("@User", tenDangNhap);
                 return (int)cmd.ExecuteScalar() > 0;
             }
@@ -52,7 +54,8 @@ namespace DoAn_LTWindows.DAL
             using (SqlConnection conn = DBConnection.GetConnection())
             {
                 conn.Open();
-                string query = @"INSERT INTO TaiKhoan (TenDangNhap, MatKhau, TenNhanVien, VaiTro, TrangThai) 
+                // Đã sửa 'TaiKhoan' thành 'NhanVien'
+                string query = @"INSERT INTO NhanVien (TenDangNhap, MatKhau, TenNhanVien, VaiTro, TrangThai) 
                                  VALUES (@User, @Pass, @Name, @Role, @Status)";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
@@ -71,7 +74,8 @@ namespace DoAn_LTWindows.DAL
             using (SqlConnection conn = DBConnection.GetConnection())
             {
                 conn.Open();
-                string query = @"UPDATE TaiKhoan 
+                // Đã sửa 'TaiKhoan' thành 'NhanVien'
+                string query = @"UPDATE NhanVien 
                                  SET MatKhau = @Pass, TenNhanVien = @Name, VaiTro = @Role, TrangThai = @Status 
                                  WHERE TenDangNhap = @User";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -91,7 +95,8 @@ namespace DoAn_LTWindows.DAL
             using (SqlConnection conn = DBConnection.GetConnection())
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("DELETE FROM TaiKhoan WHERE TenDangNhap = @User", conn);
+                // Đã sửa 'TaiKhoan' thành 'NhanVien'
+                SqlCommand cmd = new SqlCommand("DELETE FROM NhanVien WHERE TenDangNhap = @User", conn);
                 cmd.Parameters.AddWithValue("@User", tenDangNhap);
                 cmd.ExecuteNonQuery();
             }
@@ -103,8 +108,9 @@ namespace DoAn_LTWindows.DAL
             using (SqlConnection conn = DBConnection.GetConnection())
             {
                 conn.Open();
+                // Đã sửa 'TaiKhoan' thành 'NhanVien'
                 string query = @"SELECT TenDangNhap, MatKhau, TenNhanVien, VaiTro, TrangThai 
-                                 FROM TaiKhoan 
+                                 FROM NhanVien 
                                  WHERE TenDangNhap LIKE @TuKhoa OR TenNhanVien LIKE @TuKhoa";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
@@ -157,7 +163,8 @@ namespace DoAn_LTWindows.DAL
                 conditions.Add("TrangThai = @Status");
                 cmd.Parameters.AddWithValue("@Status", dieuKien.TrangThai);
 
-                string query = "SELECT TenDangNhap, MatKhau, TenNhanVien, VaiTro, TrangThai FROM TaiKhoan";
+                // Đã sửa 'TaiKhoan' thành 'NhanVien'
+                string query = "SELECT TenDangNhap, MatKhau, TenNhanVien, VaiTro, TrangThai FROM NhanVien";
                 if (conditions.Count > 0)
                 {
                     query += " WHERE " + string.Join(" AND ", conditions);

@@ -254,7 +254,7 @@
             this.lbl_Time.AutoSize = true;
             this.lbl_Time.Font = new System.Drawing.Font("Oswald", 18F);
             this.lbl_Time.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_Time.Location = new System.Drawing.Point(506, 42);
+            this.lbl_Time.Location = new System.Drawing.Point(502, 42);
             this.lbl_Time.Name = "lbl_Time";
             this.lbl_Time.Size = new System.Drawing.Size(108, 41);
             this.lbl_Time.TabIndex = 7;

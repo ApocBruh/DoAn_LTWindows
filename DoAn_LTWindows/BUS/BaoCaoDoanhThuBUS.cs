@@ -12,14 +12,16 @@ namespace DoAn_LTWindows.BUS
     {
         private BaoCaoDoanhThuDAL dal = new BaoCaoDoanhThuDAL();
 
-        public List<BaoCaoDoanhThuDTO> LayBaoCaoDoanhThu(DateTime tuNgay, DateTime denNgay)
+        // THÊM
+        public List<BaoCaoDoanhThuDTO> LayBaoCaoDoanhThu(DateTime tuNgay, DateTime denNgay, int maTuyen)
         {
             if (tuNgay > denNgay)
             {
                 throw new Exception("Khoảng thời gian không hợp lệ!\nNgày bắt đầu (Từ Ngày) không thể lớn hơn ngày kết thúc (Đến Ngày).");
             }
 
-            return dal.LayBaoCaoDoanhThu(tuNgay, denNgay);
+            // THÊM
+            return dal.LayBaoCaoDoanhThu(tuNgay, denNgay, maTuyen);
         }
     }
 }

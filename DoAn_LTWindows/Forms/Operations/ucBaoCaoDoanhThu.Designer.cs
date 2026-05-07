@@ -35,14 +35,16 @@
             this.dtp_ToDate = new System.Windows.Forms.DateTimePicker();
             this.btn_ThongKe = new System.Windows.Forms.Button();
             this.dgv_DoanhThu = new System.Windows.Forms.DataGridView();
-            this.btn_TongSoLieuThongKe = new System.Windows.Forms.Button();
-            this.btn_ExportExcel = new System.Windows.Forms.Button();
-            this.btn_Return = new System.Windows.Forms.Button();
             this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMaSoVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLoaiVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGiaVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNgayGiaoDich = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_TongSoLieuThongKe = new System.Windows.Forms.Button();
+            this.btn_ExportExcel = new System.Windows.Forms.Button();
+            this.btn_Return = new System.Windows.Forms.Button();
+            this.lbl_Filter = new System.Windows.Forms.Label();
+            this.cmb_Tuyem = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DoanhThu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +63,7 @@
             // dtp_FromDate
             // 
             this.dtp_FromDate.Font = new System.Drawing.Font("Oswald", 14F);
-            this.dtp_FromDate.Location = new System.Drawing.Point(219, 97);
+            this.dtp_FromDate.Location = new System.Drawing.Point(219, 71);
             this.dtp_FromDate.Name = "dtp_FromDate";
             this.dtp_FromDate.Size = new System.Drawing.Size(204, 35);
             this.dtp_FromDate.TabIndex = 2;
@@ -72,7 +74,7 @@
             this.lbl_FromDate.AutoSize = true;
             this.lbl_FromDate.BackColor = System.Drawing.Color.Transparent;
             this.lbl_FromDate.Font = new System.Drawing.Font("Oswald", 16F);
-            this.lbl_FromDate.Location = new System.Drawing.Point(130, 97);
+            this.lbl_FromDate.Location = new System.Drawing.Point(130, 71);
             this.lbl_FromDate.Name = "lbl_FromDate";
             this.lbl_FromDate.Size = new System.Drawing.Size(83, 37);
             this.lbl_FromDate.TabIndex = 51;
@@ -83,7 +85,7 @@
             this.lbl_ToDate.AutoSize = true;
             this.lbl_ToDate.BackColor = System.Drawing.Color.Transparent;
             this.lbl_ToDate.Font = new System.Drawing.Font("Oswald", 16F);
-            this.lbl_ToDate.Location = new System.Drawing.Point(557, 97);
+            this.lbl_ToDate.Location = new System.Drawing.Point(557, 71);
             this.lbl_ToDate.Name = "lbl_ToDate";
             this.lbl_ToDate.Size = new System.Drawing.Size(96, 37);
             this.lbl_ToDate.TabIndex = 52;
@@ -92,7 +94,7 @@
             // dtp_ToDate
             // 
             this.dtp_ToDate.Font = new System.Drawing.Font("Oswald", 14F);
-            this.dtp_ToDate.Location = new System.Drawing.Point(659, 97);
+            this.dtp_ToDate.Location = new System.Drawing.Point(659, 71);
             this.dtp_ToDate.Name = "dtp_ToDate";
             this.dtp_ToDate.Size = new System.Drawing.Size(204, 35);
             this.dtp_ToDate.TabIndex = 53;
@@ -134,6 +136,45 @@
             this.dgv_DoanhThu.Size = new System.Drawing.Size(862, 354);
             this.dgv_DoanhThu.TabIndex = 55;
             this.dgv_DoanhThu.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_DoanhThu_CellFormatting);
+            // 
+            // colSTT
+            // 
+            this.colSTT.HeaderText = "STT";
+            this.colSTT.Name = "colSTT";
+            this.colSTT.ReadOnly = true;
+            this.colSTT.Width = 50;
+            // 
+            // colMaSoVe
+            // 
+            this.colMaSoVe.DataPropertyName = "MaSoVe";
+            this.colMaSoVe.HeaderText = "Mã Số Vé";
+            this.colMaSoVe.Name = "colMaSoVe";
+            this.colMaSoVe.ReadOnly = true;
+            this.colMaSoVe.Width = 200;
+            // 
+            // colLoaiVe
+            // 
+            this.colLoaiVe.DataPropertyName = "LoaiVe";
+            this.colLoaiVe.HeaderText = "Loại Vé";
+            this.colLoaiVe.Name = "colLoaiVe";
+            this.colLoaiVe.ReadOnly = true;
+            this.colLoaiVe.Width = 150;
+            // 
+            // colGiaVe
+            // 
+            this.colGiaVe.DataPropertyName = "GiaVe";
+            this.colGiaVe.HeaderText = "Giá Vé";
+            this.colGiaVe.Name = "colGiaVe";
+            this.colGiaVe.ReadOnly = true;
+            this.colGiaVe.Width = 150;
+            // 
+            // colNgayGiaoDich
+            // 
+            this.colNgayGiaoDich.DataPropertyName = "NgayGiaoDich";
+            this.colNgayGiaoDich.HeaderText = "Thời Gian Bán";
+            this.colNgayGiaoDich.Name = "colNgayGiaoDich";
+            this.colNgayGiaoDich.ReadOnly = true;
+            this.colNgayGiaoDich.Width = 309;
             // 
             // btn_TongSoLieuThongKe
             // 
@@ -183,50 +224,32 @@
             this.btn_Return.UseVisualStyleBackColor = false;
             this.btn_Return.Click += new System.EventHandler(this.btn_Return_Click);
             // 
-            // colSTT
+            // lbl_Filter
             // 
-            this.colSTT.HeaderText = "STT";
-            this.colSTT.Name = "colSTT";
-            this.colSTT.ReadOnly = true;
-            this.colSTT.Width = 50;
+            this.lbl_Filter.AutoSize = true;
+            this.lbl_Filter.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Filter.Font = new System.Drawing.Font("Oswald", 16F);
+            this.lbl_Filter.Location = new System.Drawing.Point(130, 112);
+            this.lbl_Filter.Name = "lbl_Filter";
+            this.lbl_Filter.Size = new System.Drawing.Size(90, 37);
+            this.lbl_Filter.TabIndex = 59;
+            this.lbl_Filter.Text = "Lọc Theo:";
             // 
-            // colMaSoVe
+            // cmb_Tuyem
             // 
-            this.colMaSoVe.DataPropertyName = "MaSoVe";
-            this.colMaSoVe.HeaderText = "Mã Số Vé";
-            this.colMaSoVe.Name = "colMaSoVe";
-            this.colMaSoVe.ReadOnly = true;
-            this.colMaSoVe.Width = 200;
-            // 
-            // colLoaiVe
-            // 
-            this.colLoaiVe.DataPropertyName = "LoaiVe";
-            this.colLoaiVe.HeaderText = "Loại Vé";
-            this.colLoaiVe.Name = "colLoaiVe";
-            this.colLoaiVe.ReadOnly = true;
-            this.colLoaiVe.Width = 150;
-            // 
-            // colGiaVe
-            // 
-            this.colGiaVe.DataPropertyName = "GiaVe";
-            this.colGiaVe.HeaderText = "Giá Vé";
-            this.colGiaVe.Name = "colGiaVe";
-            this.colGiaVe.ReadOnly = true;
-            this.colGiaVe.Width = 150;
-            // 
-            // colNgayGiaoDich
-            // 
-            this.colNgayGiaoDich.DataPropertyName = "NgayGiaoDich";
-            this.colNgayGiaoDich.HeaderText = "Thời Gian Bán";
-            this.colNgayGiaoDich.Name = "colNgayGiaoDich";
-            this.colNgayGiaoDich.ReadOnly = true;
-            this.colNgayGiaoDich.Width = 309;
+            this.cmb_Tuyem.FormattingEnabled = true;
+            this.cmb_Tuyem.Location = new System.Drawing.Point(219, 112);
+            this.cmb_Tuyem.Name = "cmb_Tuyem";
+            this.cmb_Tuyem.Size = new System.Drawing.Size(203, 40);
+            this.cmb_Tuyem.TabIndex = 60;
             // 
             // ucBaoCaoDoanhThu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::DoAn_LTWindows.Properties.Resources.mainbackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.cmb_Tuyem);
+            this.Controls.Add(this.lbl_Filter);
             this.Controls.Add(this.btn_Return);
             this.Controls.Add(this.btn_ExportExcel);
             this.Controls.Add(this.btn_TongSoLieuThongKe);
@@ -268,5 +291,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colLoaiVe;
         private System.Windows.Forms.DataGridViewTextBoxColumn colGiaVe;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNgayGiaoDich;
+        private System.Windows.Forms.Label lbl_Filter;
+        private System.Windows.Forms.ComboBox cmb_Tuyem;
     }
 }

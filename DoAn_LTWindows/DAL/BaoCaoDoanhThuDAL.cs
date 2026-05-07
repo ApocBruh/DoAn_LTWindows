@@ -10,7 +10,8 @@ namespace DoAn_LTWindows.DAL
 {
     internal class BaoCaoDoanhThuDAL
     {
-        public List<BaoCaoDoanhThuDTO> LayBaoCaoDoanhThu(DateTime tuNgay, DateTime denNgay)
+        // THÊM: Bổ sung tham số int maTuyen vào hàm
+        public List<BaoCaoDoanhThuDTO> LayBaoCaoDoanhThu(DateTime tuNgay, DateTime denNgay, int maTuyen)
         {
             List<BaoCaoDoanhThuDTO> list = new List<BaoCaoDoanhThuDTO>();
             using (SqlConnection conn = DBConnection.GetConnection())
@@ -18,12 +19,16 @@ namespace DoAn_LTWindows.DAL
                 conn.Open();
                 string query = @"
                     SELECT MaSoVe, N'Nội Thành' AS LoaiVe, GiaVe, ThoiGian AS NgayGiaoDich 
-                    FROM VeXeNoiThanh WHERE CAST(ThoiGian AS DATE) BETWEEN @TuNgay AND @DenNgay AND TrangThai = 1
+                    FROM VeXeNoiThanh 
+                    WHERE CAST(ThoiGian AS DATE) BETWEEN @TuNgay AND @DenNgay AND TrangThai = 1
+                    AND (@MaTuyen = 0 OR MaTuyen = @MaTuyen) -- THÊM: Lọc theo tuyến nội thành
                     
                     UNION ALL
                     
                     SELECT MaSoVe, N'Ngoại Thành' AS LoaiVe, GiaVe, ThoiGian AS NgayGiaoDich 
-                    FROM VeXeNgoaiThanh WHERE CAST(ThoiGian AS DATE) BETWEEN @TuNgay AND @DenNgay AND TrangThai = 1
+                    FROM VeXeNgoaiThanh 
+                    WHERE CAST(ThoiGian AS DATE) BETWEEN @TuNgay AND @DenNgay AND TrangThai = 1
+                    AND (@MaTuyen = 0 OR MaTuyen = @MaTuyen) -- THÊM: Lọc theo tuyến ngoại thành
                     
                     ORDER BY NgayGiaoDich DESC";
 
@@ -31,6 +36,9 @@ namespace DoAn_LTWindows.DAL
                 {
                     cmd.Parameters.AddWithValue("@TuNgay", tuNgay);
                     cmd.Parameters.AddWithValue("@DenNgay", denNgay);
+
+                    // THÊM
+                    cmd.Parameters.AddWithValue("@MaTuyen", maTuyen);
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
